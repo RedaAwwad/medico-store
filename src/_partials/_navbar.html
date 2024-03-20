@@ -1,0 +1,114 @@
+<nav class="navbar navbar__inner navbar-dark navbar-expand-lg py-0">
+  <div class="container-xl">
+    <div class="w-100 d-flex align-items-center justify-content-between">
+      <div class="d-md-none">
+        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" stroke="#212529"/>
+        </svg>
+      </div>
+      <div class="d-flex align-items-center">
+        <a href="/" title="Medico Store logo">
+          <img class="logo" width="180" src="imgs/logo.png" 
+          alt="Medico Store logo">
+        </a>
+      </div>
+      <div class="navbar-menu__overlay">
+        <ul id="navbarMenu" class="navbar-nav navbar-menu flex-row gap-2">
+          <li class="nav-item navbar-menu__head d-flex align-items-center justify-content-between d-xl-none">
+            <img width="120" title="Medico Store logo" src="imgs/logo.png" alt="Medico Store logo">
+            <button id="closeMenu" class="btn btn-menu d-flex d-xl-none justify-content-center align-items-center text-inherit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="x-close">
+                <path id="Icon" d="M6 6L18 18M18 6L6 18" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">
+              الرئيسية
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="/">
+              المتجر
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="{{page}}-home.html#services">
+              خدماتنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="about.html">
+              عن الشركة
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">
+              المقالات
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="contact.html">
+              اتصل بنا
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <ul class="navbar-nav px-0 d-flex align-items-center flex-row gap-3">
+        <li class="nav-item d-none d-md-flex">
+          <button type="button" class="nav-link" title=" البحث">
+            <svg width="1.3rem" height="1.3rem" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.8224 21.4135L26.7199 25.309C26.9017 25.4972 27.0022 25.7492 27 26.0108C26.9977 26.2725 26.8927 26.5227 26.7077 26.7077C26.5227 26.8927 26.2725 26.9977 26.0108 27C25.7492 27.0022 25.4972 26.9017 25.309 26.7199L21.4115 22.8224C18.8645 25.0045 15.5714 26.1154 12.2231 25.9218C8.87485 25.7283 5.73166 24.2454 3.45313 21.7843C1.1746 19.3233 -0.0621424 16.0753 0.00240528 12.7221C0.066953 9.36881 1.42778 6.17088 3.79933 3.79933C6.17088 1.42778 9.36881 0.066953 12.7221 0.00240528C16.0753 -0.0621424 19.3233 1.1746 21.7843 3.45313C24.2454 5.73166 25.7283 8.87485 25.9218 12.2231C26.1154 15.5714 25.0045 18.8645 22.8224 21.4115V21.4135ZM12.9719 23.9479C15.8829 23.9479 18.6747 22.7915 20.7331 20.7331C22.7915 18.6747 23.9479 15.8829 23.9479 12.9719C23.9479 10.0608 22.7915 7.26904 20.7331 5.21063C18.6747 3.15221 15.8829 1.99581 12.9719 1.99581C10.0608 1.99581 7.26904 3.15221 5.21063 5.21063C3.15221 7.26904 1.99581 10.0608 1.99581 12.9719C1.99581 15.8829 3.15221 18.6747 5.21063 20.7331C7.26904 22.7915 10.0608 23.9479 12.9719 23.9479Z" fill="currentColor"/>
+              </svg>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="?lang=en" title="Select English Language">
+            <span class="inline-block pt-1">EN</span>
+            <span>
+              <svg width="1.2rem" height="1.2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C1 18.0753 5.9247 23 12 23C18.0753 23 23 18.0753 23 12C23 5.9247 18.0753 1 12 1C5.9247 1 1 5.9247 1 12Z" fill="#F5F5F5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.0999 1.05469C13.0999 1.05469 16.3999 5.39969 16.3999 11.9997C16.3999 18.5997 13.0999 22.9447 13.0999 22.9447M10.8999 22.9447C10.8999 22.9447 7.59987 18.5997 7.59987 11.9997C7.59987 5.39969 10.8999 1.05469 10.8999 1.05469M1.69287 15.8497H22.3069H1.69287ZM1.69287 8.14969H22.3069H1.69287Z" fill="#F5F5F5"/>
+                <path d="M13.0999 1.05469C13.0999 1.05469 16.3999 5.39969 16.3999 11.9997C16.3999 18.5997 13.0999 22.9447 13.0999 22.9447M10.8999 22.9447C10.8999 22.9447 7.59987 18.5997 7.59987 11.9997C7.59987 5.39969 10.8999 1.05469 10.8999 1.05469M1.69287 15.8497H22.3069M1.69287 8.14969H22.3069" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item d-none d-md-flex">
+          <a class="nav-link d-flex align-items-center gap-2" href="/login.html">
+            <span>
+              <svg width="1.3rem" height="1.3rem" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5 0C9.75715 0 8.08568 0.65848 6.8533 1.83058C5.62092 3.00269 4.92857 4.5924 4.92857 6.25C4.92857 7.9076 5.62092 9.49731 6.8533 10.6694C8.08568 11.8415 9.75715 12.5 11.5 12.5C13.2429 12.5 14.9143 11.8415 16.1467 10.6694C17.3791 9.49731 18.0714 7.9076 18.0714 6.25C18.0714 4.5924 17.3791 3.00269 16.1467 1.83058C14.9143 0.65848 13.2429 0 11.5 0ZM3.3005 14.0625C2.86783 14.0609 2.43908 14.1405 2.03883 14.2967C1.63857 14.453 1.2747 14.6829 0.968069 14.9733C0.661437 15.2636 0.418082 15.6086 0.251959 15.9886C0.0858358 16.3686 0.00021277 16.776 0 17.1875C0 19.8297 1.3685 21.8219 3.5075 23.1203C5.61364 24.3969 8.4525 25 11.5 25C14.5475 25 17.3864 24.3969 19.4925 23.1203C21.6315 21.8234 23 19.8281 23 17.1875C23 16.3587 22.6538 15.5638 22.0376 14.9778C21.4214 14.3917 20.5857 14.0625 19.7143 14.0625H3.3005Z" fill="currentColor"/>
+                </svg>
+            </span>
+            <span>تسجيل الدخول</span>
+          </a>
+        </li>
+        <li class="nav-item justify-content-end d-none d-md-flex d-xl-none">
+          <button id="openMenu" class="btn btn-menu btn-menu--color d-flex d-xl-none justify-content-center align-items-center text-inherit p-0">
+            <svg width="1.8rem" height="1.8rem" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Layer_1">
+              <g id="Group">
+              <path id="Vector" d="M24 3.68433H0V6.06843H24V3.68433Z" fill="currentColor"/>
+              <path id="Vector_2" d="M24 19.5784H0V21.9625H24V19.5784Z" fill="currentColor"/>
+              <path id="Vector_3" d="M24 11.6313H0V14.0155H24V11.6313Z" fill="currentColor"/>
+              </g>
+              </g>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <form action="POST" class="w-100 d-md-none">
+      <div class="search-form">
+        <label tite="ابحث عن منتج او ماركة او قسم" class="search-form__label">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </label>
+        <input type="text" autocomplete="off" class="form-control search-form__input" placeholder="ابحث عن منتج او ماركة او قسم">
+      </div>
+    </form>
+  </div>
+</nav>

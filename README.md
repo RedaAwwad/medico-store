@@ -1,6 +1,6 @@
-# Zimam
+# Medico Store
 
-موقع زمام
+مديكو ستور
 
 ## Building Rules
 - Make sure to add any `.html` file to the `vite.config.js` build -> rollupOptions -> input
