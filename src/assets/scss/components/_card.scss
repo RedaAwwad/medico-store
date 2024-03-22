@@ -185,6 +185,7 @@
 
     @media (max-width: 580px) {
         height: 280px;
+        border-radius: 20px;
     }
 
     &::after {
@@ -213,5 +214,18 @@
         z-index: 3;
         padding: 2rem;
         color: $white;
+
+        @media (max-width: 480px) {
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        font-size: 0.9;
+        line-height: 1.8;
     }
 }

@@ -708,8 +708,8 @@ body {
   padding-bottom: 4rem;
 
   @media screen and (max-width: 580px) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -1688,8 +1688,9 @@ body .add-to-cart-btn {
   padding-top: 6rem;
   padding-bottom: 6rem;
 
-  &__container {
-
+  @media screen and (max-width: 580px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   &::after {
@@ -1720,6 +1721,10 @@ body .add-to-cart-btn {
     color: $white;
   }
 
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+
   &__title {
     position: relative;
     max-width: 600px;
@@ -1740,6 +1745,7 @@ body .add-to-cart-btn {
         transform: translateX(-50%);
       }
     }
+
   }
 
   &__text {
@@ -1748,4 +1754,80 @@ body .add-to-cart-btn {
   }
 }
 
+
+.why-medico-section {
+  position: relative;
+  margin-bottom: 4rem;
+  background: rgba(246, 246, 246, 0.35);
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -75px;
+    width: 200px;
+    height: 200px;
+    background: url(imgs/left-circle.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &__heading {
+    position: relative;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--mainColor);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -25px;
+      right: -75px;
+      z-index: -1;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(0, 169, 167, 0.08);
+    }
+  }
+
+  &__text {
+    max-width: 700px;
+    line-height: 1.8;
+  }
+
+  &-card {
+
+    &__icon {
+      position: relative;
+      display: inline-flex;
+      margin-bottom: 1.5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -30px;
+        z-index: -1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(0, 169, 167, 0.08);
+      }
+    }
+
+    &__title {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    &__text {
+      max-width: 700px;
+      line-height: 1.8;
+    }
+  }
+}
 
