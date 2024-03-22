@@ -1441,6 +1441,7 @@ body .add-to-cart-btn {
     height: 200px;
     background: url(imgs/right-circle.png) no-repeat center;
     background-size: contain;
+    z-index: -1;
 
     @media (max-width: 580px) {
       top: -30%;
@@ -1516,6 +1517,19 @@ body .add-to-cart-btn {
 }
 
 .brands-section {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: -75px;
+    width: 200px;
+    height: 200px;
+    background: url(imgs/right-circle.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
+  }
 
   &__slider {
 
@@ -1551,3 +1565,187 @@ body .add-to-cart-btn {
   margin-left: auto;
 
 }
+
+.by-category-name {
+  &__slider {
+    transform: translateX(100px);
+
+    @media (max-width: 1100px) {
+      transform: none;
+    }
+
+    .slick-slide {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding-left: 50px;
+
+    @media (max-width: 1100px) {
+      padding: 0;
+    }
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+
+    &:hover {
+      background-color: var(--mainColor);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 580px) {
+      width: 40px;
+      height: 40px;
+    }
+  
+    &-container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50px;
+
+      @media (max-width: 1100px) {
+        top: -90px;
+        left: 20px;
+        transform: none;
+      }
+
+      @media (max-width: 580px) {
+        top: -85px;
+      }
+    }
+  }
+}
+
+
+.with-right-circle-shape {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: -75px;
+    width: 200px;
+    height: 200px;
+    background: url(imgs/right-circle.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.category-cards-section {
+   
+  &__grid {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-areas: "card-2 card-1"
+                        "card-3 card-1";
+    
+    @media (max-width: 991px) {
+      grid-template-areas:  "card-1"
+                            "card-2"
+                            "card-3";
+    }
+  }
+   
+   .card-1 {
+      grid-area: card-1;
+      background-color: #d0d9e6; ;
+      
+   }
+   
+   .card-2 {
+    grid-area: card-2;
+      background-color: #151127; 
+      
+   }
+   
+   .card-3 {
+    grid-area: card-3;
+      background-color: #2b4c81; 
+
+      
+   }
+}
+
+.main-banner {
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  &__container {
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+    color: $white;
+  }
+
+  &__title {
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      width: 115px;
+      height: 5px;
+      background-color: var(--mainColor);
+
+      @media (max-width: 991px) {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__text {
+    max-width: 650px;
+    line-height: 2;
+  }
+}
+
+

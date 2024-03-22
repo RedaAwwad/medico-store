@@ -176,8 +176,8 @@ $(function () {
         });
     }
 
-     // brands section slider
-     if($('.brands-section__slider').length) {
+    // brands section slider
+    if($('.brands-section__slider').length) {
         let initialSlide = 2
 
         if(window.innerWidth < 500) {
@@ -220,6 +220,49 @@ $(function () {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 2,
+                        centerMode: true,
+                    }
+                }
+            ]
+        });
+    }
+
+    // by-category-name-slider
+    if($('.by-category-name__slider').length) {
+        $('.by-category-name__slider').slick({
+            rtl: document.dir == 'rtl',
+            lazyLoad: 'ondemand',
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 2,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 740,
+                        settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
                         centerMode: true,
                     }
                 }
