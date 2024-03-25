@@ -40,6 +40,10 @@ body {
     color: $secondaryColor !important;
   }
 
+  .text-start {
+    text-align: start !important;
+  }
+
   .text-gray {
     color: #ACACAC;
   }
@@ -56,13 +60,9 @@ body {
     background: #000;
   }
 
-  &.zimam-qwa-page::-webkit-scrollbar-thumb {
-    background: var(--mainColor, #000);
-  }
-
   @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 1200px;
+      max-width: 1280px;
     }
   }
 
@@ -127,6 +127,14 @@ body {
     &.active {
       color: var(--mainColor) !important;
     }
+
+    @media (min-width: 992px) {
+      min-height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+    }
   }
 
   &--fixed {
@@ -147,6 +155,13 @@ body {
 }
 
 .navbar-menu {
+  .nav-link {
+    @media (min-width: 1350px) {
+      padding-right: 20px !important;
+      padding-left: 20px !important;
+    }
+  }
+
   @media screen and (max-width: 1199px) {
     position: absolute;
     top: 45%;
@@ -169,15 +184,25 @@ body {
     visibility: hidden;
     opacity: 0;
 
+    .link-with-menu {
+      .sub-menu {
+        height: 400px;
+        max-width: 100%;
+        top: 100%;
+      }
+    }
+
     &.active {
       top: 50%;
       visibility: visible;
       opacity: 1;
 
       @media screen and (max-width: 480px) {
-        top: 0;
-        transform: translate(-50%, 0);
+        top: 0 !important;
+        transform: translate(-50%, 0) !important;
         height: calc(100% - 75px);
+        border-radius: 0;
+        transition-delay: 200ms;
       }
     }
 
@@ -219,25 +244,113 @@ body {
     }
   }
 
-  // @media screen and (max-width: 480px) {
-  //   width: 100%;
-  // }
 }
 
-.navbar__main {
-  @media screen and (max-width: 991px) {
-    .navbar-nav {
-      gap: 1rem;
+.link-with-menu {
+  position: relative;
+  transition: all 300ms ease-in-out;
+
+  .sub-menu {
+    position: absolute;
+    top: calc(100% - 5px);
+    right: 0;
+    z-index: 999;
+    width: 700px;
+    height: 400px;
+    overflow-y: auto;
+    // max-width: max-content;
+    // max-height: 100%;
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 300ms ease-in-out;
+    color: $black;
+
+    &__heading {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  
+    &__list {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 2rem;
+
+      li {
+        padding-right: 10px;
+      }
+      
+      a {
+        display: inline-block;
+        padding: 5px;
+        text-decoration: none;
+        color: #7E7E7E;
+        font-weight: 300;
+        font-size: 0.85rem;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+          color: var(--mainColor);
+        }
+      }
+    }
+
+    .row>div {
+      padding-right: 0.25rem;
+      padding-left: 0.25rem;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .brands-list {
+      a {
+        display: block;
+        height: 50px;
+        padding: 5px;
+        border: 1px solid transparent;
+        background-color: #F6F6F6;
+        transition: 300ms ease-in-out;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &:hover {
+          border-color: var(--mainColor);
+        }
+      }
     }
   }
+
+  &.active {
+    background-color: #3E3E3E;
+    color: $white;
+
+    .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  
 }
 
-.navbar {
-  &.zimam-qwa-navbar {
-    .navbar__phone small {
-      color: $white;
-    }
+.navbar__inner .link-with-menu.active {
+
+  .nav-link {
+    color: inherit !important;
   }
+
 }
 
 .hero-header {
@@ -334,342 +447,8 @@ body {
   }
 }
 
-.main-card {
-  position: relative;
-  // width: 400px;
-  // height: 465px;
-  // border-radius: 30px 30px 30px 0px;
-  max-width: 100%;
-  background-color: #FFF;
-  border: none;
-  overflow: hidden;
-
-  width: 371px;
-  height: 538px;
-  border-radius: 30px 30px 50px 0px;
-
-  @media screen and (max-width: 767px) {
-    height: 400px;
-  }
-
-
-  &-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    transition: all ease-in-out 600ms;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-  }
-
-  &__title {
-    font-size: 1.25rem;
-  }
-
-  &.one .main-card-img::after {
-    background: rgba(208, 157, 91, 0.89);
-
-  }
-
-  &.two .main-card-img::after {
-    background: rgba(78, 67, 203, 0.89);
-
-  }
-
-  &.three .main-card-img::after {
-    background: rgba(34, 44, 101, 0.89);
-
-  }
-
-  &-body {
-    position: relative;
-    z-index: 10;
-  }
-
-  &-content {
-    color: $white;
-  }
-
-  &-title {
-    font-size: 1.5rem;
-    color: $white;
-    transition: all ease-in-out 500ms;
-
-    @media screen and (max-width: 767px) {
-      margin-bottom: 0.75rem;
-      color: $primaryColor;
-      font-weight: 600;
-    }
-  }
-
-  &-footer {
-    position: relative;
-    width: 100%;
-    max-width: 90%;
-    justify-content: center;
-    padding: 40px 20px;
-    border-top: 1px solid #ECF0FF;
-    color: $white;
-
-    &--content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      padding: 25px 15px;
-    }
-  }
-
-  .footer-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: transform 300ms ease-in-out;
-  }
-}
-
-.card-controller {
-  display: block;
-  
-  .card {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
-    transition: transform 300ms ease-in-out;
-
-    h3 {
-      transition: transform 400ms ease-in-out;
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    &:hover .card {
-      transform: scale(1.05);
-
-      h3 {
-        transform: rotateX(360deg);
-      }
-
-      .footer-icon {
-        transform: rotate(90deg) translateY(20px);
-        animation: slide 1s infinite alternate linear;
-
-        @keyframes slide {
-          from {
-            transform: rotate(90deg) translateY(0px);
-          }
-
-          to {
-            transform: rotate(90deg) translateY(30px);
-          }
-        }
-      }
-    }
-  }
-}
-
-.zimam-card {
-  position: relative;
-  width: 400px;
-  max-width: 100%;
-  height: 142px;
-  border-radius: 20px 20px 50px 0px;
-  padding: 10px 25px;
-  overflow: hidden;
-
-  &__container {
-    text-decoration: none
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: all ease-in-out 600ms;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-  }
-
-  &__title {
-    position: relative;
-    color: #FFF;
-    font-size: 1.1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    max-width: 85px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: -30px;
-      width: 1px;
-      height: 70px;
-      background: rgba(255, 255, 255, 0.20);
-    }
-  }
-
-  &--qwa::after {
-    background-color: rgba(220, 164, 92, 0.9);
-  }
-
-  &--raqamya::after {
-    background: rgba(78, 67, 203, 0.89);
-  }
-
-  &--engaz::after {
-    background: rgba(30, 41, 99, 0.89);
-  }
-
-  &__body {
-    position: relative;
-    z-index: 10;
-  }
-
-  &-title {
-    font-size: 1.5rem;
-    color: $white;
-    transition: all ease-in-out 500ms;
-
-    @media screen and (max-width: 767px) {
-      margin-bottom: 0.75rem;
-      color: $primaryColor;
-      font-weight: 600;
-    }
-  }
-
-  &-footer {
-    position: relative;
-    width: 100%;
-    max-width: 90%;
-    justify-content: center;
-    padding: 40px 20px;
-    border-top: 1px solid #ECF0FF;
-    color: $white;
-
-    &--content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      padding: 25px 15px;
-    }
-  }
-}
-
 .transition-all {
   transition: all 300ms ease-in-out;
-}
-
-.cards-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  @media screen and (max-width: 1199px) {
-    overflow-x: auto;
-
-    .row {
-      overflow-y: auto;
-      flex-wrap: nowrap;
-      margin: 0;
-
-      &::-webkit-scrollbar {
-        height: 5px;
-      }
-    
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
-    
-      &::-webkit-scrollbar-thumb {
-        background: $primaryColor;
-        border-radius: 5px;
-      }
-
-      &>.card-controller {
-        width: 375px;
-        padding-bottom: 1rem;
-      }
-    }
-  }
-
-  @media screen and (max-width: 580px) {
-    .row>.card-controller {
-        width: 325px;
-      }
-    }
-  }
-
-.btn-go {
-  padding: 10px 40px;
-  border-radius: 40px;
-  border: 1px solid #fff;
-  background-color: $primaryColor;
-  color: #fff;
-
-  &:hover {
-    opacity: 0.9;
-    color: #fff;
-    border-color: #fff;
-    background-color: #131e55;
-  }
 }
 
 /*
@@ -679,7 +458,7 @@ body {
 .medico-page {
   --mainColor: #00A9A7;
   --secondaryColor: #252525;
-  --accentColor: ba(0, 169, 167, 0.08);
+  --accentColor: rgba(0, 169, 167, 0.08);
   --overlay: linear-gradient(180deg, rgba(30, 41, 99, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
   color: $black;
 }
@@ -1279,10 +1058,6 @@ body {
   }
 }
 
-.text-start {
-  text-align: start !important;
-}
-
 .latest-products-slider {
 
   .slick-slide {
@@ -1488,6 +1263,7 @@ body .add-to-cart-btn {
   }
 
   &__color {
+    position: relative;
     width: 150px;
     height: 150px;
     display: flex;
@@ -1496,6 +1272,23 @@ body .add-to-cart-btn {
     border-radius: 50%;
     color: $white;
     transition: opacity 200ms ease-in-out;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
 
     &:hover {
       color: $white;
@@ -1635,7 +1428,7 @@ body .add-to-cart-btn {
     content: '';
     position: absolute;
     bottom: 5%;
-    right: -75px;
+    right: -25px;
     width: 200px;
     height: 200px;
     background: url(imgs/right-circle.png) no-repeat center;
@@ -1650,7 +1443,7 @@ body .add-to-cart-btn {
     display: grid;
     width: 100%;
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-areas: "card-2 card-1"
                         "card-3 card-1";
     
@@ -1758,13 +1551,15 @@ body .add-to-cart-btn {
 .why-medico-section {
   position: relative;
   margin-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   background: rgba(246, 246, 246, 0.35);
 
   &::before {
     content: '';
     position: absolute;
     bottom: -50px;
-    left: -75px;
+    left: -50px;
     width: 200px;
     height: 200px;
     background: url(imgs/left-circle.png) no-repeat center;
@@ -1796,6 +1591,7 @@ body .add-to-cart-btn {
   &__text {
     max-width: 700px;
     line-height: 1.8;
+    font-size: 0.9rem;
   }
 
   &-card {
@@ -1820,7 +1616,7 @@ body .add-to-cart-btn {
 
     &__title {
       margin-bottom: 1.5rem;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
@@ -1831,3 +1627,26 @@ body .add-to-cart-btn {
   }
 }
 
+.gender-category-section {
+  .info-card {
+    height: 460px;
+
+    @media (max-width: 580px) {
+      height: 400px;
+    }
+  }
+}
+
+.category-cards-section {
+  .info-card {
+    height: 300px;
+
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+    }
+  }
+}

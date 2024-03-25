@@ -14,30 +14,16 @@ import { Modal } from 'bootstrap';
 import { assignProductColorsVariants, updateProductColorVariant } from './helpers/helpers'
 
 $(function () {
-    setTimeout(function () {
-        $('#preloader').addClass('hidden');
-        // $('body').removeClass('overflow-hidden');
+    // setTimeout(function () {
+    //     $('#preloader').addClass('hidden');
+    //     // $('body').removeClass('overflow-hidden');
         
-        reveal();
-        
-        if(window.innerWidth < 768) {
-            reveal('.card-controller');
-        }
-    }, 1000);
+    // }, 1000);
 
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
         new Modal(modalNode)
-    })
-
-    if($('#particles-js').length) {
-        particlesJS.load('particles-js', 'vendor/particles/particles.json');
-    }
-
-    if($('#particles-loader').length) {
-        particlesJS.load('particles-loader', 'vendor/particles/particles.json');
-    }
-    
+    }) 
 
     // navbar menu navigation
     $('#openMenu').on('click', function () {
@@ -45,7 +31,7 @@ $(function () {
         $('.navbar-menu__overlay').addClass('active');
     })
 
-    $('#closeMenu, .navbar-menu__overlay').on('click', function () {
+    $('#closeMenu').on('click', function () {
         $('#navbarMenu').removeClass('active');
         $('.navbar-menu__overlay').removeClass('active');
     })
@@ -87,13 +73,18 @@ $(function () {
     window.addEventListener("scroll", function () {
         reveal();
         makeNavbarFixed();
-
-        if(window.innerWidth < 768) {
-            reveal('.card-controller');
-        }
     });
 
     makeNavbarFixed();
+
+    // toggle navbar sub menus
+    $('.link-with-menu').on('mouseenter touchstart', function () {
+        $(this).addClass('active')
+    })
+
+    $('.link-with-menu').on('mouseleave touchend', function () {
+        $(this).removeClass('active')
+    })
 
     // assign colors variants to elements
     assignProductColorsVariants();
@@ -133,6 +124,8 @@ $(function () {
             // dots: true,
             infinite: true,
             speed: 300,
+            autoplay: true,
+            autoplaySpeed: 4000,
             slidesToShow: 4,
             slidesToScroll: 1,
             initialSlide,
@@ -381,14 +374,5 @@ $(function () {
     //     }, 1000);
     // });
 
-    // $(window).on('resize', function () {
-    //     if(window.innerWidth > 767) {
-    //         if($('.card-controller').length) {
-    //             $('.card-controller').removeClass('slide-up');
-    //         }
-    //     } else {
-    //         reveal('.card-controller');
-    //     }
-    // });
 });
 

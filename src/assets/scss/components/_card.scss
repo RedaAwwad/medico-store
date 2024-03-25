@@ -9,7 +9,7 @@
 
     &__top {
         position: relative;
-        height: 400px;
+        height: 350px;
         overflow: hidden;
         // padding-top: 1rem;
         // padding-bottom: 1rem;
@@ -19,6 +19,11 @@
         @media (max-width: 480px) {
             height: 320px;  
         }
+    }
+
+    &__heading {
+        align-items: flex-start;
+        margin-top: 1rem;
     }
 
     &__img {
@@ -61,7 +66,8 @@
     }
 
     &__title {
-        margin-bottom: 0;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
         
         a {
             font-size: 1rem;
@@ -225,7 +231,7 @@
     }
 
     &__text {
-        font-size: 0.9;
+        font-size: 0.9rem;
         line-height: 1.8;
     }
 }
