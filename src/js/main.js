@@ -78,11 +78,11 @@ $(function () {
     makeNavbarFixed();
 
     // toggle navbar sub menus
-    $('.link-with-menu').on('mouseenter touchstart', function () {
+    $('.link-with-menu').on('mouseenter', function () {
         $(this).addClass('active')
     })
 
-    $('.link-with-menu').on('mouseleave touchend', function () {
+    $('.link-with-menu').on('mouseleave', function () {
         $(this).removeClass('active')
     })
 
