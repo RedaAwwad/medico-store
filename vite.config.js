@@ -19,6 +19,7 @@ export default defineConfig({
       // external: ['jquery'],
       input: {
         main: resolve(__dirname, siteData.root, 'index.html'),
+        filter: resolve(__dirname, siteData.root, 'filter.html'),
       },
     },
   },

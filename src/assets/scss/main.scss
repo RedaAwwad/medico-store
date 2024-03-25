@@ -5,8 +5,8 @@
 @forward './components/card';
 
 @font-face {
-  font-family: 'Alexandria';
-  src: url(/fonts/Alexandria-VariableFont_wght.ttf);
+  font-family: 'Tajawal';
+  src: url(/fonts/Tajawal-Regular.ttf);
   font-weight: 400;
 }
 
@@ -21,10 +21,10 @@ html {
 }
 
 body {
-  font-family: 'Alexandria', 'Tahoma', sans-serif;
+  font-family: 'Tajawal', 'Tahoma', sans-serif;
 
   pre {
-    font-family: 'Alexandria', 'Tahoma', sans-serif !important;
+    font-family: 'Tajawal', 'Tahoma', sans-serif !important;
     line-height: 2;
   }
 
