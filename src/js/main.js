@@ -11,7 +11,12 @@ import 'swiper/css/pagination';
 // import * as bootstrap from 'bootstrap'
 import { Modal } from 'bootstrap';
 // import scrollIntoView from 'scroll-into-view';
-import { assignProductColorsVariants, updateProductColorVariant } from './helpers/helpers'
+import {
+    reveal,
+    makeNavbarFixed,
+    assignProductColorsVariants, 
+    updateProductColorVariant
+} from './helpers/helpers'
 
 $(function () {
     // setTimeout(function () {
@@ -40,35 +45,6 @@ $(function () {
         $('#navbarMenu').toggleClass('active');
         $('.navbar-menu__overlay').toggleClass('active');
     })
-
-    function reveal(elementClass = '.reveal') {
-        const reveals = document.querySelectorAll(elementClass);
-
-        for (let i = 0; i < reveals.length; i++) {
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 50;
-
-        if (elementTop < window.innerHeight - elementVisible) {
-            reveals[i].classList.add("slide-up");
-        }
-        }
-    }
-
-    function makeNavbarFixed () {
-        if (window.scrollY < 100) {
-            $('.navbar__inner').removeClass('navbar__inner--fixed');
-            $('.navbar__inner .logo').attr('src', $('.navbar__inner .logo').attr('data-logo-src'));
-            return;
-        }
-
-        if (window.scrollY < 100) {
-            $('.navbar__inner').removeClass('navbar__inner--fixed');
-            $('.navbar__inner .logo').attr('src', $('.navbar__inner .logo').attr('data-logo-src'));
-        } else {
-            $('.navbar__inner').addClass('navbar__inner--fixed');
-            $('.navbar__inner .logo').attr('src', $('.navbar__inner .logo').attr('data-colored-logo-src'));
-        }
-    }
 
     window.addEventListener("scroll", function () {
         reveal();
