@@ -28,6 +28,10 @@ export function makeNavbarFixed() {
 }
 
 export function assignProductColorsVariants() {
+    $('[data-var-color]').each((index, element) => {
+        $(element).css('--var-color', $(element).attr('data-var-color'));
+    })
+
     $('[data-color]').each((index, element) => {
         $(element).css('background-color', $(element).attr('data-color'));
     })

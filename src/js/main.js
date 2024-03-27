@@ -70,6 +70,18 @@ $(function () {
         updateProductColorVariant(this);
     })
 
+    // show filters
+    $('#btnFilters').on('click', function () {
+        $('#filterSidebar').addClass('show');
+        $('#filterSidebarOverlay').addClass('show');
+    })
+
+    $('#btnCloseFilters').on('click', function () {
+        $('#filterSidebar').removeClass('show');
+        $('#filterSidebarOverlay').removeClass('show');
+    })
+    
+
     // hero slider
     if($('.hero-slider').length) {
         $('.hero-slider').slick({
@@ -313,25 +325,25 @@ $(function () {
     //     }, 300);
     // });
 
-    $('.services-slider .service-card__content').each(function (index, item) {
-        $(this).css({ 
-            'bottom': `-${$(this).find('.service-card__footer').height()}px`,
-        })
-    });
+    // $('.services-slider .service-card__content').each(function (index, item) {
+    //     $(this).css({ 
+    //         'bottom': `-${$(this).find('.service-card__footer').height()}px`,
+    //     })
+    // });
 
 
-    $('.serviceCardBtn').on('click', function () {
-        $('.serviceCardBtn').removeClass('active');
-        $('.service-details-container').removeClass('active');
-        $(this).addClass('active');
-        $(`.service-details-container[data-index="${$(this).attr('data-target')}"]`).addClass('active');
-    });
+    // $('.serviceCardBtn').on('click', function () {
+    //     $('.serviceCardBtn').removeClass('active');
+    //     $('.service-details-container').removeClass('active');
+    //     $(this).addClass('active');
+    //     $(`.service-details-container[data-index="${$(this).attr('data-target')}"]`).addClass('active');
+    // });
 
    
-    $('.projects-grid__slider .btn').on('click', function () {
-        $('.projects-grid__slider .btn').removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('.projects-grid__slider .btn').on('click', function () {
+    //     $('.projects-grid__slider .btn').removeClass('active');
+    //     $(this).addClass('active');
+    // });
 
     // // click outside = close mobile menu
     // $(window).on('click', function() {

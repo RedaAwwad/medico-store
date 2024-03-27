@@ -3,6 +3,7 @@
 @forward './components/footer';
 @forward './components/btn';
 @forward './components/card';
+@forward './components/checkbox';
 
 @font-face {
   font-family: 'Tajawal';
@@ -1786,6 +1787,11 @@ body .add-to-cart-btn {
     }
   }
 
+  // &__filters-head {
+  //   position: sticky;
+  //   top: 150px;
+  // }
+
   &__body {
     display: flex;
     gap: 15px;
@@ -1794,9 +1800,58 @@ body .add-to-cart-btn {
     .filter {
 
       &-sidebar {
-        width: 700px;
+        position: sticky;
+        top: 0;
+        width: 350px;
         max-width: 100%;
-        border-left: 1px solid #ECECEC;
+        height: 100%;
+        background-color: $white;
+        border-left: 2px solid #ECECEC;
+        overflow-y: auto;
+
+        @media screen and (max-width: 991px) {
+          position: fixed;
+          top: 90px;
+          right: -100%;
+          height: calc(100vh - 90px);
+          z-index: 99;
+          padding-top: 1rem;
+          transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+          &__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 98;
+            background: var(--accentColor);
+            backdrop-filter: blur(8px);
+            visibility: hidden;
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+
+            &.show {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          
+          &.show {
+            right: 0;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          top: 145.5px;
+          height: calc(100vh - 145.5px);
+          padding-bottom: 80px;
+        }
+
+        @media screen and (max-width: 580px) {
+          top: 135.5px;
+          height: calc(100vh - 135.5px);
+        }
 
         .accordion-button::after {
           margin-left: 0;
@@ -1805,16 +1860,50 @@ body .add-to-cart-btn {
 
         .accordion-item {
           border: none;
+          margin-left: 1rem;
+          border-radius: 0;
+
+          &:not(:last-child) {
+            border-bottom: 2px solid#EEEEEE;
+          }
         }
 
         .accordion-button {
           font-weight: 600;
         }
+
+        .accordion-button:not(.collapsed) {
+          color: var(--bs-accordion-active-color);
+          background-color: transparent;
+          box-shadow: none;
+        }
+
+        .accordion-button:focus {
+          box-shadow: none;
+        }
+
+        .accordion-body {
+          // padding-right: 0;
+          padding-left: 0;
+        }
       }
 
       &-grid {
-        
+        width: calc(100% - 350px);
+
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
       }
+
+      &__color-list {
+        gap: 1rem;
+
+        li {
+          width: calc(50% - 0.5rem);
+        }
+      }
+      
     }
   }
 }
@@ -1838,4 +1927,89 @@ body .add-to-cart-btn {
     }
   }
 
+}
+
+.ui-slider.price-filter-range {
+  .ui-slider-handle {
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    border-radius: 50%;
+    border-color: #FF9838;
+    background-color: #FF9838;
+
+    &>span {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: #868686;
+
+      small {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .ui-widget-header {
+    border-color: #FF9838;
+    background: #FF9838;
+  }
+
+  &.ui-widget-content {
+    border-color: #E5E5E5;
+    background: #E5E5E5;
+  }
+
+  &.ui-slider-horizontal {
+    height: 7px;
+  }
+}
+
+.filter-sizes {
+  column-gap: 8px;
+  row-gap: 12px;
+
+  .btn {
+    position: relative;
+    padding: 3px 12px;
+    overflow: hidden;
+    background-color: rgba(239, 239, 239, 0.28);
+
+    input {
+      display: none;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .text {
+      position: relative;
+      z-index: 2;
+    }
+
+    input:checked + .bg {
+      background-color: var(--mainColor);
+
+      & + .text {
+        color: $white;
+      } 
+    }
+  }
 }
