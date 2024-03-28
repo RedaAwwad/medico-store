@@ -273,18 +273,18 @@
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
-                                <div class="accordion-body">
+                                <div class="accordion-body filter-category-container">
                                     <div id="jstree">
                                         <ul>
                                           <li data-jstree='{"opened":true,"selected":true}'>الصنف
                                             <ul>
-                                              <li>صنف فرعي 1
+                                              <li data-value="category 1">صنف فرعي 1
                                                 <ul>
-                                                    <li>صنف فرعي 1</li>
-                                                    <li><a href="#">صنف فرعي 2</a></li>
+                                                    <li data-value="category 2">صنف فرعي 1</li>
+                                                    <li data-value="category 3"><a href="#">صنف فرعي 2</a></li>
                                                   </ul>
                                               </li>
-                                              <li><a href="#">صنف فرعي 2</a></li>
+                                              <li><a href="#" data-value="category 4">صنف فرعي 2</a></li>
                                             </ul>
                                           </li>
                                           <li>الصنف
@@ -998,6 +998,20 @@
             "keep_selected_style" : false
         },
         "plugins" : [ "wholerow", "checkbox" ]
+    });
+    // .select_node('mn1');
+
+    $('#jstree').on("changed.jstree", function (e, data) {
+        var i, selectedLeafs = [];
+        for(i = 0; i < data.selected.length; i++) {
+            selectedLeafs.push(data.instance.get_node(data.selected[i]).text);
+        }
+        console.log(selectedLeafs);
+    });
+
+    $('#jstree').on("check_node.jstree", function (node, selected, event) {
+        // console.log(node);
+        console.log(selected);
     });
   </script>
 </body>
