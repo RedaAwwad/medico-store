@@ -19,7 +19,183 @@
             </div>
         </nav>
 
+        <!-- favorite empty -->
+        <!-- <div class="items-empty">
+            <div class="d-flex flex-column align-items-center gap-3">
+                <svg width="8rem" height="8rem" viewBox="0 0 156 156" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M108.223 6.00171C101.942 6.06632 95.4996 7.29287 89.1967 9.80876L88.9106 9.93018L88.6245 10.0776C84.6289 12.1124 80.9872 14.6578 77.7498 17.6743C60.3268 2.60507 32.5886 1.51137 13.6117 18.6195L13.4209 18.7929L13.2475 18.9751C-3.39981 36.3633 -3.00994 63.1422 6.96886 84.3012L7.05557 84.4661L7.14228 84.6395C18.8948 106.402 40.8404 124.894 60.8393 140.097L60.8913 140.14L60.9346 140.175C62.2212 141.118 64.4335 143.069 66.9876 144.988C69.5416 146.908 72.4267 149.011 76.6482 149.818L77.5934 150L78.5474 149.922C82.978 149.54 84.7161 147.904 87.627 146.072C90.5378 144.24 93.76 141.914 97.0708 139.368C103.597 134.351 110.35 128.568 114.796 124.444C114.854 124.391 114.948 124.314 115.005 124.262C115.014 124.254 115.021 124.244 115.031 124.236C124.397 116.243 133.676 107.029 141.541 96.1907C141.543 96.1874 141.547 96.1853 141.549 96.1821C141.564 96.1622 141.578 96.1414 141.593 96.1214C154.067 79.3263 160.118 56.693 152.901 34.3941L152.771 33.9951L152.598 33.6222C144.495 16.1041 127.066 5.80814 108.223 6.00171ZM108.449 19.7209C122.025 19.4086 133.925 26.6782 139.833 39.1114C145.291 56.518 140.573 74.253 130.406 87.9087L130.38 87.9435L130.354 87.9783C123.272 97.7517 114.695 106.307 105.804 113.873L105.691 113.977L105.578 114.081C101.575 117.808 94.798 123.613 88.6072 128.373C85.5116 130.752 82.544 132.879 80.2387 134.33C79.3718 134.876 78.5476 135.248 77.8711 135.536C77.1601 135.147 76.2578 134.6 75.3217 133.897C73.4367 132.48 71.4295 130.671 69.2425 129.058C69.2084 129.032 69.1726 129.006 69.1385 128.979C49.7303 114.217 29.287 96.2928 19.4565 78.2222C11.4757 61.1723 11.824 40.765 23.0987 28.7743C38.4291 15.1436 61.2047 18.1069 72.5637 32.0957L78.0965 38.9033L83.4472 31.957C86.5259 27.963 90.1998 24.9097 94.6601 22.5913C99.3353 20.7649 103.98 19.8236 108.449 19.7209Z" fill="#00A9A7"/>
+                </svg>
+                <h2 class="items-empty__heading">لا توجد منتجات في المفضلة</h2>
+            </div>
+        </div> -->
+
+        <div class="py-5">
+            <div class="filter-page__filters-head d-flex align-items-center justify-content-between flex-column gap-3 flex-md-row font-bold">
+                <div class="d-flex align-items-center gap-2">
+                    لديك <span class="text-primary">4</span> منتجات في المفضلة
+                    </span>
+                </div>
         
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" id="addAllProductsToCart" class="btn btn-main btn-main--primary">
+                        اضافة المنتجات الى السلة
+                    </button>
+                    <button type="button" id="removeAllProductsFromFavorite" class="btn btn-main btn-main--outline">
+                        حذف كل المنتجات
+                    </button>
+                </div>
+            </div>
+            <div class="py-2">
+                <hr>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table orders-table orders-table--solid">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <div class="orders-table__order-meta">
+                                       <div class="order__img">
+                                        <img src="imgs/p.png" alt="">
+                                       </div>
+                                       <div class="order__body">
+                                            <h2 class="order__name">اسم المنتج</h2>
+                                            <div class="order__type">
+                                                <small>نوع المنتج</small>
+                                            </div>
+                                            <div class="order__size">
+                                                <span>المقاس:</span>
+                                                <span>L</span>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">متوفر</div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <div class="d-flex align-items-center product-counter">
+                                        <button class="btn btn-increase">+</button>
+                                        <span>1</span>
+                                        <input type="hidden" value="1" name="qty">
+                                        <button class="btn btn-decrease">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">$15.00</div>
+                            </td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button type="button" data-product-id="1" class="btn py-2 px-3 text-danger font-bold btn--remove-from-favorite">
+                                        ازالة
+                                    </button>
+                                    <button type="button" data-product-id="1" class="btn btn-main btn-main--primary btn--add-to-cart">
+                                        اضافة الى العربة
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <div class="orders-table__order-meta">
+                                       <div class="order__img">
+                                        <img src="imgs/p.png" alt="">
+                                       </div>
+                                       <div class="order__body">
+                                            <h2 class="order__name">اسم المنتج</h2>
+                                            <div class="order__type">
+                                                <small>نوع المنتج</small>
+                                            </div>
+                                            <div class="order__size">
+                                                <span>المقاس:</span>
+                                                <span>L</span>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">متوفر</div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <div class="d-flex align-items-center product-counter">
+                                        <button class="btn btn-increase">+</button>
+                                        <span>1</span>
+                                        <input type="hidden" value="1" name="qty">
+                                        <button class="btn btn-decrease">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">$15.00</div>
+                            </td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button type="button" data-product-id="1" class="btn py-2 px-3 text-danger font-bold btn--remove-from-favorite">
+                                        ازالة
+                                    </button>
+                                    <button type="button" data-product-id="1" class="btn btn-main btn-main--primary btn--add-to-cart">
+                                        اضافة الى العربة
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <div class="orders-table__order-meta">
+                                       <div class="order__img">
+                                        <img src="imgs/p.png" alt="">
+                                       </div>
+                                       <div class="order__body">
+                                            <h2 class="order__name">اسم المنتج</h2>
+                                            <div class="order__type">
+                                                <small>نوع المنتج</small>
+                                            </div>
+                                            <div class="order__size">
+                                                <span>المقاس:</span>
+                                                <span>L</span>
+                                            </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">متوفر</div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <div class="d-flex align-items-center product-counter">
+                                        <button class="btn btn-increase">+</button>
+                                        <span>1</span>
+                                        <input type="hidden" value="1" name="qty">
+                                        <button class="btn btn-decrease">-</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">$15.00</div>
+                            </td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button type="button" data-product-id="1" class="btn py-2 px-3 text-danger font-bold btn--remove-from-favorite">
+                                        ازالة
+                                    </button>
+                                    <button type="button" data-product-id="1" class="btn btn-main btn-main--primary btn--add-to-cart">
+                                        اضافة الى العربة
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
   </main>

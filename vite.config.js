@@ -28,6 +28,8 @@ export default defineConfig({
         cart: resolve(__dirname, siteData.root, 'cart.html'),
         favorite: resolve(__dirname, siteData.root, 'favorite.html'),
         orders: resolve(__dirname, siteData.root, 'orders.html'),
+        orderDetails: resolve(__dirname, siteData.root, 'order-details.html'),
+        
        
       },
     },

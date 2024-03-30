@@ -2,7 +2,7 @@
 
 body .btn-main {
     display: inline-flex;
-    padding: 10px 40px;
+    padding: 10px 35px;
     border-radius: 10px;
     font-size: 0.8rem;
     font-style: normal;
@@ -10,6 +10,11 @@ body .btn-main {
     line-height: 19.2px;
     border: 1px solid transparent;
     transition: 300ms ease-in-out;
+    text-wrap: nowrap;
+
+    @media (max-width: 480px) {
+        padding: 8px 20px;
+    }
 
     &--primary {
         border-color: var(--mainColor);
