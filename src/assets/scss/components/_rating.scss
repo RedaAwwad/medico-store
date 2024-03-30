@@ -1,0 +1,60 @@
+
+.rating-field {
+    .star-cb-group {
+      display: flex;
+  
+      & > input {
+        display: none;
+        & + label {
+          display: inline-block;
+          overflow: hidden;
+          text-indent: 9999px;
+          width: 25px;
+          white-space: nowrap;
+          cursor: pointer;
+          &:before {
+            display: inline-block;
+            text-indent: -9999px;
+            content: '\2606';
+            color: #888;
+            font-size: 2rem;
+          }
+        }
+        &:checked ~ label:before,
+          & + label:hover ~ label:before,
+          & + label:hover:before {
+          content: '\2605';
+          color: #F98921;
+          text-shadow: 0 0 1px #333;
+          font-size: 2rem;
+        }
+      }
+  
+      & > .star-cb-clear + label {
+        text-indent: -9999px;
+        width: 25px;
+      }
+      & > .star-cb-clear + label:before {
+        width: 25px;
+      }
+  
+      &:hover > input + label:before {
+        content: '\2606';
+        color: #888;
+        text-shadow: none;
+        font-size: 2rem;
+      }
+      &:hover > input + label:hover ~ label:before,
+      &:hover > input + label:hover:before {
+        content: '\2605';
+        color: #e52;
+        text-shadow: 0 0 1px #333;
+        font-size: 2rem;
+      }
+    }
+  
+    fieldset {
+      border: 0;
+    }
+  }
+  

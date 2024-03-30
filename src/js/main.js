@@ -28,7 +28,23 @@ $(function () {
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
         new Modal(modalNode)
-    }) 
+    })
+
+    // show tatris modal
+    if($('#tatrizProductModal').length) {
+        const tatrizModal = new Modal(document.getElementById('tatrizProductModal'));
+
+        $('#embroidery').on('change', () => {
+            if($('#embroidery').is(':checked')) {
+                tatrizModal.show();
+            }
+        })
+
+        // document.getElementById('tatrizProductModal')
+        // .addEventListener('hidden.bs.modal', function () {
+        //     $('#embroidery').click();
+        // })
+    }
 
     // navbar menu navigation
     $('#openMenu').on('click', function () {
@@ -80,7 +96,26 @@ $(function () {
         $('#filterSidebar').removeClass('show');
         $('#filterSidebarOverlay').removeClass('show');
     })
+
+    // product quantity counter
+    $('.product-counter .btn-increase').on('click', function () {
+        let quantity = $(this).parent().find('input').val();
+        quantity++;
+
+        $(this).parent().find('input').val(quantity);
+        $(this).parent().find('span').text(quantity);
+    })
+
+    $('.product-counter .btn-decrease').on('click', function () {
+        let quantity = $(this).parent().find('input').val();
+        if(quantity > 1) {
+            quantity--;
     
+            $(this).parent().find('input').val(quantity);
+            $(this).parent().find('span').text(quantity);
+        }
+    })
+
 
     // hero slider
     if($('.hero-slider').length) {

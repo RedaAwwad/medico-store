@@ -6,13 +6,20 @@ body .btn-main {
     border-radius: 10px;
     font-size: 0.8rem;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 19.2px;
+    border: 1px solid transparent;
     transition: 300ms ease-in-out;
 
     &--primary {
+        border-color: var(--mainColor);
         background-color: var(--mainColor);
         color: $white;
+    }
+
+    &--outline {
+        border-color: #333;
+        color: #333;
     }
 
     &--solid {

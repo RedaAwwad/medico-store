@@ -1,0 +1,1263 @@
+{{> _head }}
+
+<!-- <link rel="stylesheet" href="/vendor/jquery/jquery-ui.min.css"> -->
+<link rel="stylesheet" href="vendor/slick/slick.min.css">
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
+</head>
+<body class="medico-page navbar-padding-top">
+  {{> _navbar }}
+
+  <main class="product-page overflow-hidden">
+    <div class="container-xl">
+        <nav class="pt-5 pb-4">
+            <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
+                    <li class="breadcrumb-item"><a href="#">اسم القسم</a></li>
+                    <li class="breadcrumb-item active text-primary" aria-current="page">
+                        المنتج
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="product-page__product-meta">
+            <div class="row">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4 pb-2"
+                    style="max-width: 600px;">
+                        <div>
+                            <h1 class="product-page__product-name">
+                                اسم المنتج
+                            </h1>
+                            <small dir="ltr">
+                                <span> Sku No. 234</span>
+                            </small>
+                        </div>
+                        <div>
+                            <small>السعر</small>
+                            <h2 class="product-page__product-price">
+                                <span>25.00</span>
+                                <span>د.ع</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="product-page__heading">التقييمات</h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center gap-1">
+                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                              </svg>
+                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                              </svg>
+                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                              </svg>
+                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                              </svg>
+                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                              </svg>
+                            </div>
+                            <small class="text-gray">(35)</small>
+                        </div>
+                    </div>
+                    <div class="mb-4" style="max-width: 400px;">
+                        <h2 class="product-page__heading">اللون</h2>
+                        <div class="product-card__variants product-colors-variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                        </div>
+                    </div>
+                    <div class="mb-4" style="max-width: 400px;">
+                        <h2 class="product-page__heading">المقاسات</h2>
+                        <div class="filter-sizes d-flex align-items-center flex-wrap">
+                            <label class="btn">
+                                <input type="radio" value="xxs" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>XXS</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="xs" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>XS</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="s" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>S</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="m" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>M</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="l" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>L</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="xl" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>XL</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                            <label class="btn">
+                                <input type="radio" value="xxl" name="sizes[]">
+                                <span class="bg"></span>
+                                <span class="text">
+                                    <span>XXL</span>
+                                    (<small>25</small>)
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="product-page__heading">الكمية</h2>
+                        <div class="d-flex align-items-center product-counter">
+                            <button class="btn btn-increase">+</button>
+                            <span>1</span>
+                            <input type="hidden" value="1" name="qty">
+                            <button class="btn btn-decrease">-</button>
+                        </div>
+    
+                        <div class="py-5">
+                            <div class="add-embroidery">
+                                <div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="embroidery">
+                                        <label for="embroidery" aria-label="add embroidery"></label>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <h2>اضافة تطريز</h2>
+                                    <p class="mb-0">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثالد</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex gap-3 mb-4">
+                            <button type="button" class="btn btn-main btn-main--primary">
+                                اضافة الى العربة
+                            </button>
+                            <button type="button" class="btn btn-main px-2">
+                                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.4951 15.8562C15.7327 18.2276 12.9069 19.7723 12.5 19.9882C12.0931 19.7723 9.26728 18.2276 6.50488 15.8562C3.57328 13.3396 1.0003 10.1359 1 6.78343C1.00191 5.25666 1.62131 3.78882 2.72901 2.70302C3.8374 1.61654 5.3443 1.00188 6.92021 1C8.94028 1.00016 10.6534 1.84727 11.7061 3.22167L12.5 4.25809L13.2939 3.22167C14.3466 1.84727 16.0597 1.00016 18.0798 1C19.6557 1.00188 21.1626 1.61654 22.271 2.70302C23.3788 3.78896 23.9982 5.25703 24 6.784C23.9994 10.1363 21.4266 13.3397 18.4951 15.8562Z" fill="white" stroke="#00A9A7" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h2 class="product-page__heading">الوصف</h2>
+                        <p>
+                            وصف المنتج وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج وصف ا
+                        </p>
+                    </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <button type="button" class="btn btn-main btn-main--primary">
+                            اوجد قياسك
+                        </button>
+                        <button type="button" class="btn btn-main btn-main--primary">
+                            اكمل التنسيق الخاص بك
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0">
+                    <div class="d-flex justify-content-center gap-2 mb-3">
+                        <span>مثال نوع المنتج</span>
+                        <span>-</span>
+                        <span>مثال كود المنتج</span>
+                    </div>
+                    <div class="product-page__product-viewer">
+                        <div>
+                            <div class="viewer-item">
+                                <img src="imgs/p--1.png" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="viewer-item">
+                                <img src="imgs/p--2.png" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="viewer-item">
+                                <img src="imgs/p--3.png" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="viewer-item">
+                                <img src="imgs/p--3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <div class="mb-4 pb-1">
+                <h2 class="page-section-title">
+                    اكمل التنسيق الخاص بك
+                </h2>
+            </div>
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="product-card">
+                          <div class="product-card__top">
+                            <a href="#" class="inline-block">
+                              <img class="product-card__img" loading="lazy" src="imgs/p--01.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                              <div class="product-card__discount">
+                                -30%
+                              </div>
+                              <button type="button" class="btn product-card__fav-btn p-1 active">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                              <h2 class="product-card__title">
+                                <a href="#" class="inline-block">
+                                  اسم المنتج
+                                </a>
+                              </h2>
+                              <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <small class="text-gray">(35)</small>
+                              <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                              <span>15.00</span>
+                              <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                              <span>25.00</span>
+                              <small>د.ع</small>
+                            </div>
+                          </div>
+                          <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="product-card">
+                            <div class="product-card__top">
+                            <a href="#" class="inline-block">
+                                <img class="product-card__img" loading="lazy" src="imgs/p--02.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                                <div class="product-card__discount">
+                                -30%
+                                </div>
+                                <button class="btn product-card__fav-btn p-1">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                                <h2 class="product-card__title">
+                                <a href="#" class="inline-block">
+                                    اسم المنتج
+                                </a>
+                                </h2>
+                                <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <small class="text-gray">(35)</small>
+                                <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                                <span>15.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                                <span>25.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            </div>
+                            <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p2.png"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="product-card">
+                            <div class="product-card__top">
+                            <a href="#" class="inline-block">
+                                <img class="product-card__img" loading="lazy" src="imgs/p--01.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                                <div class="product-card__discount">
+                                -30%
+                                </div>
+                                <button class="btn product-card__fav-btn p-1">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                                <h2 class="product-card__title">
+                                <a href="#" class="inline-block">
+                                    اسم المنتج
+                                </a>
+                                </h2>
+                                <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <small class="text-gray">(35)</small>
+                                <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                                <span>15.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                                <span>25.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            </div>
+                            <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#72283f" data-src="imgs/products/p3.png"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                        <div class="product-card">
+                            <div class="product-card__top">
+                            <a href="#" class="inline-block">
+                                <img class="product-card__img" loading="lazy" src="imgs/p--02.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                                <div class="product-card__discount">
+                                -30%
+                                </div>
+                                <button class="btn product-card__fav-btn p-1">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                                <h2 class="product-card__title">
+                                <a href="#" class="inline-block">
+                                    اسم المنتج
+                                </a>
+                                </h2>
+                                <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <small class="text-gray">(35)</small>
+                                <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                                <span>15.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                                <span>25.00</span>
+                                <small>د.ع</small>
+                            </div>
+                            </div>
+                            <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#0e4a7e" data-src="imgs/products/p4.png"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-4">
+            <hr>
+        </div>
+
+        <!-- similar products -->
+
+        <div class="mb-4">
+            <div class="mb-4 pb-1">
+                <h2 class="page-section-title">
+                    منتجات مشابهة
+                </h2>
+            </div>
+            <div class="by-category-name__slider" style="transform: none;">
+                <div>
+                  <div class="product-card">
+                    <div class="product-card__top">
+                      <a href="#" class="inline-block">
+                        <img class="product-card__img" data-lazy="imgs/products/p1.jfif" alt="">
+                      </a>
+                      <div class="product-card__info d-flex align-items-center justify-content-between">
+                        <div class="product-card__discount">
+                          -30%
+                        </div>
+                        <button type="button" class="btn product-card__fav-btn p-1 active">
+                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__heading d-flex justify-content-between mb-2">
+                      <div>
+                        <h2 class="product-card__title">
+                          <a href="#" class="inline-block">
+                            اسم المنتج
+                          </a>
+                        </h2>
+                        <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <small class="text-gray">(35)</small>
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="d-flex align-items-center gap-1">
+                        <span>15.00</span>
+                        <small>د.ع</small>
+                      </div>
+                      <div class="product-card__before-price d-flex align-items-center text-gray">
+                        <span>25.00</span>
+                        <small>د.ع</small>
+                      </div>
+                    </div>
+                    <div class="product-card__variants">
+                      <button type="button" class="btn p-1" 
+                      data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="product-card">
+                    <div class="product-card__top">
+                      <a href="#" class="inline-block">
+                        <img class="product-card__img" data-lazy="imgs/products/p2.png" alt="">
+                      </a>
+                      <div class="product-card__info d-flex align-items-center justify-content-between">
+                        <div class="product-card__discount">
+                          -30%
+                        </div>
+                        <button class="btn product-card__fav-btn p-1">
+                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__heading d-flex justify-content-between mb-2">
+                      <div>
+                        <h2 class="product-card__title">
+                          <a href="#" class="inline-block">
+                            اسم المنتج
+                          </a>
+                        </h2>
+                        <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <small class="text-gray">(35)</small>
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="d-flex align-items-center gap-1">
+                        <span>15.00</span>
+                        <small>د.ع</small>
+                      </div>
+                      <div class="product-card__before-price d-flex align-items-center text-gray">
+                        <span>25.00</span>
+                        <small>د.ع</small>
+                      </div>
+                    </div>
+                    <div class="product-card__variants">
+                      <button type="button" class="btn p-1" 
+                      data-color="#D9D9D9" data-src="imgs/products/p2.png"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="product-card">
+                    <div class="product-card__top">
+                      <a href="#" class="inline-block">
+                        <img class="product-card__img" data-lazy="imgs/products/p3.png" alt="">
+                      </a>
+                      <div class="product-card__info d-flex align-items-center justify-content-between">
+                        <div class="product-card__discount">
+                          -30%
+                        </div>
+                        <button class="btn product-card__fav-btn p-1">
+                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__heading d-flex justify-content-between mb-2">
+                      <div>
+                        <h2 class="product-card__title">
+                          <a href="#" class="inline-block">
+                            اسم المنتج
+                          </a>
+                        </h2>
+                        <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <small class="text-gray">(35)</small>
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="d-flex align-items-center gap-1">
+                        <span>15.00</span>
+                        <small>د.ع</small>
+                      </div>
+                      <div class="product-card__before-price d-flex align-items-center text-gray">
+                        <span>25.00</span>
+                        <small>د.ع</small>
+                      </div>
+                    </div>
+                    <div class="product-card__variants">
+                      <button type="button" class="btn p-1" 
+                      data-color="#72283f" data-src="imgs/products/p3.png"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="product-card">
+                    <div class="product-card__top">
+                      <a href="#" class="inline-block">
+                        <img class="product-card__img" data-lazy="imgs/products/p4.png" alt="">
+                      </a>
+                      <div class="product-card__info d-flex align-items-center justify-content-between">
+                        <div class="product-card__discount">
+                          -30%
+                        </div>
+                        <button class="btn product-card__fav-btn p-1">
+                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__heading d-flex justify-content-between mb-2">
+                      <div>
+                        <h2 class="product-card__title">
+                          <a href="#" class="inline-block">
+                            اسم المنتج
+                          </a>
+                        </h2>
+                        <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <small class="text-gray">(35)</small>
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="d-flex align-items-center gap-1">
+                        <span>15.00</span>
+                        <small>د.ع</small>
+                      </div>
+                      <div class="product-card__before-price d-flex align-items-center text-gray">
+                        <span>25.00</span>
+                        <small>د.ع</small>
+                      </div>
+                    </div>
+                    <div class="product-card__variants">
+                      <button type="button" class="btn p-1" 
+                      data-color="#0e4a7e" data-src="imgs/products/p4.png"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="product-card">
+                    <div class="product-card__top">
+                      <a href="#" class="inline-block">
+                        <img class="product-card__img" data-lazy="imgs/products/p5.png" alt="">
+                      </a>
+                      <div class="product-card__info d-flex align-items-center justify-content-between">
+                        <div class="product-card__discount">
+                          -30%
+                        </div>
+                        <button class="btn product-card__fav-btn p-1">
+                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="product-card__heading d-flex justify-content-between mb-2">
+                      <div>
+                        <h2 class="product-card__title">
+                          <a href="#" class="inline-block">
+                            اسم المنتج
+                          </a>
+                        </h2>
+                        <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <small class="text-gray">(35)</small>
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-2">
+                      <div class="d-flex align-items-center gap-1">
+                        <span>15.00</span>
+                        <small>د.ع</small>
+                      </div>
+                      <div class="product-card__before-price d-flex align-items-center text-gray">
+                        <span>25.00</span>
+                        <small>د.ع</small>
+                      </div>
+                    </div>
+                    <div class="product-card__variants">
+                      <button type="button" class="btn p-1" 
+                      data-color="#1a8372" data-src="imgs/products/p5.png"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                      <button type="button" class="btn p-1" 
+                      data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-4">
+            <hr>
+        </div>
+
+        <!-- reviews -->
+
+        <div class="review-list mb-5">
+            <div class="mb-4 pb-1">
+                <h2 class="page-section-title">
+                    <span>الآراء و التعليقات</span>
+                    (<small>12</small>)
+                </h2>
+            </div>
+            <ul class="list-unstyled m-0 p-0">
+                <li>
+                    <div class="d-flex">
+                        <div class="left">
+                            <span>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="profile-pict-img img-fluid" alt="" />
+                            </span>
+                        </div>
+                        <div class="right">
+                            <h3 class="author-name">
+                                محمد ابراهيم
+                            </h3>
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                </svg>
+                              </div>
+                            <p class="publish">
+                                12/6/2023
+                            </p>
+                            <div class="review-description">
+                                <p>
+                                    مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق ليق مثال لتعليق 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--  -->
+                <li>
+                    <div class="d-flex">
+                        <div class="left">
+                            <span>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="profile-pict-img img-fluid" alt="" />
+                            </span>
+                        </div>
+                        <div class="right">
+                            <h3 class="author-name">
+                                محمد ابراهيم
+                            </h3>
+                            <div class="d-flex align-items-center gap-1 mb-2">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                </svg>
+                              </div>
+                            <p class="publish">
+                                12/6/2023
+                            </p>
+                            <div class="review-description">
+                                <p>
+                                    مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق ليق مثال لتعليق 
+                                </p>
+                            </div>
+                            
+                            <div class="response-item mt-4 d-flex">
+                                <div class="left">
+                                    <span>
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="profile-pict-img img-fluid" alt="" />
+                                    </span>
+                                </div>
+                                <div class="right">
+                                    <h4 class="reply-author-name">
+                                        محمد ابراهيم
+                                    </h4>
+                                    <p class="publish">
+                                        12/6/2023
+                                    </p>
+                                    <div class="review-description">
+                                        <p>
+                                            مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="response-item mt-4 d-flex">
+                                <div class="left">
+                                    <span>
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="profile-pict-img img-fluid" alt="" />
+                                    </span>
+                                </div>
+                                <div class="right">
+                                    <h4 class="reply-author-name">
+                                        محمد ابراهيم
+                                    </h4>
+                                    <p class="publish">
+                                        12/6/2023
+                                    </p>
+                                    <div class="review-description">
+                                        <p>
+                                            مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق مثال لتعليق 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center mb-4">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#reviewProductModal" class="btn btn-main btn-main--primary">
+                    إضافة تعليق
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+  </main>
+
+  <!-- tatriz -->
+  <div class="modal fade tatriz-modal" id="tatrizProductModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content overflow-hidden">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title">
+            التطريز
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body p-0">
+          <div class="row">
+            <div class="col-6">
+              <div class="py-5 h-100 tatriz-modal__right">
+
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="py-5 h-100 tatriz-modal__left">
+                <h2 class="mb-3 tatriz-modal__heading">التطريز</h2>
+                <p class="mb-4">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</p>
+                <div dir="ltr" class="d-flex align-items-start mb-4">
+                  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                      <div class="d-flex flex-column align-items-center nav-link__item-head">
+                        <span class="icon">
+                          <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.2" d="M20.5786 10.6582C20.5786 12.0785 19.2622 13.2305 17.6388 13.2305C16.0155 13.2305 14.699 12.0785 14.699 10.6582C14.699 9.23791 16.0155 8.08587 17.6388 8.08587C19.2622 8.08587 20.5786 9.23791 20.5786 10.6582ZM2.46387 9.55578H10.7652L6.61452 0.736328L2.46387 9.55578Z" fill="#232323"/>
+                            <path d="M7.27979 0.422296C7.22043 0.296033 7.12637 0.189272 7.00859 0.114492C6.8908 0.039711 6.75417 0 6.61465 0C6.47514 0 6.3385 0.039711 6.22072 0.114492C6.10294 0.189272 6.00887 0.296033 5.94952 0.422296L0.0698875 12.9165C0.028808 13.0039 0.00533499 13.0984 0.000808633 13.1949C-0.00371773 13.2913 0.0107912 13.3876 0.043507 13.4785C0.10958 13.6619 0.245802 13.8115 0.422206 13.8945C0.59861 13.9774 0.800747 13.9869 0.984148 13.9208C1.16755 13.8548 1.31719 13.7185 1.40015 13.5421L2.9307 10.29H10.2986L11.8292 13.5421C11.8702 13.6295 11.9281 13.7079 11.9995 13.7729C12.0709 13.8378 12.1543 13.8881 12.2452 13.9208C12.336 13.9536 12.4323 13.9681 12.5288 13.9635C12.6252 13.959 12.7198 13.9355 12.8071 13.8945C12.8944 13.8534 12.9728 13.7955 13.0378 13.7241C13.1028 13.6527 13.1531 13.5693 13.1858 13.4785C13.2185 13.3876 13.233 13.2913 13.2285 13.1949C13.224 13.0984 13.2005 13.0039 13.1594 12.9165L7.27979 0.422296ZM3.62247 8.82006L6.61465 2.46179L9.60683 8.82006H3.62247ZM17.639 4.41034C16.4667 4.41034 15.5508 4.72913 14.9169 5.35843C14.7842 5.49678 14.7108 5.68151 14.7123 5.87322C14.7139 6.06492 14.7903 6.24843 14.9253 6.38459C15.0602 6.52075 15.2431 6.59878 15.4347 6.60205C15.6264 6.60531 15.8118 6.53355 15.9513 6.40206C16.3004 6.05572 16.87 5.88025 17.639 5.88025C18.8544 5.88025 19.8438 6.70707 19.8438 7.71763V8.01345C19.1916 7.5771 18.4237 7.34607 17.639 7.35016C15.6123 7.35016 13.9642 8.83384 13.9642 10.6574C13.9642 12.4811 15.6123 13.9647 17.639 13.9647C18.424 13.9682 19.192 13.7362 19.8438 13.2987C19.853 13.4936 19.9392 13.6769 20.0834 13.8083C20.2277 13.9397 20.4183 14.0083 20.6132 13.9992C20.8082 13.9901 20.9915 13.9039 21.1228 13.7596C21.2542 13.6153 21.3229 13.4247 21.3137 13.2298V7.71763C21.3137 5.89403 19.6656 4.41034 17.639 4.41034ZM17.639 12.4948C16.4235 12.4948 15.4341 11.668 15.4341 10.6574C15.4341 9.64689 16.4235 8.82006 17.639 8.82006C18.8544 8.82006 19.8438 9.64689 19.8438 10.6574C19.8438 11.668 18.8544 12.4948 17.639 12.4948Z" fill="#232323"/>
+                          </svg>
+                        </span>
+                        <span>اضافة نص</span>
+                      </div>
+                    </button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                      <div class="d-flex flex-column align-items-center nav-link__item-head">
+                        <span class="icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.2957 19.6023L7.6597 13.2383M15.6737 10.4083L13.7687 16.1243C13.7382 16.2157 13.686 16.2984 13.6168 16.3655C13.5475 16.4325 13.4631 16.4818 13.3707 16.5093L1.6927 19.9813C1.58749 20.0126 1.47572 20.0143 1.36957 19.9865C1.26341 19.9586 1.16693 19.9022 1.09062 19.8233C1.01432 19.7444 0.961109 19.6461 0.93679 19.5391C0.912471 19.4321 0.917973 19.3204 0.952696 19.2163L4.7447 7.8423C4.77187 7.76064 4.8163 7.68577 4.87497 7.62279C4.93363 7.55982 5.00516 7.5102 5.0847 7.4773L10.4717 5.2593C10.5812 5.21407 10.7017 5.20228 10.8179 5.22542C10.9341 5.24855 11.0409 5.30558 11.1247 5.3893L15.5287 9.7943C15.6075 9.87309 15.6628 9.97226 15.6884 10.0807C15.714 10.1892 15.7089 10.3026 15.6737 10.4083Z" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.4024 2.18206L18.7664 4.54606C18.9441 4.71602 19.086 4.91975 19.1838 5.1453C19.2817 5.37085 19.3335 5.61367 19.3362 5.85951C19.3389 6.10535 19.2925 6.34926 19.1997 6.57692C19.1068 6.80457 18.9695 7.01139 18.7956 7.18524C18.6218 7.35909 18.4149 7.49646 18.1873 7.58928C17.9596 7.68211 17.7157 7.72853 17.4699 7.72581C17.224 7.72309 16.9812 7.67129 16.7557 7.57345C16.5301 7.47562 16.3264 7.33371 16.1564 7.15606L13.7914 4.79206C13.4579 4.44341 13.2741 3.978 13.2794 3.49551C13.2847 3.01302 13.4788 2.5518 13.82 2.2106C14.1612 1.86941 14.6224 1.67537 15.1049 1.67003C15.5874 1.6647 16.0538 1.84849 16.4024 2.18206Z" fill="#232323" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.78108 11.1161C9.64271 10.9729 9.47719 10.8586 9.29419 10.78C9.11118 10.7014 8.91435 10.66 8.71518 10.6583C8.51601 10.6565 8.31849 10.6945 8.13415 10.7699C7.94981 10.8453 7.78233 10.9567 7.64149 11.0975C7.50065 11.2384 7.38927 11.4059 7.31385 11.5902C7.23843 11.7745 7.20047 11.9721 7.20221 12.1712C7.20394 12.3704 7.24531 12.5672 7.32393 12.7502C7.40254 12.9332 7.51682 13.0988 7.66008 13.2371C7.94298 13.5104 8.32189 13.6616 8.71518 13.6581C9.10848 13.6547 9.4847 13.497 9.76281 13.2189C10.0409 12.9408 10.1987 12.5645 10.2021 12.1712C10.2055 11.7779 10.0543 11.399 9.78108 11.1161Z" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                        <span>
+                          اضافة تصميم
+                        </span>
+                      </div>
+                    </button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                      <div class="d-flex flex-column align-items-center nav-link__item-head">
+                        <span class="icon">
+                          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10.536L15.584 6.096C15.2613 5.77454 14.8697 5.53077 14.4389 5.38316C14.008 5.23556 13.5492 5.188 13.0972 5.24409C12.6452 5.30018 12.2119 5.45844 11.8302 5.70689C11.4484 5.95533 11.1283 6.28743 10.894 6.678L5.072 16H3C2.20435 16 1.44129 15.6839 0.87868 15.1213C0.31607 14.5587 0 13.7956 0 13L0 3C0 2.20435 0.31607 1.44129 0.87868 0.87868C1.44129 0.31607 2.20435 0 3 0L17 0C17.7956 0 18.5587 0.31607 19.1213 0.87868C19.6839 1.44129 20 2.20435 20 3V10.536ZM19.989 13.26C19.9239 14.0079 19.5809 14.7042 19.0275 15.2114C18.4741 15.7187 17.7507 16.0001 17 16H7.64L12.609 7.707C12.687 7.5768 12.7937 7.46606 12.9208 7.38319C13.048 7.30032 13.1924 7.24748 13.343 7.22869C13.4936 7.2099 13.6465 7.22564 13.7902 7.27473C13.9338 7.32382 14.0644 7.40496 14.172 7.512L19.989 13.26ZM6 9C6.79565 9 7.55871 8.68393 8.12132 8.12132C8.68393 7.55871 9 6.79565 9 6C9 5.20435 8.68393 4.44129 8.12132 3.87868C7.55871 3.31607 6.79565 3 6 3C5.20435 3 4.44129 3.31607 3.87868 3.87868C3.31607 4.44129 3 5.20435 3 6C3 6.79565 3.31607 7.55871 3.87868 8.12132C4.44129 8.68393 5.20435 9 6 9Z" fill="#232323"/>
+                            </svg>
+                        </span>
+                          <span>اضافة شعار</span>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="tab-content w-100" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                      <div class="mb-3">
+                        <label for="textValue">النص</label>
+                        <input type="text" class="form-control" id="textValue">
+                      </div>
+                      <div class="mb-3">
+                        <label for="fontFamily">الخط</label>
+                        <select class="form-control" id="fontFamily">
+                          <option value="">Arial</option>
+                          <option value="">Tahoma</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="fontSize">حجم الخط</label>
+                        <select class="form-control" id="fontSize">
+                          <option value="">صغير</option>
+                          <option selected value="">معياري</option>
+                          <option value="">متوسط</option>
+                          <option value="">كبير</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="mb-2" for="fontSize">مكان النص</label>
+                        <div class="filter-sizes" style="gap: 0;">
+                          <div class="row">
+                            <div class="col-4 px-1">
+                              <label class="btn h-100 w-100">
+                                <input type="radio" value="xxs" name="textPlace">
+                                <span class="bg"></span>
+                                <span class="text">
+                                  الكم العلوي الأيسر
+                                </span>
+                              </label>
+                            </div>
+                            <div class="col-4 px-1">
+                              <label class="btn h-100 w-100">
+                                <input type="radio" value="xxs" name="textPlace">
+                                <span class="bg"></span>
+                                <span class="text">
+                                  الصدر الأيمن
+                                </span>
+                              </label>
+                            </div>
+                            <div class="col-4 px-1">
+                              <label class="btn h-100 w-100">
+                                <input type="radio" value="xxs" name="textPlace">
+                                <span class="bg"></span>
+                                <span class="text">
+                                  الكم العلوي الأيمن
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</div>
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-2">
+                  <button type="submit" class="btn btn-main btn-main--primary">
+                      الانتقال للاختيار التالي
+                  </button>
+                  <button type="submit" class="btn btn-main btn-main--outline">
+                      الانتهاء و اضافة الطلب
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal custom-modal fade" id="reviewProductModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            إضافة تعليق
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+          <form action="#">
+            <div class="mb-3">
+                <textarea class="form-control" name="comment" cols="30" rows="5"
+                placeholder="كتابة تعليق ..."></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="rate">التقييم</label>
+                <div class="mb-4 rating-field d-flex justify-content-center align-items-center gap-4">
+                    <fieldset>
+                      <div class="star-cb-group gap-1">
+                        <input
+                          type="radio"
+                          id="rating-5"
+                          name="rating"
+                          value="5"
+                        /><label for="rating-5">5</label>
+                        <input
+                          type="radio"
+                          id="rating-4"
+                          name="rating"
+                          value="4"
+                        /><label for="rating-4">4</label>
+                        <input
+                          type="radio"
+                          id="rating-3"
+                          name="rating"
+                          value="3"
+                        /><label for="rating-3">3</label>
+                        <input
+                          type="radio"
+                          id="rating-2"
+                          name="rating"
+                          value="2"
+                          checked="checked"
+                        /><label for="rating-2">2</label>
+                        <input
+                          type="radio"
+                          id="rating-1"
+                          name="rating"
+                          value="1"
+                        /><label for="rating-1">1</label>
+                        <input
+                          type="radio"
+                          id="rating-0"
+                          name="rating"
+                          value="0"
+                          class="star-cb-clear"
+                        /><label for="rating-0">0</label>
+                      </div>
+                    </fieldset>
+                  </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-main btn-main--primary">
+                    <span class="inline-block px-4">
+                        إضافة
+                    </span>
+                </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{> _footer }}
+  {{> _tail }}
+
+  <!-- <script src="/vendor/jquery/jquery-ui.min.js"></script> -->
+  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+</body>
+</html>

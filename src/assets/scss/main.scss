@@ -4,11 +4,19 @@
 @forward './components/btn';
 @forward './components/card';
 @forward './components/checkbox';
+@forward './components/rating';
+@forward './components/product-counter';
 
 @font-face {
   font-family: 'Tajawal';
   src: url(/fonts/Tajawal-Regular.ttf);
   font-weight: 400;
+}
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
@@ -1003,8 +1011,7 @@ body {
 
 .form-control {
   border-radius: 8px;
-  border: 1px solid #F5F5F5;
-  background-color: #FAFAFA;
+  border: 1px solid #BDBDBD;
 
   &:not(textarea) {
     height: 55px;
@@ -1978,7 +1985,7 @@ body .add-to-cart-btn {
     position: relative;
     padding: 3px 12px;
     overflow: hidden;
-    background-color: rgba(239, 239, 239, 0.28);
+    background-color: #F3F3F3;
 
     input {
       display: none;
@@ -2173,4 +2180,252 @@ body .add-to-cart-btn {
   //     background: #000;
   //   }
   // }
+}
+
+// 
+.review-list {
+  max-width: 1200px;
+
+  .left {
+    flex: none;
+    max-width: none;
+    margin: 0 0 0 15px;
+  }
+
+  .left span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
+
+  .left span img {
+    border-radius: 50%;
+  }
+
+  .author-name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .reply-author-name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  ul li {
+   padding: 0 0 30px;
+   margin: 0 0 30px;
+
+   &:not(:last-child) {
+    border-bottom: 1px solid #dadbdd;
+   }
+
+  }
+  .response-item {
+   border-right: 1px solid #E8E8E8;
+   padding-right: 10px;
+ }
+
+ .review-description {
+    max-width: 800px;
+    margin: 10px 0 0;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+  }
+
+  .publish {
+    font-size: 14px;
+    color: #95979d;
+  }
+}
+.review-list ul li .right {
+  flex: auto;
+}
+
+.modal {
+  .modal-header .btn-close {
+    margin: 0;
+  }
+}
+
+// product details page
+.product-page {
+
+  &__product-name {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31.2px;
+
+  }
+
+  &__heading {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .product-card__variants.product-colors-variants .btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &__product-meta {
+    margin-bottom: 85px;
+  }
+
+  &__product-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__product-viewer {
+    --item-width: 300px;
+    --item-height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: calc((var(--item-width) * 2) + 2rem);
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (max-width: 1180px) {
+      --item-width: 275px;
+      --item-height: 400px;
+    }
+
+    @media (max-width: 580px) {
+      --item-width: 175px;
+      --item-height: 260px;
+    }
+
+    &>div {
+      width: calc(50% - 0.5rem);
+    }
+
+    .viewer-item {
+      width: var(--item-width);
+      height: var(--item-height);
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color:#F6F6F6;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+}
+
+.add-embroidery {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  background-color: #F2F2F2;
+
+  .body {
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #919191;
+    }
+  }
+
+  .form-group label::before {
+    background-color: #fff;
+    border-color: #fff;
+  }
+}
+
+// tatriz modal
+.tatriz-modal {
+
+  .modal-dialog {
+    max-width: 1200px;
+  }
+
+  &__right {
+    background-color: #F9F9F9;
+  }
+
+  &__left {
+    
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .btn-main {
+    width: 250px;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 150px;
+    border-radius: 0 10px 10px 0 !important;
+    padding: 30px 10px;
+    
+    &.active {
+      background-color: #F3F3F3;
+    }
+
+    &__item-head {
+      gap: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333;
+
+      .icon {
+        @extend %center;
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #F3F3F3;
+      }
+    }
+  }
+
+  .tab-content {
+    direction: rtl;
+
+    .form-control:not(textarea) {
+      height: 40px;
+    }
+
+    .filter-sizes {
+      .btn {
+        padding: 10px 12px;
+      }
+
+      .text {
+        font-weight: 300;
+        font-size: 0.85rem;
+      }
+    } 
+
+  }
 }
