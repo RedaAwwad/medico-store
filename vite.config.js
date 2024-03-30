@@ -20,7 +20,15 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, siteData.root, 'index.html'),
         filter: resolve(__dirname, siteData.root, 'filter.html'),
+        filterColor: resolve(__dirname, siteData.root, 'filter-color.html'),
+        filterBrand: resolve(__dirname, siteData.root, 'filter-brand.html'),
+        filterDiscount: resolve(__dirname, siteData.root, 'filter-discount.html'),
+        search: resolve(__dirname, siteData.root, 'search.html'),
         productDetails: resolve(__dirname, siteData.root, 'product-details.html'),
+        cart: resolve(__dirname, siteData.root, 'cart.html'),
+        favorite: resolve(__dirname, siteData.root, 'favorite.html'),
+        orders: resolve(__dirname, siteData.root, 'orders.html'),
+       
       },
     },
   },

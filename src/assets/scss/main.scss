@@ -1721,6 +1721,7 @@ body .add-to-cart-btn {
   &__title {
     margin-bottom: 1.3rem;
     font-size: 2rem;
+    font-weight: 700;
   }
 
   &__heading {
@@ -1732,6 +1733,18 @@ body .add-to-cart-btn {
 
     @media (max-width: 580px) {
       padding: 2rem 1rem;
+    }
+
+    &--color {
+
+      .filter-page__title,
+      .breadcrumb .breadcrumb-item+.breadcrumb-item::before,
+      .breadcrumb a,
+      .breadcrumb .breadcrumb-item.active {
+        color: $white !important;
+      }
+      
+      
     }
   }
 

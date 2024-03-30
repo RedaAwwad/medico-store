@@ -1,0 +1,1018 @@
+{{> _head }}
+
+<link rel="stylesheet" href="/vendor/jquery/jquery-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+</head>
+<body class="medico-page navbar-padding-top">
+  {{> _navbar }}
+
+  <main class="filter-page overflow-hidden">
+    <div class="container-xl">
+        <nav class="filter-page__heading filter-page__heading--color">
+            <img class="filter-page__bg-heading" src="imgs/bg-hero.jfif" alt="">
+            <h1 class="filter-page__title">اسود</h1>
+            <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
+                    <li class="breadcrumb-item"><a href="#">اسم القسم</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        اسود
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <div class="filter-page__categories-list">
+            <h2 class="page-section-title">التصنيفات</h2>
+            <ul class="list-unstyles m-0 p-0">
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-1.png" alt="">
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-2.png" alt="">
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-3.png" alt="">
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-1.png" alt="">
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-2.png" alt="">
+                    </a>
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <a href="#">
+                        <img src="imgs/cat-3.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-page__filters-head d-flex align-items-center justify-content-between font-bold">
+            <div class="d-lg-none">
+                <button id="btnFilters" class="btn p-1">
+                    <svg width="1.2rem" height="1.2rem" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.07143 15.0075C6.74154 15.0075 7.30618 14.5467 7.4637 13.9242H13.1905C13.3853 13.9242 13.5431 13.7663 13.5431 13.5715C13.5431 13.3767 13.3853 13.2188 13.1905 13.2188H7.46367C7.30628 12.5972 6.74272 12.1355 6.07143 12.1355C5.40132 12.1355 4.83668 12.5963 4.67915 13.2188H0.809524C0.614748 13.2188 0.456852 13.3767 0.456852 13.5715C0.456852 13.7663 0.614748 13.9242 0.809524 13.9242H4.67919C4.83658 14.5458 5.40013 15.0075 6.07143 15.0075ZM10.7143 9.43606C11.3844 9.43606 11.949 8.97528 12.1066 8.35273H13.1905C13.3853 8.35273 13.5431 8.19483 13.5431 8.00005C13.5431 7.80528 13.3853 7.64738 13.1905 7.64738H12.1065C11.9491 7.02574 11.3856 6.56405 10.7143 6.56405C10.0442 6.56405 9.47954 7.02483 9.32201 7.64738L0.809524 7.64738C0.614748 7.64738 0.456852 7.80528 0.456852 8.00005C0.456852 8.19483 0.614748 8.35273 0.809524 8.35273H9.32205C9.47943 8.97437 10.043 9.43606 10.7143 9.43606ZM4.67799 2.7813L13.1905 2.7813C13.3853 2.7813 13.5431 2.6234 13.5431 2.42862C13.5431 2.23385 13.3853 2.07595 13.1905 2.07595L4.67795 2.07595C4.52057 1.45431 3.95701 0.992618 3.28571 0.992618C2.6156 0.992618 2.05097 1.4534 1.89344 2.07595H0.809524C0.614748 2.07595 0.456852 2.23385 0.456852 2.42862C0.456852 2.6234 0.614748 2.7813 0.809524 2.7813H1.89348C2.05086 3.40294 2.61442 3.86463 3.28571 3.86463C3.95583 3.86463 4.52046 3.40385 4.67799 2.7813Z" fill="#25273B" stroke="#25273B" stroke-width="0.0862963"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="d-none d-sm-inline-block">المنتجات :</span>
+                <span>(<span id="totalProducts">145</span>) منتج</span>
+            </div>
+    
+            <div class="d-flex align-items-center gap-2">
+                <span>ترتيب حسب :</span>
+                <select name="" id="filterCategory" class="solid-select text-primary">
+                    <option value="0">
+                        الأكثر مبيعا
+                    </option>
+                    <option value="1">
+                        الأقل مبيعا
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-xl">
+        <div class="filter-page__body">
+            <div id="filterSidebarOverlay" class="filter-sidebar__overlay">
+                <aside id="filterSidebar" class="filter-sidebar">
+                    <div class="d-flex d-lg-none align-items-center justify-content-between mb-3 px-3">
+                        <span class="font-semibold">الفلترة</span>
+                        <button id="btnCloseFilters" class="btn p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="accordion" id="accordionFilter">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    العلامات التجارية
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="accordion-body">
+                                <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-2">
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="all">
+                                            <label for="all">
+                                                <span class="font-semibold">الكل</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="brand1">
+                                            <label for="brand1">
+                                                <span class="font-semibold">العلامة التجارية</span>
+                                                (<small>25</small>)
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="brand2">
+                                            <label for="brand2">
+                                                <span class="font-semibold">العلامة التجارية</span>
+                                                (<small>25</small>)
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="brand3">
+                                            <label for="brand3">
+                                                <span class="font-semibold">العلامة التجارية</span>
+                                                (<small>25</small>)
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="brand4">
+                                            <label for="brand4">
+                                                <span class="font-semibold">العلامة التجارية</span>
+                                                (<small>25</small>)
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="brand5">
+                                            <label for="brand5">
+                                                <span class="font-semibold">العلامة التجارية</span>
+                                                (<small>25</small>)
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    السعر
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                                <div class="accordion-body">
+                                    <div class="p-4">
+                                        <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    اللون
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                                <div class="accordion-body">
+                                    <ul class="filter__color-list list-unstyled m-0 p-0 d-flex flex-wrap">
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color1">
+                                                <label for="color1" data-var-color="#000">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color2">
+                                                <label for="color2" data-var-color="#000">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color3">
+                                                <label for="color3" data-var-color="#864C4C">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color4">
+                                                <label for="color4" data-var-color="#864C4C">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color5">
+                                                <label for="color5" data-var-color="#D9D9D9">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color6">
+                                                <label for="color6" data-var-color="#D9D9D9">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color7">
+                                                <label for="color7" data-var-color="#0CA3E4">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="color8">
+                                                <label for="color8" data-var-color="#0CA3E4">
+                                                    <span class="font-semibold">اسم اللون</span>
+                                                    (<small>35</small>)
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    الصنف
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                                <div class="accordion-body filter-category-container">
+                                    <div id="jstree">
+                                        <ul>
+                                          <li data-jstree='{"opened":true,"selected":true}'>الصنف
+                                            <ul>
+                                              <li data-value="category 1">صنف فرعي 1
+                                                <ul>
+                                                    <li data-value="category 2">صنف فرعي 1</li>
+                                                    <li data-value="category 3"><a href="#">صنف فرعي 2</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li><a href="#" data-value="category 4">صنف فرعي 2</a></li>
+                                            </ul>
+                                          </li>
+                                          <li>الصنف
+                                            <ul>
+                                              <li>صنف فرعي 1
+                                                <ul>
+                                                    <li>صنف فرعي 1</li>
+                                                    <li><a href="#">صنف فرعي 2</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li><a href="#">صنف فرعي 2</a></li>
+                                            </ul>
+                                          </li>
+                                          <li>الصنف
+                                            <ul>
+                                              <li>صنف فرعي 1
+                                                <ul>
+                                                    <li>صنف فرعي 1</li>
+                                                    <li><a href="#">صنف فرعي 2</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li><a href="#">صنف فرعي 2</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    المقاس
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+                                <div class="accordion-body">
+                                    <div class="filter-sizes py-4 d-flex align-items-center flex-wrap">
+                                        <label class="btn">
+                                            <input type="checkbox" value="xxs" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>XXS</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="xs" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>XS</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="s" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>S</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="m" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>M</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="l" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>L</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="xl" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>XL</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                        <label class="btn">
+                                            <input type="checkbox" value="xxl" name="sizes[]">
+                                            <span class="bg"></span>
+                                            <span class="text">
+                                                <span>XXL</span>
+                                                (<small>25</small>)
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingLast">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLast" aria-expanded="true" aria-controls="collapseLast">
+                                    تقييم العملاء
+                                </button>
+                            </h2>
+                            <div id="collapseLast" class="accordion-collapse collapse show" aria-labelledby="headingLast">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-2">
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rate1">
+                                                <label for="rate1">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                      </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rate2">
+                                                <label for="rate2">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                      </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rate3">
+                                                <label for="rate3">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                      </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rate4">
+                                                <label for="rate4">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                      </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rate5">
+                                                <label for="rate5">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                        <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                                                        </svg>
+                                                      </div>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="filter-grid">
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-4">
+                        <div class="product-card">
+                          <div class="product-card__top">
+                            <a href="product-details.html" class="inline-block">
+                              <img class="product-card__img" loading="lazy" src="imgs/products/p1.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                              <div class="product-card__discount">
+                                -30%
+                              </div>
+                              <button type="button" class="btn product-card__fav-btn p-1 active">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                              <h2 class="product-card__title">
+                                <a href="product-details.html" class="inline-block">
+                                  اسم المنتج
+                                </a>
+                              </h2>
+                              <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <small class="text-gray">(35)</small>
+                              <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                              <span>15.00</span>
+                              <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                              <span>25.00</span>
+                              <small>د.ع</small>
+                            </div>
+                          </div>
+                          <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-card__top">
+                        <a href="product-details.html" class="inline-block">
+                            <img class="product-card__img" loading="lazy" src="imgs/products/p2.png" alt="">
+                        </a>
+                        <div class="product-card__info d-flex align-items-center justify-content-between">
+                            <div class="product-card__discount">
+                            -30%
+                            </div>
+                            <button class="btn product-card__fav-btn p-1">
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <div class="product-card__heading d-flex justify-content-between mb-2">
+                        <div>
+                            <h2 class="product-card__title">
+                            <a href="product-details.html" class="inline-block">
+                                اسم المنتج
+                            </a>
+                            </h2>
+                            <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <small class="text-gray">(35)</small>
+                            <div class="d-flex align-items-center gap-1">
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                        <div class="d-flex align-items-center gap-1">
+                            <span>15.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        <div class="product-card__before-price d-flex align-items-center text-gray">
+                            <span>25.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        </div>
+                        <div class="product-card__variants">
+                        <button type="button" class="btn p-1" 
+                        data-color="#D9D9D9" data-src="imgs/products/p2.png"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-card__top">
+                        <a href="product-details.html" class="inline-block">
+                            <img class="product-card__img" loading="lazy" src="imgs/products/p3.png" alt="">
+                        </a>
+                        <div class="product-card__info d-flex align-items-center justify-content-between">
+                            <div class="product-card__discount">
+                            -30%
+                            </div>
+                            <button class="btn product-card__fav-btn p-1">
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <div class="product-card__heading d-flex justify-content-between mb-2">
+                        <div>
+                            <h2 class="product-card__title">
+                            <a href="product-details.html" class="inline-block">
+                                اسم المنتج
+                            </a>
+                            </h2>
+                            <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <small class="text-gray">(35)</small>
+                            <div class="d-flex align-items-center gap-1">
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                        <div class="d-flex align-items-center gap-1">
+                            <span>15.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        <div class="product-card__before-price d-flex align-items-center text-gray">
+                            <span>25.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        </div>
+                        <div class="product-card__variants">
+                        <button type="button" class="btn p-1" 
+                        data-color="#72283f" data-src="imgs/products/p3.png"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-card__top">
+                        <a href="product-details.html" class="inline-block">
+                            <img class="product-card__img" loading="lazy" src="imgs/products/p4.png" alt="">
+                        </a>
+                        <div class="product-card__info d-flex align-items-center justify-content-between">
+                            <div class="product-card__discount">
+                            -30%
+                            </div>
+                            <button class="btn product-card__fav-btn p-1">
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <div class="product-card__heading d-flex justify-content-between mb-2">
+                        <div>
+                            <h2 class="product-card__title">
+                            <a href="product-details.html" class="inline-block">
+                                اسم المنتج
+                            </a>
+                            </h2>
+                            <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <small class="text-gray">(35)</small>
+                            <div class="d-flex align-items-center gap-1">
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                        <div class="d-flex align-items-center gap-1">
+                            <span>15.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        <div class="product-card__before-price d-flex align-items-center text-gray">
+                            <span>25.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        </div>
+                        <div class="product-card__variants">
+                        <button type="button" class="btn p-1" 
+                        data-color="#0e4a7e" data-src="imgs/products/p4.png"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-card__top">
+                        <a href="product-details.html" class="inline-block">
+                            <img class="product-card__img" loading="lazy" src="imgs/products/p5.png" alt="">
+                        </a>
+                        <div class="product-card__info d-flex align-items-center justify-content-between">
+                            <div class="product-card__discount">
+                            -30%
+                            </div>
+                            <button class="btn product-card__fav-btn p-1">
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <div class="product-card__heading d-flex justify-content-between mb-2">
+                        <div>
+                            <h2 class="product-card__title">
+                            <a href="product-details.html" class="inline-block">
+                                اسم المنتج
+                            </a>
+                            </h2>
+                            <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <small class="text-gray">(35)</small>
+                            <div class="d-flex align-items-center gap-1">
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                            </svg>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                        <div class="d-flex align-items-center gap-1">
+                            <span>15.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        <div class="product-card__before-price d-flex align-items-center text-gray">
+                            <span>25.00</span>
+                            <small>د.ع</small>
+                        </div>
+                        </div>
+                        <div class="product-card__variants">
+                        <button type="button" class="btn p-1" 
+                        data-color="#1a8372" data-src="imgs/products/p5.png"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                        <button type="button" class="btn p-1" 
+                        data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <div class="product-card">
+                          <div class="product-card__top">
+                            <a href="product-details.html" class="inline-block">
+                              <img class="product-card__img" loading="lazy" src="imgs/products/p1.jfif" alt="">
+                            </a>
+                            <div class="product-card__info d-flex align-items-center justify-content-between">
+                              <div class="product-card__discount">
+                                -30%
+                              </div>
+                              <button type="button" class="btn product-card__fav-btn p-1 active">
+                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="product-card__heading d-flex justify-content-between mb-2">
+                            <div>
+                              <h2 class="product-card__title">
+                                <a href="product-details.html" class="inline-block">
+                                  اسم المنتج
+                                </a>
+                              </h2>
+                              <span class="product-card__brand text-gray">اسم العلامة التجارية</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <small class="text-gray">(35)</small>
+                              <div class="d-flex align-items-center gap-1">
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                                <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="d-flex align-items-center gap-1">
+                              <span>15.00</span>
+                              <small>د.ع</small>
+                            </div>
+                            <div class="product-card__before-price d-flex align-items-center text-gray">
+                              <span>25.00</span>
+                              <small>د.ع</small>
+                            </div>
+                          </div>
+                          <div class="product-card__variants">
+                            <button type="button" class="btn p-1" 
+                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                            <button type="button" class="btn p-1" 
+                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+  </main>
+
+  {{> _footer }}
+  {{> _tail }}
+
+  <script src="/vendor/jquery/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+  <script>
+    $("#slider-range").slider({
+        range: true,
+        orientation: "horizontal",
+        min: 0,
+        max: 10000,
+        values: [0, 5000],
+        step: 100,
+        create: function(event, ui) {
+            $('.price-filter-range .ui-slider-handle').each(function (index, ele) {
+                if(index == 0) {
+                    $(ele).html(
+                        '<span id="priceRangeMin">' +
+                            '<small> 0' +
+                        '</small> $ </span>'
+                    );
+
+                    return
+                }
+    
+                $(ele).html(
+                    '<span id="priceRangeMax">' +
+                        '<small> 9000' +
+                    '</small> $ </span>'
+                );
+            })
+        },
+        slide: function (event, ui) {
+            if (ui.values[0] == ui.values[1]) {
+                return false;
+            }
+            
+            $("#priceRangeMin small").html(ui.values[0]);
+            $("#priceRangeMax small").html(ui.values[1]);
+        }
+    });
+
+    // tree js
+    $('#jstree').jstree({
+        "checkbox" : {
+            "keep_selected_style" : false
+        },
+        "plugins" : [ "wholerow", "checkbox" ]
+    });
+    // .select_node('mn1');
+
+    $('#jstree').on("changed.jstree", function (e, data) {
+        var i, selectedLeafs = [];
+        for(i = 0; i < data.selected.length; i++) {
+            selectedLeafs.push(data.instance.get_node(data.selected[i]).text);
+        }
+        console.log(selectedLeafs);
+    });
+
+    $('#jstree').on("check_node.jstree", function (node, selected, event) {
+        // console.log(node);
+        console.log(selected);
+    });
+  </script>
+</body>
+</html>
