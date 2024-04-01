@@ -45,9 +45,336 @@
             <div class="py-2">
                 <hr>
             </div>
+
+            <div class="cart__grid">
+                <div class="cart__body">
+                    <div class="cart__items">
+                        <div class="table-responsive">
+                            <table class="table orders-table orders-table--solid">
+                                <thead style="border-bottom: 1px solid #D9D9D9;">
+                                    <tr>
+                                        <th scope="col">
+                                            <div>
+                                                المنتج
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="text-center">
+                                                الكمية
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="text-center">
+                                                السعر
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="text-center">
+                                                بعد التخفيض
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="text-center">
+                                                الاجمالي
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="orders-table__order-meta">
+                                                   <div class="order__img" style="width: 120px;height: 150px;">
+                                                    <img src="imgs/p.png" alt="">
+                                                   </div>
+                                                   <div class="order__body">
+                                                        <h2 class="order__name">اسم المنتج</h2>
+                                                        <div class="order__type mb-2">
+                                                            <small>نوع المنتج</small>
+                                                        </div>
+                                                        <div class="order__type">
+                                                            <span>المقاس:</span>
+                                                            <span>L</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2 mt-4">
+                                                            <button type="button" data-product-id="1" class="btn py-1 px-3 text-danger">
+                                                                ازالة
+                                                            </button>
+                                                            <div class="horizontal-line"></div>
+                                                            <a href="product-details.html" class="btn py-1 px-3 text-gray">
+                                                                تعديل
+                                                            </a>
+                                                        </div>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <div class="d-flex align-items-center product-counter">
+                                                    <button class="btn btn-increase">+</button>
+                                                    <span>1</span>
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button class="btn btn-decrease">-</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">$15.00</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="orders-table__order-meta">
+                                                   <div class="order__img" style="width: 120px;height: 150px;">
+                                                    <img src="imgs/p.png" alt="">
+                                                   </div>
+                                                   <div class="order__body">
+                                                        <h2 class="order__name">اسم المنتج</h2>
+                                                        <div class="order__type mb-2">
+                                                            <small>نوع المنتج</small>
+                                                        </div>
+                                                        <div class="order__type">
+                                                            <span>المقاس:</span>
+                                                            <span>L</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2 mt-4">
+                                                            <button type="button" data-product-id="1" class="btn py-1 px-3 text-danger">
+                                                                ازالة
+                                                            </button>
+                                                            <div class="horizontal-line"></div>
+                                                            <a href="product-details.html" class="btn py-1 px-3 text-gray">
+                                                                تعديل
+                                                            </a>
+                                                        </div>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <div class="d-flex align-items-center product-counter">
+                                                    <button class="btn btn-increase">+</button>
+                                                    <span>1</span>
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button class="btn btn-decrease">-</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">$15.00</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex justify-content-center">
+                                                <div class="orders-table__order-meta">
+                                                   <div class="order__img" style="width: 120px;height: 150px;">
+                                                    <img src="imgs/p.png" alt="">
+                                                   </div>
+                                                   <div class="order__body">
+                                                        <h2 class="order__name">اسم المنتج</h2>
+                                                        <div class="order__type mb-2">
+                                                            <small>نوع المنتج</small>
+                                                        </div>
+                                                        <div class="order__type">
+                                                            <span>المقاس:</span>
+                                                            <span>L</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2 mt-4">
+                                                            <button type="button" data-product-id="1" class="btn py-1 px-3 text-danger">
+                                                                ازالة
+                                                            </button>
+                                                            <div class="horizontal-line"></div>
+                                                            <a href="product-details.html" class="btn py-1 px-3 text-gray">
+                                                                تعديل
+                                                            </a>
+                                                        </div>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <div class="d-flex align-items-center product-counter">
+                                                    <button class="btn btn-increase">+</button>
+                                                    <span>1</span>
+                                                    <input type="hidden" value="1" name="qty">
+                                                    <button class="btn btn-decrease">-</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center text-gray">$15.00</div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center">$15.00</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end py-2">
+                        <a href="filter.html" class="btn btn-main btn-main--primary">
+                            استمرار التسوق
+                        </a>
+                    </div>
+                </div>
+                <aside class="cart__summary">
+                    <h2 class="page-section-title mb-3">
+                        طلبيتك
+                    </h2>
+                    <div class="">
+                        <hr>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-4">
+                        <h2 class="cart-title mb-0">
+                            المنتجات
+                        </h2>
+                        <h2 class="cart-title mb-0">
+                            المبلغ
+                        </h2>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="cart-summary-title mb-0">مثال لمنتج</h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="cart-summary-title mb-0">
+                                25.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="cart-summary-title mb-0">مثال لمنتج رقم 2</h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="cart-summary-title mb-0">
+                                25.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="cart-summary-title mb-0">التخفيض</h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="cart-summary-title mb-0">
+                                -25.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-4">
+                        <h2 class="cart-title mb-0">
+                            المجموع
+                        </h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="cart-title mb-0">
+                                75.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="pb-2">
+                        <hr>
+                    </div>
+                    <div class="mb-4 pb-2">
+                        <h2 class="cart-summary-title mb-3">
+                            كوبون الخصم
+                        </h2>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <input type="text" name="coupon" class="form-control">
+                            <button type="button" class="btn btn-main btn-main--primary">
+                                تفعيل
+                            </button>
+                        </div>
+                        <button type="button" class="btn d-flex align-items-center gap-2 py-1">
+                            <svg width="1rem" height="1rem" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6" cy="6" r="6" fill="#AEAEAE"/>
+                                <rect x="5.64648" y="2.11719" width="0.705882" height="7.05882" fill="white"/>
+                                <rect x="2.4707" y="6" width="0.705882" height="7.05882" transform="rotate(-90 2.4707 6)" fill="white"/>
+                            </svg>
+                            <span>اضافة كوبون اخر</span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="cart-summary-title mb-0">الشحن و التوصيل</h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="cart-summary-title mb-0">
+                                75.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-4">
+                        <h2 class="page-section-title mb-0">
+                            المبلغ الكلي
+                        </h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <h2 class="page-section-title mb-0">
+                                75.00 
+                            </h2>
+                            <span>د.ع</span>
+                        </div>
+                    </div>
+                    <div class="pb-2">
+                        <hr>
+                    </div>
+                    <form action="#" class="mb-4">
+                        <div class="row">
+                            <div class="col-sm-6 mb-3">
+                                <label for="fname" class="mb-2">الاسم الأول</label>
+                                <input type="text" id="fname" name="fname" class="form-control">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="lname" class="mb-2">الاسم الأخير</label>
+                                <input type="text" id="lname" name="lname" class="form-control">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="phone" class="mb-2">رقم الهاتف</label>
+                                <input type="number" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="rigion" class="mb-2">المحافظة</label>
+                                <select class="form-control" name="rigion" id="rigion">
+                                    <option value="">محافظة 1</option>
+                                    <option value="">محافظة 2</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="address" class="mb-2">العنوان</label>
+                                <input type="text" id="address" name="address" class="form-control">
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label for="notes" class="mb-2">ملاحظات</label>
+                                <textarea class="form-control" name="notes" id="notes" cols="30" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-main btn-main--primary w-100 justify-content-center py-3">
+                        تثبيت الطلب
+                    </button>
+                </aside>
+            </div>
         </div>
 
-        <div class="py-5">
+        <!-- <div class="py-5">
             <div class="mb-4 pb-1">
                 <h2 class="page-section-title">
                     مقترحات أخرى
@@ -405,7 +732,7 @@
                   </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
   </main>

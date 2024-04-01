@@ -1014,7 +1014,7 @@ body {
   border: 1px solid #BDBDBD;
 
   &:not(textarea) {
-    height: 55px;
+    height: 42px;
   }
 
   &::placeholder {
@@ -1026,8 +1026,13 @@ body {
 
   &:focus {
     box-shadow: none;
-    border-color: var(--mainColor);
+    border-color: var(--mainColor) !important;
   }
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 // our-partners
@@ -2604,7 +2609,7 @@ body .add-to-cart-btn {
       }
 
       &__name {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 600;
       }
 
@@ -2616,7 +2621,7 @@ body .add-to-cart-btn {
 
       &__size {
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 600;
       }
     }
@@ -2634,4 +2639,78 @@ body .add-to-cart-btn {
     font-weight: bold;
     color: var(--mainColor);
   }
+}
+
+// cart
+.cart {
+
+  &__grid {
+    --side-summary-width: 450px;
+    --grid-gap: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--grid-gap);
+
+    .row {
+      --bs-gutter-x: 1rem;
+    }
+
+    .form-control {
+      border-color: transparent;
+      border-radius: 3px;
+    }
+
+  }
+
+  &__body {
+    width: calc(100% - (var(--side-summary-width) + (var(--grid-gap) / 2)));
+
+    @media (max-width: 1199px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(228, 228, 228, 1);
+  }
+
+  &__summary {
+    width: calc(var(--side-summary-width) - (var(--grid-gap) / 2));
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 0.3px solid #C0C0C0;
+    background: rgba(245, 245, 245, 0.54);
+
+    @media (max-width: 1199px) {
+      width: 600px;
+      max-width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &-title {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &-summary-title {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.horizontal-line {
+  width: 1px;
+  height: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color: #E4E4E4;
 }

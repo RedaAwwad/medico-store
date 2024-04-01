@@ -29,6 +29,7 @@ export default defineConfig({
         favorite: resolve(__dirname, siteData.root, 'favorite.html'),
         orders: resolve(__dirname, siteData.root, 'orders.html'),
         orderDetails: resolve(__dirname, siteData.root, 'order-details.html'),
+        notFound: resolve(__dirname, siteData.root, '404.html'),
         
        
       },
