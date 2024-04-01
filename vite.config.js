@@ -30,6 +30,7 @@ export default defineConfig({
         orders: resolve(__dirname, siteData.root, 'orders.html'),
         orderDetails: resolve(__dirname, siteData.root, 'order-details.html'),
         notFound: resolve(__dirname, siteData.root, '404.html'),
+        profile: resolve(__dirname, siteData.root, 'profile.html'),
         
        
       },
