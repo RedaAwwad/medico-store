@@ -31,6 +31,11 @@ export default defineConfig({
         orderDetails: resolve(__dirname, siteData.root, 'order-details.html'),
         notFound: resolve(__dirname, siteData.root, '404.html'),
         profile: resolve(__dirname, siteData.root, 'profile.html'),
+        privacy: resolve(__dirname, siteData.root, 'privacy-policy.html'),
+        shipping: resolve(__dirname, siteData.root, 'shipping-policy.html'),
+        services: resolve(__dirname, siteData.root, 'services.html'),
+        tatriz: resolve(__dirname, siteData.root, 'tatriz.html'),
+        locations: resolve(__dirname, siteData.root, 'locations.html'),
         
        
       },
