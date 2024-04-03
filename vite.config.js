@@ -36,6 +36,7 @@ export default defineConfig({
         services: resolve(__dirname, siteData.root, 'services.html'),
         tatriz: resolve(__dirname, siteData.root, 'tatriz.html'),
         locations: resolve(__dirname, siteData.root, 'locations.html'),
+        blog: resolve(__dirname, siteData.root, 'blog.html'),
         
        
       },

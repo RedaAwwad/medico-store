@@ -2063,6 +2063,15 @@ body .add-to-cart-btn {
         li {
           width: calc(50% - 0.5rem);
         }
+
+        .form-group label::before {
+          padding: 13px;
+        }
+
+        .form-group input:checked + label::after {
+          width: 25px;
+          height: 25px;
+        }
       }
       
     }
@@ -2124,6 +2133,10 @@ body .add-to-cart-btn {
   &.ui-widget-content {
     border-color: #E5E5E5;
     background: #E5E5E5;
+
+    span {
+      font-family: 'Tajawal', 'Tahoma', sans-serif;
+    }
   }
 
   &.ui-slider-horizontal {

@@ -74,11 +74,17 @@
             <div class="d-flex align-items-center gap-2">
                 <span>ترتيب حسب :</span>
                 <select name="" id="filterCategory" class="solid-select text-primary">
-                    <option value="0">
-                        الأكثر مبيعا
-                    </option>
                     <option value="1">
-                        الأقل مبيعا
+                        الأعلى سعرا
+                    </option>
+                    <option value="2">
+                        الأقل سعرا
+                    </option>
+                    <option value="3">
+                        الأعلى تقييما
+                    </option>
+                    <option value="4">
+                        الأكثر مبيعا
                     </option>
                 </select>
             </div>
@@ -969,7 +975,7 @@
                     $(ele).html(
                         '<span id="priceRangeMin">' +
                             '<small> 0' +
-                        '</small> $ </span>'
+                        '</small> د.ع </span>'
                     );
 
                     return
@@ -978,7 +984,7 @@
                 $(ele).html(
                     '<span id="priceRangeMax">' +
                         '<small> 9000' +
-                    '</small> $ </span>'
+                    '</small> د.ع </span>'
                 );
             })
         },
