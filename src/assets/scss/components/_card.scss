@@ -265,7 +265,7 @@
     }
 
     &__name {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
     }
 
     &__text {
@@ -280,5 +280,59 @@
     &__list {
         color: #9A9A9A;
  
+    }
+}
+
+
+.blog-card {
+    width: 425px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__img {
+        position: relative;
+        height: 225px;
+        background: #ECECEC;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.3rem !important;
+    }
+
+    &__title-link {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--bs-heading-color);
+        transition: 350ms ease-in-out;
+
+        &:hover {
+            color: var(--mainColor);
+        }  
+    }
+
+    &__text {
+        color: #9A9A9A;
+        text-align: justify;
+    }
+
+    &__more-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: #436778;
+        transition: 350ms ease-in-out;
+
+        &:hover {
+            color: var(--mainColor);
+        }
     }
 }

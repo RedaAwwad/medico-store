@@ -37,6 +37,7 @@ export default defineConfig({
         tatriz: resolve(__dirname, siteData.root, 'tatriz.html'),
         locations: resolve(__dirname, siteData.root, 'locations.html'),
         blog: resolve(__dirname, siteData.root, 'blog.html'),
+        blogDetails: resolve(__dirname, siteData.root, 'blog-details.html'),
         
        
       },
