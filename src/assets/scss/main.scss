@@ -7,16 +7,12 @@
 @forward './components/rating';
 @forward './components/product-counter';
 
+@forward './extend-style';
+
 @font-face {
   font-family: 'Tajawal';
   src: url(/fonts/Tajawal-Regular.ttf);
   font-weight: 400;
-}
-
-%center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 html {

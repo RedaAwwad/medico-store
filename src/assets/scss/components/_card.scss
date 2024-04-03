@@ -1,4 +1,5 @@
 @use '../variables' as *;
+@forward '../extend-style';
 
 .product-card {
     width: 350px;
@@ -233,5 +234,51 @@
     &__text {
         font-size: 0.9rem;
         line-height: 1.8;
+    }
+}
+
+.location-card {
+    width: 390px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    &__map {
+        position: relative;
+        height: 225px;
+        border-radius: 13px;
+        background: #ECECEC;
+
+    }
+
+    &__icon {
+        @extend %center;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        width: 44px;
+        height: 39px;
+        border-radius: 9px;
+        background: #008F8D;
+        color: $white;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__name {
+        font-size: 1.3rem;
+    }
+
+    &__text {
+        color: #9A9A9A;
+        text-align: justify;
+    }
+
+    &__heading {
+        font-size: 1.2rem;
+    }
+
+    &__list {
+        color: #9A9A9A;
+ 
     }
 }
