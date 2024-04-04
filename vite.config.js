@@ -38,6 +38,11 @@ export default defineConfig({
         locations: resolve(__dirname, siteData.root, 'locations.html'),
         blog: resolve(__dirname, siteData.root, 'blog.html'),
         blogDetails: resolve(__dirname, siteData.root, 'blog-details.html'),
+        login: resolve(__dirname, siteData.root, 'login.html'),
+        register: resolve(__dirname, siteData.root, 'register.html'),
+        otp: resolve(__dirname, siteData.root, 'otp.html'),
+        forgotPassword: resolve(__dirname, siteData.root, 'forgot-password.html'),
+        resetPassword: resolve(__dirname, siteData.root, 'reset-password.html'),
         
        
       },

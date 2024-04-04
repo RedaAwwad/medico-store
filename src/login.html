@@ -1,0 +1,45 @@
+{{> _head }}
+</head>
+<body class="medico-page navbar-padding-top--auth">
+  {{> _navbar_auth }}
+
+  <main class="auth overflow-hidden">
+    <div class="container-xl">
+      <div class="row mb-5 pb-4">
+        <div class="col-md-7 col-xl-6 mx-auto">
+          <div class="d-flex justify-content-center pt-4 pb-5">
+            <img width="180rem" src="imgs/medico-logo.svg" alt="">
+          </div>
+          <form class="auth__card" action="#">
+            <h1 class="auth__title">تسجيل الدخول</h1>
+            <div class="mb-4 pb-3">
+              <label for="phone">رقم الهاتف</label>
+              <input id="phone" type="number" min="0" required class="form-control">
+            </div>
+            <div class="mb-4 pb-3">
+              <label for="password">كلمة المرور</label>
+              <input id="password" type="password" required class="form-control">
+              <a href="forgot-password.html" class="btn-link d-inline-block mt-3 font-bold">
+                هل نسيت كلمة المرور ؟
+              </a>
+            </div>
+            <div class="pt-4">
+              <button type="submit" class="btn btn-main btn-main--primary w-100 py-3 justify-content-center">
+                تسجيل الدخول
+              </button>
+            </div>
+            <div class="d-flex align-items-center justify-content-center font-bold gap-1 mt-3">
+              <span>ليس لديك حساب ؟</span>
+              <a href="register.html" class="btn-link">تسجيل حساب جديد</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{> _footer }}
+  {{> _tail }}
+
+</body>
+</html>

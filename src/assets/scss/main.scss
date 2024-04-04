@@ -641,6 +641,10 @@ body {
   padding-top: var(--navbar-height);
 }
 
+.navbar-padding-top--auth {
+  padding-top: 80px;
+}
+
 .partners-slider {
   .swiper-slide {
     display: flex;
@@ -2900,4 +2904,77 @@ body .add-to-cart-btn {
       height: 300px;
     }
   }
+}
+
+body {
+  .navbar__auth {
+
+    &.navbar__inner--fixed {
+      background-color: $black !important;
+    }
+
+    .nav-link {
+      span {
+        color: $white;
+
+      }
+    }
+
+    .link-btn-outline-white {
+      min-height: 1px;
+      padding: 7px 25px !important;
+      border-radius: 5px;
+      border: 1px solid $white;
+
+      &:hover {
+        border-color: var(--mainColor);
+        color: var(--mainColor);
+
+        span {
+          color: var(--mainColor);
+        }
+      }
+    }
+  }
+  
+}
+
+.auth {
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  &__card {
+    width: 550px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 4rem 2rem;
+    box-shadow: 5px 10px 50px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    background-color: $white;
+
+    @media (max-width: 580px) {
+      padding: 3rem 1rem;
+    }
+  }
+
+  .btn-main {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .form-control {
+    height: 50px;
+    box-shadow: 2px 5px 40px 0px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--mainColor);
 }

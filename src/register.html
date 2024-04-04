@@ -1,0 +1,80 @@
+{{> _head }}
+</head>
+<body class="medico-page navbar-padding-top--auth">
+  {{> _navbar_auth }}
+
+  <main class="auth overflow-hidden">
+    <div class="container-xl">
+      <div class="row mb-5 pb-4">
+        <div class="col-md-7 col-xl-6 mx-auto">
+          <div class="d-flex justify-content-center pt-4 pb-5">
+            <img width="180rem" src="imgs/medico-logo.svg" alt="">
+          </div>
+          <form class="auth__card" action="#" style="width: 600px;">
+            <h1 class="auth__title">إنشاء حساب جديد</h1>
+            <div class="row">
+              <div class="col-sm-6 mb-4 pb-3">
+                <label for="fname">الاسم الأول</label>
+                <input id="fname" type="text" required class="form-control">
+              </div>
+              <div class="col-sm-6 mb-4 pb-3">
+                <label for="lname">الاسم الأخير</label>
+                <input id="lname" type="text" required class="form-control">
+              </div>
+              <div class="col-sm-6 mb-4 pb-3">
+                <label for="phone">رقم الهاتف</label>
+                <input id="phone" type="number" min="0" required class="form-control">
+              </div>
+              <div class="col-sm-6 mb-4 pb-3">
+                <label for="city">المحافظة</label>
+                <select name="city" id="city" required class="form-control">
+                  <option value="0">اختر المحافظة </option>
+                  <option value="1">محافظة 1</option>
+                  <option value="2">محافظة 2</option>
+                </select>
+              </div>
+              <div class="col-sm-6 mb-4 pb-3">
+                <label for="address">العنوان</label>
+                <input id="address" type="text" required class="form-control">
+              </div>
+              <div class="row">
+                <div class="col-sm-6 mb-4 pb-3">
+                  <label for="password">كلمة المرور</label>
+                  <input id="password" type="password" required class="form-control">
+                </div>
+                <div class="col-sm-6 mb-4 pb-3">
+                  <label for="passwordConfirmation">تأكيد كلمة المرور</label>
+                  <input id="passwordConfirmation" type="password" required class="form-control">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="checkbox" id="accept">
+                  <label for="accept">
+                      <span class="text-primary">
+                        الموافقة على شروط الاستخدام الخصوصية
+                      </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4">
+              <button type="submit" class="btn btn-main btn-main--primary w-100 py-3 justify-content-center">
+                إنشاء حساب
+              </button>
+            </div>
+            <div class="d-flex align-items-center justify-content-center font-bold gap-1 mt-3">
+              <span> لديك حساب ؟</span>
+              <a href="login.html" class="btn-link">تسجيل الدخول</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{> _footer }}
+  {{> _tail }}
+
+</body>
+</html>
