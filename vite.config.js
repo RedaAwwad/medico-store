@@ -43,7 +43,8 @@ export default defineConfig({
         otp: resolve(__dirname, siteData.root, 'otp.html'),
         forgotPassword: resolve(__dirname, siteData.root, 'forgot-password.html'),
         resetPassword: resolve(__dirname, siteData.root, 'reset-password.html'),
-        
+        about: resolve(__dirname, siteData.root, 'about.html'),
+        contact: resolve(__dirname, siteData.root, 'contact.html'),
        
       },
     },
