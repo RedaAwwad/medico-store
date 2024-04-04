@@ -243,6 +243,64 @@ $(function () {
         });
     }
 
+    // testimonial slider
+    if($('.testimonial__slider').length) {
+        let initialSlide = 2
+
+        if(window.innerWidth < 500) {
+            initialSlide = 0
+        }
+
+        $('.testimonial__slider').slick({
+            rtl: document.dir == 'rtl',
+            lazyLoad: 'ondemand',
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide,
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 3,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                        settings: {
+                        slidesToShow: 2,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                        settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,
+                    }
+                }
+            ]
+        });
+    }
+
     // by-category-name-slider
     if($('.by-category-name__slider').length) {
         $('.by-category-name__slider').slick({

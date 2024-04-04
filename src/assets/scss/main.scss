@@ -1,11 +1,11 @@
 @use './variables' as *;
-// @import "~bootstrap/scss/bootstrap";
 @forward './components/footer';
 @forward './components/btn';
 @forward './components/card';
 @forward './components/checkbox';
 @forward './components/rating';
 @forward './components/product-counter';
+@forward './components/custome-accordion';
 
 @forward './extend-style';
 
@@ -675,7 +675,7 @@ body {
   &__title {
     margin-bottom: 1.5rem;
     line-height: 47.43px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     color: #444444;
@@ -2977,4 +2977,89 @@ body {
 .btn-link {
   text-decoration: none;
   color: var(--mainColor);
+}
+
+.row-text-section {
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      right: -35px;
+      bottom: -50px;
+      background: url(/imgs/circle-shape.png) no-repeat center;
+      background-size: contain;
+      z-index: -1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0px 4px 40px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__heading {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-weight: bold;
+
+    &--underline {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 45%;
+        height: 3px;
+        background-color: var(--mainColor);
+      }
+    }
+  }
+
+  &__text {
+    line-height: 2;
+    color: #686868;
+
+  }
+}
+
+.banner-section {
+
+  &__heading {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    line-height: 2;
+  }
+
+  &--primary-bg {
+    background-color: var(--mainColor);
+    color: $white;
+
+  }
+}
+
+.stats .row-text-section__text {
+  @media (min-width: 992px) {
+    padding-left: 2rem;
+  }
+}
+
+.testimonial__slider {
+  .slick-slide {
+    padding: 35px 10px 0 10px;
+  }
 }
