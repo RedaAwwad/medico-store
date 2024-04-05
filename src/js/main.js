@@ -18,6 +18,11 @@ import {
     updateProductColorVariant
 } from './helpers/helpers'
 
+import { 
+    updateProductColor,
+    updateProductSize
+} from './helpers/product-details'
+
 $(function () {
     // setTimeout(function () {
     //     $('#preloader').addClass('hidden');
@@ -69,6 +74,34 @@ $(function () {
 
     makeNavbarFixed();
 
+    function addProductToFavorite(url, data) {
+        $.ajax({
+          url,
+          type: "POST",
+          data,
+          success: function(){
+            Swal.fire({
+              icon: "success",
+              title: "تمت الإضافة إلى المفضلة",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          },
+          error: function(xhr, status, error){
+            console.error("Error:", error);
+            Swal.fire({
+              icon: "error",
+              title: "حدث خطأ غير متوقع",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          }
+        });
+    }
+
+    // make addProductToFavorite func as a GLOBAL FUNCTION
+    window.addProductToFavorite = addProductToFavorite;
+
     // toggle navbar sub menus
     $('.link-with-menu').on('mouseenter', function () {
         $(this).addClass('active')
@@ -116,6 +149,8 @@ $(function () {
         }
     })
 
+    updateProductColor();
+    updateProductSize();
 
     // hero slider
     if($('.hero-slider').length) {

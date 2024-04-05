@@ -45,7 +45,7 @@ export default defineConfig({
         resetPassword: resolve(__dirname, siteData.root, 'reset-password.html'),
         about: resolve(__dirname, siteData.root, 'about.html'),
         contact: resolve(__dirname, siteData.root, 'contact.html'),
-       
+        
       },
     },
   },

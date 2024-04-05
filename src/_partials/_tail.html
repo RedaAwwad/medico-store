@@ -1,6 +1,16 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/particles/particles.min.js"></script>
+<script src="vendor/sweetalert2/sweetalert2.min.js"></script>
 <script
 type="module"
 src="./js/main.js"
 ></script>
+<script>
+    $(document).ready(function () {
+        $('body').on('click', '.product-card__fav-btn', function () {
+            window.addProductToFavorite('https://example.com', { 
+                id: $(this).attr('data-product-id') 
+            });
+        });
+    })
+</script>

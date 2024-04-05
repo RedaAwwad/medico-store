@@ -2448,8 +2448,45 @@ body .add-to-cart-btn {
     height: 30px;
     padding: 0 !important;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: initial;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border-radius: 50%;
+      z-index: 2;
+      background-color: inherit;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      border-radius: 50%;
+      background-color: var(--mainColor);
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: 350ms ease-in-out;
+    }
+
+    &.selected {
+      border-color: $white;
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__product-meta {

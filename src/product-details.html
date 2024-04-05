@@ -33,6 +33,11 @@
                             <small dir="ltr">
                                 <span> Sku No. 234</span>
                             </small>
+                            <!-- 
+                              Product ID should be provided
+                              some functionality depends on it
+                             -->
+                            <input type="hidden" id="productId" value="1">
                         </div>
                         <div>
                             <small>السعر</small>
@@ -67,7 +72,8 @@
                     </div>
                     <div class="mb-4" style="max-width: 400px;">
                         <h2 class="product-page__heading">اللون</h2>
-                        <div class="product-card__variants product-colors-variants">
+                        <div id="productColorsContainer" class="product-card__variants product-colors-variants">
+                            <input type="hidden" id="productColor" name="product_color">
                             <button type="button" class="btn p-1" 
                             data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
                             <button type="button" class="btn p-1" 
@@ -102,9 +108,10 @@
                     </div>
                     <div class="mb-4" style="max-width: 400px;">
                         <h2 class="product-page__heading">المقاسات</h2>
-                        <div class="filter-sizes d-flex align-items-center flex-wrap">
+                        <div id="productSizeContainer" class="filter-sizes d-flex align-items-center flex-wrap">
+                            <input type="hidden" id="productSize" name="product_size">
                             <label class="btn">
-                                <input type="radio" value="xxs" name="sizes[]">
+                                <input type="radio" value="xxs" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>XXS</span>
@@ -112,7 +119,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="xs" name="sizes[]">
+                                <input type="radio" value="xs" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>XS</span>
@@ -120,7 +127,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="s" name="sizes[]">
+                                <input type="radio" value="s" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>S</span>
@@ -128,7 +135,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="m" name="sizes[]">
+                                <input type="radio" value="m" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>M</span>
@@ -136,7 +143,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="l" name="sizes[]">
+                                <input type="radio" value="l" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>L</span>
@@ -144,7 +151,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="xl" name="sizes[]">
+                                <input type="radio" value="xl" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>XL</span>
@@ -152,7 +159,7 @@
                                 </span>
                             </label>
                             <label class="btn">
-                                <input type="radio" value="xxl" name="sizes[]">
+                                <input type="radio" value="xxl" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>XXL</span>
@@ -166,7 +173,7 @@
                         <div class="d-flex align-items-center product-counter">
                             <button class="btn btn-increase">+</button>
                             <span>1</span>
-                            <input type="hidden" value="1" name="qty">
+                            <input type="hidden" value="1" id="productQty" name="qty">
                             <button class="btn btn-decrease">-</button>
                         </div>
     
@@ -186,10 +193,10 @@
                         </div>
     
                         <div class="d-flex gap-3 mb-4">
-                            <button type="button" class="btn btn-main btn-main--primary">
+                            <button id="addToCartBtn" type="button" class="btn btn-main btn-main--primary">
                                 اضافة الى العربة
                             </button>
-                            <button type="button" class="btn btn-main px-2">
+                            <button id="addToFavoriteBtn" type="button" class="btn btn-main px-2">
                                 <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.4951 15.8562C15.7327 18.2276 12.9069 19.7723 12.5 19.9882C12.0931 19.7723 9.26728 18.2276 6.50488 15.8562C3.57328 13.3396 1.0003 10.1359 1 6.78343C1.00191 5.25666 1.62131 3.78882 2.72901 2.70302C3.8374 1.61654 5.3443 1.00188 6.92021 1C8.94028 1.00016 10.6534 1.84727 11.7061 3.22167L12.5 4.25809L13.2939 3.22167C14.3466 1.84727 16.0597 1.00016 18.0798 1C19.6557 1.00188 21.1626 1.61654 22.271 2.70302C23.3788 3.78896 23.9982 5.25703 24 6.784C23.9994 10.1363 21.4266 13.3397 18.4951 15.8562Z" fill="white" stroke="#00A9A7" stroke-width="2"/>
                                 </svg>
@@ -261,7 +268,7 @@
                               <div class="product-card__discount">
                                 -30%
                               </div>
-                              <button type="button" class="btn product-card__fav-btn p-1 active">
+                              <button data-product-id="1" type="button" class="btn product-card__fav-btn p-1 active">
                                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                                 </svg>
@@ -332,7 +339,7 @@
                                 <div class="product-card__discount">
                                 -30%
                                 </div>
-                                <button class="btn product-card__fav-btn p-1">
+                                <button data-product-id="1" class="btn product-card__fav-btn p-1">
                                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                                 </svg>
@@ -397,7 +404,7 @@
                                 <div class="product-card__discount">
                                 -30%
                                 </div>
-                                <button class="btn product-card__fav-btn p-1">
+                                <button data-product-id="1" class="btn product-card__fav-btn p-1">
                                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                                 </svg>
@@ -468,7 +475,7 @@
                                 <div class="product-card__discount">
                                 -30%
                                 </div>
-                                <button class="btn product-card__fav-btn p-1">
+                                <button data-product-id="1" class="btn product-card__fav-btn p-1">
                                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                                 </svg>
@@ -556,7 +563,7 @@
                         <div class="product-card__discount">
                           -30%
                         </div>
-                        <button type="button" class="btn product-card__fav-btn p-1 active">
+                        <button data-product-id="1" type="button" class="btn product-card__fav-btn p-1 active">
                           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                           </svg>
@@ -627,7 +634,7 @@
                         <div class="product-card__discount">
                           -30%
                         </div>
-                        <button class="btn product-card__fav-btn p-1">
+                        <button data-product-id="1" class="btn product-card__fav-btn p-1">
                           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                           </svg>
@@ -692,7 +699,7 @@
                         <div class="product-card__discount">
                           -30%
                         </div>
-                        <button class="btn product-card__fav-btn p-1">
+                        <button data-product-id="1" class="btn product-card__fav-btn p-1">
                           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                           </svg>
@@ -763,7 +770,7 @@
                         <div class="product-card__discount">
                           -30%
                         </div>
-                        <button class="btn product-card__fav-btn p-1">
+                        <button data-product-id="1" class="btn product-card__fav-btn p-1">
                           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                           </svg>
@@ -834,7 +841,7 @@
                         <div class="product-card__discount">
                           -30%
                         </div>
-                        <button class="btn product-card__fav-btn p-1">
+                        <button data-product-id="1" class="btn product-card__fav-btn p-1">
                           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.1772 19.456L12.1743 19.4575C12.1215 19.4851 12.0615 19.5 12 19.5C11.9385 19.5 11.8785 19.4851 11.8257 19.4575L11.8228 19.456C11.6026 19.3426 8.7417 17.8261 5.94356 15.4431C3.11657 13.0356 0.500152 9.86688 0.5 6.46015C0.501903 4.88457 1.14625 3.37112 2.29642 2.25264C3.44707 1.13369 5.01003 0.50186 6.64313 0.5C8.71487 0.500077 10.4999 1.36435 11.6042 2.7947L12 3.30727L12.3958 2.7947C13.5001 1.36435 15.2851 0.500077 17.3569 0.5C18.99 0.50186 20.5529 1.13369 21.7036 2.25264C22.8538 3.37119 23.4982 4.88475 23.5 6.46044C23.4997 9.86706 20.8834 13.0356 18.0564 15.4431C15.2583 17.8261 12.3974 19.3426 12.1772 19.456Z" class="fill" fill="#F6F6F6" stroke="#9B9B9B"/>
                           </svg>
@@ -1259,5 +1266,81 @@
 
   <!-- <script src="/vendor/jquery/jquery-ui.min.js"></script> -->
   <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // add to cart
+      function addProductToCart() {
+        if(validateProductChoices()) {
+          console.log(collectProductInfo());
+          $.ajax({
+            url: "https://api.example.com/data",
+            type: "POST",
+            data: collectProductInfo(),
+            success: function(data){
+              console.log("Data received:", data);
+              Swal.fire({
+                icon: "success",
+                title: "تمت الإضافة إلى السلة",
+                confirmButtonColor: "#00A9A7",
+                confirmButtonText: "نعم، موافق"
+              });
+            },
+            error: function(xhr, status, error){
+              console.error("Error:", error);
+              Swal.fire({
+                icon: "error",
+                title: "حدث خطأ غير متوقع",
+                confirmButtonColor: "#00A9A7",
+                confirmButtonText: "نعم، موافق"
+              });
+            }
+          });
+        }
+      }
+
+      $('#addToCartBtn').on('click', addProductToCart);
+      // add to favorite
+      $('#addToFavoriteBtn').on('click', function () {
+        window.addProductToFavorite('https://example.com', { id: $('#productId').val() });
+      });
+
+      // validate product choices
+      function validateProductChoices() {
+        // product color validation
+        if(!$('#productColor').val() || $('#productColor').val() == '') {
+          Swal.fire({
+            icon: "error",
+            title: "اختر لون المنتج",
+            confirmButtonColor: "#00A9A7",
+            confirmButtonText: "نعم، موافق"
+          });
+          return false
+        }
+
+        // product size validation
+        if(!$('#productSize').val() || $('#productSize').val() == '') {
+          Swal.fire({
+            icon: "error",
+            title: "اختر حجم المنتج",
+            confirmButtonColor: "#00A9A7",
+            confirmButtonText: "نعم، موافق"
+          });
+          return false
+        }
+
+        return true;
+      }
+
+      // collect product info
+      function collectProductInfo() {
+        return {
+          id: $('#productId').val(),
+          color: $('#productColor').val(),
+          size: $('#productSize').val(),
+          qty: $('#productQty').val(),
+        }
+      }
+    });
+  </script>
 </body>
 </html>
