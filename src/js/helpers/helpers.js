@@ -41,3 +41,7 @@ export function updateProductColorVariant(element) {
     const img = $(element).attr('data-src');
     $($(element).parent().parent().find('.product-card__img')).attr('src', img);
 }
+
+export function convertNumberWithCommas(x) {
+    return (x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

@@ -15,7 +15,8 @@ import {
     reveal,
     makeNavbarFixed,
     assignProductColorsVariants, 
-    updateProductColorVariant
+    updateProductColorVariant,
+    convertNumberWithCommas,
 } from './helpers/helpers'
 
 import { 
@@ -33,6 +34,11 @@ $(function () {
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
         new Modal(modalNode)
+    })
+
+    // convert product's price to be seperated with commas
+    $('.convert-price').each((index, ele) => {
+        $(ele).text(convertNumberWithCommas($(ele).text()));
     })
 
     // show tatris modal
