@@ -224,27 +224,29 @@
                         <span>-</span>
                         <span>مثال كود المنتج</span>
                     </div>
-                    <div class="product-page__product-viewer">
-                        <div>
-                            <div class="viewer-item">
-                                <img src="imgs/p--1.png" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="viewer-item">
-                                <img src="imgs/p--2.png" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="viewer-item">
-                                <img src="imgs/p--3.png" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="viewer-item">
-                                <img src="imgs/p--3.png" alt="">
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                      <div class="product-page__product-viewer">
+                          <div>
+                              <div class="viewer-item">
+                                  <img src="imgs/p--1.png" alt="">
+                              </div>
+                          </div>
+                          <div>
+                              <div class="viewer-item">
+                                  <img src="imgs/p--2.png" alt="">
+                              </div>
+                          </div>
+                          <div>
+                              <div class="viewer-item">
+                                  <img src="imgs/p--3.png" alt="">
+                              </div>
+                          </div>
+                          <div>
+                              <div class="viewer-item">
+                                  <img src="imgs/p--3.png" alt="">
+                              </div>
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -1291,9 +1293,26 @@
     $(document).ready(function () {
       // add to cart
       function addProductToCart() {
-        if(validateProductChoices()) {
-          console.log(collectProductInfo());
-          $.ajax({
+        if(!validateProductChoices()) {
+          return false;
+        }
+
+        if($('#embroidery').is(':checked')) {
+          window.tatrizModal.show();
+          return false;
+        }
+
+        proceedAddingToCart()
+      }
+
+      $('#addToCartBtn').on('click', addProductToCart);
+      // add to favorite
+      $('#addToFavoriteBtn').on('click', function () {
+        window.addProductToFavorite('https://example.com', { id: $('#productId').val() });
+      });
+
+      function proceedAddingToCart() {
+        $.ajax({
             url: "https://api.example.com/data",
             type: "POST",
             data: collectProductInfo(),
@@ -1316,14 +1335,7 @@
               });
             }
           });
-        }
       }
-
-      $('#addToCartBtn').on('click', addProductToCart);
-      // add to favorite
-      $('#addToFavoriteBtn').on('click', function () {
-        window.addProductToFavorite('https://example.com', { id: $('#productId').val() });
-      });
 
       // validate product choices
       function validateProductChoices() {

@@ -43,18 +43,7 @@ $(function () {
 
     // show tatris modal
     if($('#tatrizProductModal').length) {
-        const tatrizModal = new Modal(document.getElementById('tatrizProductModal'));
-
-        $('#embroidery').on('change', () => {
-            if($('#embroidery').is(':checked')) {
-                tatrizModal.show();
-            }
-        })
-
-        // document.getElementById('tatrizProductModal')
-        // .addEventListener('hidden.bs.modal', function () {
-        //     $('#embroidery').click();
-        // })
+        window.tatrizModal = new Modal(document.getElementById('tatrizProductModal'));
     }
 
     // navbar menu navigation
