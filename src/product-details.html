@@ -42,7 +42,7 @@
                         <div>
                             <small>السعر</small>
                             <h2 class="product-page__product-price">
-                                <span class="convert-price">25</span>
+                                <span class="convert-price">1200</span>
                                 <span>د.ع</span>
                             </h2>
                         </div>
@@ -210,7 +210,7 @@
                         </p>
                     </div>
                     <div class="d-flex gap-3 mb-4">
-                        <button type="button" class="btn btn-main btn-main--primary">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#findYourSizeModal" class="btn btn-main btn-main--primary">
                             اوجد قياسك
                         </button>
                         <button type="button" class="btn btn-main btn-main--primary">
@@ -1051,7 +1051,7 @@
 
   </main>
 
-  <!-- tatriz -->
+  <!-- tatriz modal -->
   <div class="modal fade tatriz-modal" id="tatrizProductModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content overflow-hidden">
@@ -1186,6 +1186,7 @@
     </div>
   </div>
 
+  <!-- add review modal -->
   <div class="modal custom-modal fade" id="reviewProductModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -1256,6 +1257,26 @@
                 </button>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- find your size modal -->
+  <div class="modal custom-modal fade" id="findYourSizeModal" tabindex="-1" aria-hidden="true"
+  style="--bs-modal-width: 750px;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            اوجد مقاسك
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+          <div class="find-your-size-img">
+            <img src="imgs/find-size.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>

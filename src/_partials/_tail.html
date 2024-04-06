@@ -7,10 +7,12 @@ src="./js/main.js"
 ></script>
 <script>
     $(document).ready(function () {
+        // add to favorite as a Global logic
         $('body').on('click', '.product-card__fav-btn', function () {
             window.addProductToFavorite('https://example.com', { 
                 id: $(this).attr('data-product-id') 
             });
         });
+
     })
 </script>
