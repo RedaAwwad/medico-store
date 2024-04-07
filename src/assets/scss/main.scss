@@ -25,6 +25,22 @@ html {
   }
 }
 
+.medico-page {
+  --mainColor: #00A9A7;
+  --secondaryColor: #252525;
+  --accentColor: rgba(0, 169, 167, 0.08);
+  --overlay: linear-gradient(180deg, rgba(30, 41, 99, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+  color: $black;
+}
+
+.navbar-padding-top {
+  padding-top: var(--navbar-height);
+}
+
+.navbar-padding-top--auth {
+  padding-top: 80px;
+}
+
 body {
   font-family: 'Tajawal', 'Tahoma', sans-serif;
 
@@ -638,26 +654,6 @@ body {
 
 .transition-all {
   transition: all 300ms ease-in-out;
-}
-
-/*
-  medico Page
-*/
-
-.medico-page {
-  --mainColor: #00A9A7;
-  --secondaryColor: #252525;
-  --accentColor: rgba(0, 169, 167, 0.08);
-  --overlay: linear-gradient(180deg, rgba(30, 41, 99, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
-  color: $black;
-}
-
-.navbar-padding-top {
-  padding-top: var(--navbar-height);
-}
-
-.navbar-padding-top--auth {
-  padding-top: 80px;
 }
 
 .partners-slider {
@@ -3133,5 +3129,23 @@ body {
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.pagination {
+  --bs-pagination-color: var(--mainColor);
+}
+
+[dir=rtl] {
+  .page-item:last-child .page-link {
+    border-radius: 0;
+    border-top-left-radius: var(--bs-pagination-border-radius);
+    border-bottom-left-radius: var(--bs-pagination-border-radius);
+  }
+
+  .page-item:first-child .page-link {
+    border-radius: 0;
+    border-top-right-radius: var(--bs-pagination-border-radius);
+    border-bottom-right-radius: var(--bs-pagination-border-radius);
   }
 }
