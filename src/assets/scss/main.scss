@@ -91,6 +91,10 @@ body {
       margin-top: 1.5rem;
     }
 
+    p {
+      line-height: 2;
+    }
+
     .article-img {
       position: relative;
       width: 100%;
@@ -139,6 +143,11 @@ body {
         width: 200px;
         height: 175px;
         background-color: #00829E;
+
+        @media (max-width: 580px) {
+          bottom: -30px;
+          height: 120px;
+        }
       }
 
       &::after {
@@ -150,6 +159,11 @@ body {
         width: 200px;
         height: 175px;
         background-color: #00829E;
+
+        @media (max-width: 580px) {
+          top: -30px;
+          height: 120px;
+        }
       }
 
       &__img {
