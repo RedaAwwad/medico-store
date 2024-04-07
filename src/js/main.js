@@ -436,14 +436,20 @@ $(function () {
     // add another coupon
     $('#addAnotherCoupon').on('click', function () {
         $('#couponsContainer').append(`
-            <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="position-relative d-flex align-items-center gap-2 mb-2">
+                <span class="remove-coupon-input">X</span>
                 <input type="text" class="form-control">
                 <button type="button" class="btn btn-main btn-main--primary btn-activate-coupon">
                     تفعيل
                 </button>
             </div>
         `)
-    })
+    });
+
+    $('#couponsContainer').on('click', '.remove-coupon-input', function () {
+        $($(this).parent()).remove();
+    });
+    
 
     // smooth scrolling
     // $(".scroll-link").on("click", function (event) {

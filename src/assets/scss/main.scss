@@ -3148,3 +3148,18 @@ body {
     border-bottom-right-radius: var(--bs-pagination-border-radius);
   }
 }
+
+.remove-coupon-input {
+  @extend %center;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  color: red;
+  cursor: pointer;
+}
