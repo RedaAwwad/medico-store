@@ -27,6 +27,11 @@ body .btn-main {
         color: #333;
     }
 
+    &--outline-primary {
+        border-color: var(--mainColor);
+        color: var(--mainColor);
+    }
+
     &--solid {
         padding: 10px;
     }
