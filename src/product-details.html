@@ -1391,28 +1391,28 @@
 
       function proceedAddingToCart() {
         $.ajax({
-            url: "https://api.example.com/data",
-            type: "POST",
-            data: collectProductInfo(),
-            success: function(data){
-              console.log("Data received:", data);
-              Swal.fire({
-                icon: "success",
-                title: "تمت الإضافة إلى السلة",
-                confirmButtonColor: "#00A9A7",
-                confirmButtonText: "نعم، موافق"
-              });
-            },
-            error: function(xhr, status, error){
-              console.error("Error:", error);
-              Swal.fire({
-                icon: "error",
-                title: "حدث خطأ غير متوقع",
-                confirmButtonColor: "#00A9A7",
-                confirmButtonText: "نعم، موافق"
-              });
-            }
-          });
+          url: "https://api.example.com/data",
+          type: "POST",
+          data: collectProductInfo(),
+          success: function(data){
+            console.log("Data received:", data);
+            Swal.fire({
+              icon: "success",
+              title: "تمت الإضافة إلى السلة",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          },
+          error: function(xhr, status, error){
+            console.error("Error:", error);
+            Swal.fire({
+              icon: "error",
+              title: "حدث خطأ غير متوقع",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          }
+        });
       }
 
       // validate product choices

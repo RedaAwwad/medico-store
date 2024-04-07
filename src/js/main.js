@@ -433,6 +433,18 @@ $(function () {
         });
     }
 
+    // add another coupon
+    $('#addAnotherCoupon').on('click', function () {
+        $('#couponsContainer').append(`
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <input type="text" class="form-control">
+                <button type="button" class="btn btn-main btn-main--primary btn-activate-coupon">
+                    تفعيل
+                </button>
+            </div>
+        `)
+    })
+
     // smooth scrolling
     // $(".scroll-link").on("click", function (event) {
     //     const target = $(this).attr("data-href");

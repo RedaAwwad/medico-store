@@ -296,21 +296,23 @@
                     </div>
                     <div class="mb-4 pb-2">
                         <h2 class="cart-summary-title mb-3">
-                            كوبون الخصم
+                          كوبون الخصم
                         </h2>
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <input type="text" name="coupon" class="form-control">
-                            <button type="button" class="btn btn-main btn-main--primary">
-                                تفعيل
+                        <div id="couponsContainer">
+                          <div class="d-flex align-items-center gap-2 mb-2">
+                            <input type="text" class="form-control">
+                            <button type="button" class="btn btn-main btn-main--primary btn-activate-coupon">
+                              تفعيل
                             </button>
+                          </div>
                         </div>
-                        <button type="button" class="btn d-flex align-items-center gap-2 py-1">
-                            <svg width="1rem" height="1rem" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="6" cy="6" r="6" fill="#AEAEAE"/>
-                                <rect x="5.64648" y="2.11719" width="0.705882" height="7.05882" fill="white"/>
-                                <rect x="2.4707" y="6" width="0.705882" height="7.05882" transform="rotate(-90 2.4707 6)" fill="white"/>
-                            </svg>
-                            <span>اضافة كوبون اخر</span>
+                        <button id="addAnotherCoupon" type="button" class="btn d-flex align-items-center gap-2 py-1">
+                          <svg width="1rem" height="1rem" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="6" cy="6" r="6" fill="#AEAEAE"/>
+                              <rect x="5.64648" y="2.11719" width="0.705882" height="7.05882" fill="white"/>
+                              <rect x="2.4707" y="6" width="0.705882" height="7.05882" transform="rotate(-90 2.4707 6)" fill="white"/>
+                          </svg>
+                          <span>اضافة كوبون اخر</span>
                         </button>
                     </div>
                     <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
@@ -741,5 +743,48 @@
   {{> _tail }}
 
   <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // activate coupon
+      $('#couponsContainer').on('click', '.btn-activate-coupon', function () {
+        var coupon = $(this).prev('input').val();
+
+        if(!coupon || coupon == '') {
+          Swal.fire({
+            icon: "error",
+            title: "أدخل كود التفعيل",
+            confirmButtonColor: "#00A9A7",
+            confirmButtonText: "نعم، موافق"
+          });
+
+          return false;
+        }
+
+        $.ajax({
+          url: "https://api.example.com/data",
+          type: "POST",
+          data: { coupon: coupon },
+          success: function(data){
+            console.log("Data received:", data);
+            Swal.fire({
+              icon: "success",
+              title: "تم تطبيق الخصم",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          },
+          error: function(xhr, status, error){
+            console.error("Error:", error);
+            Swal.fire({
+              icon: "error",
+              title: "حدث خطأ غير متوقع",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          }
+        });
+      });
+    })
+  </script>
 </body>
 </html>
