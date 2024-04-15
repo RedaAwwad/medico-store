@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 // import * as bootstrap from 'bootstrap'
-import { Modal } from 'bootstrap';
+import { Modal, Tooltip } from 'bootstrap';
 // import scrollIntoView from 'scroll-into-view';
 import {
     reveal,
@@ -33,8 +33,12 @@ $(function () {
 
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
-        new Modal(modalNode)
-    })
+        new Modal(modalNode);
+    });
+
+    Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).forEach(tooltipTrigger => {
+        return new Tooltip(tooltipTrigger);
+    });
 
     // convert product's price to be seperated with commas
     $('.convert-price').each((index, ele) => {

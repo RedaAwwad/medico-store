@@ -76,43 +76,79 @@
                         <div id="productColorsContainer" class="product-card__variants product-colors-variants">
                             <input type="hidden" id="productColor" name="product_color">
                             <button type="button" class="btn p-1" 
-                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                              data-color="#D9D9D9" 
+                              data-src="imgs/products/p1.jfif"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="رمادي">
+                              <!-- <span class="color-unavailable">X</span> -->
+                            </button>
                             <button type="button" class="btn p-1" 
-                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                              data-color="#000" 
+                              data-src="imgs/products/p1-b.webp"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أسود">
+                            </button>
                             <button type="button" class="btn p-1" 
-                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                              data-color="#FFF" 
+                              data-src="imgs/products/p1-w.jpg"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أبيض"
+                              ></button>
                             <button type="button" class="btn p-1" 
-                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
+                              data-color="#CF3B3B" 
+                              data-src="imgs/products/p1-r.webp"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أحمر" disabled>
+                              <span class="color-unavailable">X</span>
+                              </button>
                             <button type="button" class="btn p-1" 
-                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                              data-color="#23A440" 
+                              data-src="imgs/products/p1-g.webp"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أخضر" disabled>
+                              <span class="color-unavailable">X</span>
+                              </button>
                             <button type="button" class="btn p-1" 
-                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
+                              data-color="#D9D9D9" 
+                              data-src="imgs/products/p1.jfif"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="رمادي"
+                              ></button>
                             <button type="button" class="btn p-1" 
-                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
+                              data-color="#000" 
+                              data-src="imgs/products/p1-b.webp"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أسود"
+                              ></button>
                             <button type="button" class="btn p-1" 
-                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
+                              data-color="#FFF" 
+                              data-src="imgs/products/p1-w.jpg"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أبيض"
+                              ></button>
                             <button type="button" class="btn p-1" 
-                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#D9D9D9" data-src="imgs/products/p1.jfif"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#000" data-src="imgs/products/p1-b.webp"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#FFF" data-src="imgs/products/p1-w.jpg"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#CF3B3B" data-src="imgs/products/p1-r.webp"></button>
-                            <button type="button" class="btn p-1" 
-                            data-color="#23A440" data-src="imgs/products/p1-g.webp"></button>
+                              data-color="#CF3B3B" 
+                              data-src="imgs/products/p1-r.webp"
+                              data-bs-toggle="tooltip" 
+                              data-bs-placement="top" 
+                              title="أحمر"
+                              ></button>
                         </div>
                     </div>
                     <div class="mb-4" style="max-width: 400px;">
                         <h2 class="product-page__heading">المقاسات</h2>
-                        <div id="productSizeContainer" class="filter-sizes d-flex align-items-center flex-wrap">
+                        <div id="productSizeContainer" class="filter-sizes product-size-variants d-flex align-items-center flex-wrap">
                             <input type="hidden" id="productSize" name="product_size">
-                            <label class="btn">
-                                <input type="radio" value="xxs" name="size">
+                            <label class="btn unavailable" disabled>
+                                <input disabled type="radio" value="xxs" name="size">
                                 <span class="bg"></span>
                                 <span class="text">
                                     <span>XXS</span>
@@ -1374,6 +1410,37 @@
       // zoom images
       $('.zoom-image').each(function() { 
         $(this).imageZoom(); 
+      });
+
+      // get product images by color
+      $('#productColorsContainer').on('click', '.btn', function () {
+        $.ajax({
+          url: "https://api.example.com/data",
+          type: "GET",
+          data: {
+            product_id: $('#productId').val(),
+            color_code: $(this).attr('data-color'),
+          },
+          success: function(data) {
+            console.log("Data received:", data);
+            // Swal.fire({
+            //   icon: "success",
+            //   title: "تمت الإضافة إلى السلة",
+            //   confirmButtonColor: "#00A9A7",
+            //   confirmButtonText: "نعم، موافق"
+            // });
+          },
+          error: function(xhr, status, error){
+            console.error("Error:", error);
+            Swal.fire({
+              icon: "error",
+              title: "حدث خطأ غير متوقع",
+              confirmButtonColor: "#00A9A7",
+              confirmButtonText: "نعم، موافق"
+            });
+          }
+        });
+
       });
 
       // add to cart

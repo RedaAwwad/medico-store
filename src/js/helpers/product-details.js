@@ -8,6 +8,10 @@ export function updateProductColor() {
 
 export function updateProductSize() {
     $('#productSizeContainer').on('click', '.btn', function () {
+        if($(this).hasClass('unavailable')) {
+            return;
+        }
+
         $($(this).parent().find('#productSize')).val($(this).find('input').val());
     });
 }

@@ -2498,6 +2498,20 @@ body .add-to-cart-btn {
         visibility: visible;
       }
     }
+
+    .color-unavailable {
+      @extend %center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.03);
+      color: $white;
+    }
+
   }
 
   &__product-meta {
@@ -3192,8 +3206,29 @@ body {
   }
 }
 
-// [dir=rtl] .iti--allow-dropdown input.iti__tel-input, [dir=rtl] .iti--allow-dropdown input.iti__tel-input[type=text], [dir=rtl] .iti--allow-dropdown input.iti__tel-input[type=tel], [dir=rtl] .iti--show-selected-dial-code input.iti__tel-input, [dir=rtl] .iti--show-selected-dial-code input.iti__tel-input[type=text], [dir=rtl] .iti--show-selected-dial-code input.iti__tel-input[type=tel] {
-//   padding-right: var(--iti-selected-country-arrow-padding) !important;
-//   padding-left: var(--iti-input-padding) !important;
-//   margin-right: 0;
-// }
+.product-size-variants .btn {
+  position: relative;
+
+  &::after {
+    @extend %center;
+    content: 'X';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $white;
+  }
+
+  &.unavailable {
+    cursor: not-allowed;
+
+    &::after {
+      display: flex;
+    }
+  }
+}
