@@ -1,4 +1,5 @@
 {{> _head }}
+<link rel="stylesheet" href="vendor/intlTelInput/intlTelInput.css">
 </head>
 <body class="medico-page navbar-padding-top--auth">
   {{> _navbar_auth }}
@@ -23,7 +24,9 @@
               </div>
               <div class="col-sm-6 mb-4 pb-3">
                 <label for="phone">رقم الهاتف</label>
-                <input id="phone" type="number" min="0" required class="form-control">
+                <div dir="ltr">
+                  <input id="phone" type="tel" min="0" required class="form-control">
+                </div>
               </div>
               <div class="col-sm-6 mb-4 pb-3">
                 <label for="city">المحافظة</label>
@@ -77,5 +80,15 @@
   {{> _footer }}
   {{> _tail }}
 
+  <script src="vendor/intlTelInput/intelTelInput.js"></script>
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "vendor/intlTelInput/utils.js",
+      showSelectedDialCode: true,
+      initialCountry: 'IQ',
+      preferredCountries: ['IQ', 'EG', 'KSA'],
+    });
+  </script>
 </body>
 </html>

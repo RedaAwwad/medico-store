@@ -3,6 +3,7 @@
 <!-- <link rel="stylesheet" href="/vendor/jquery/jquery-ui.min.css"> -->
 <link rel="stylesheet" href="vendor/slick/slick.min.css">
 <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
+<link rel="stylesheet" href="vendor/image-zoom-plugin/image-zoom.css">
 </head>
 <body class="medico-page navbar-padding-top">
   {{> _navbar }}
@@ -228,22 +229,22 @@
                       <div class="product-page__product-viewer">
                           <div>
                               <div class="viewer-item">
-                                  <img src="imgs/p--1.png" alt="">
+                                  <img src="imgs/p--1.png" class="zoom-image" alt="">
                               </div>
                           </div>
                           <div>
                               <div class="viewer-item">
-                                  <img src="imgs/p--2.png" alt="">
+                                  <img src="imgs/p--2.png" class="zoom-image" alt="">
                               </div>
                           </div>
                           <div>
                               <div class="viewer-item">
-                                  <img src="imgs/p--3.png" alt="">
+                                  <img src="imgs/p--3.png" class="zoom-image" alt="">
                               </div>
                           </div>
                           <div>
                               <div class="viewer-item">
-                                  <img src="imgs/p--3.png" alt="">
+                                  <img src="imgs/p--3.png" class="zoom-image" alt="">
                               </div>
                           </div>
                       </div>
@@ -1367,8 +1368,14 @@
 
   <!-- <script src="/vendor/jquery/jquery-ui.min.js"></script> -->
   <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script src="vendor/image-zoom-plugin/image-zoom.min.js"></script>
   <script>
     $(document).ready(function () {
+      // zoom images
+      $('.zoom-image').each(function() { 
+        $(this).imageZoom(); 
+      });
+
       // add to cart
       function addProductToCart() {
         if(!validateProductChoices()) {

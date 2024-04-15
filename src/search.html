@@ -491,8 +491,8 @@
                 </aside>
             </div>
             <div class="filter-grid">
-                <div class="row">
-                    <div class="col-6 col-md-4 mb-4">
+                <div class="row product-items-container">
+                    <div class="product-item col-6 col-md-4 mb-4">
                         <div class="product-card">
                           <div class="product-card__top">
                             <a href="product-details.html" class="inline-block">
@@ -563,7 +563,7 @@
                           </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-item col-6 col-md-4 mb-4">
                     <div class="product-card">
                         <div class="product-card__top">
                         <a href="product-details.html" class="inline-block">
@@ -628,7 +628,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-item col-6 col-md-4 mb-4">
                     <div class="product-card">
                         <div class="product-card__top">
                         <a href="product-details.html" class="inline-block">
@@ -699,7 +699,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-item col-6 col-md-4 mb-4">
                     <div class="product-card">
                         <div class="product-card__top">
                         <a href="product-details.html" class="inline-block">
@@ -770,7 +770,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-item col-6 col-md-4 mb-4">
                     <div class="product-card">
                         <div class="product-card__top">
                         <a href="product-details.html" class="inline-block">
@@ -841,7 +841,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-6 col-md-4 mb-4">
+                    <div class="product-item col-6 col-md-4 mb-4">
                         <div class="product-card">
                           <div class="product-card__top">
                             <a href="product-details.html" class="inline-block">
@@ -913,6 +913,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination d-none">
+                    <a href="page2.html" class="next">Next</a>
+                </div>
             </div>
         </div>
     </div>
@@ -926,64 +929,80 @@
 
   <script src="/vendor/jquery/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+  <script src="https://unpkg.com/@webcreate/infinite-ajax-scroll/dist/infinite-ajax-scroll.min.js"></script>
   <script>
-    $("#slider-range").slider({
-        range: true,
-        orientation: "horizontal",
-        min: 0,
-        max: 10000,
-        values: [0, 5000],
-        step: 100,
-        create: function(event, ui) {
-            $('.price-filter-range .ui-slider-handle').each(function (index, ele) {
-                if(index == 0) {
+    $(document).ready(function () {
+        $("#slider-range").slider({
+            range: true,
+            orientation: "horizontal",
+            min: 0,
+            max: 10000,
+            values: [0, 5000],
+            step: 100,
+            create: function(event, ui) {
+                $('.price-filter-range .ui-slider-handle').each(function (index, ele) {
+                    if(index == 0) {
+                        $(ele).html(
+                            '<span id="priceRangeMin">' +
+                                '<small> 0' +
+                            '</small> د.ع </span>'
+                        );
+    
+                        return
+                    }
+        
                     $(ele).html(
-                        '<span id="priceRangeMin">' +
-                            '<small> 0' +
+                        '<span id="priceRangeMax">' +
+                            '<small> 9000' +
                         '</small> د.ع </span>'
                     );
-
-                    return
+                })
+            },
+            slide: function (event, ui) {
+                if (ui.values[0] == ui.values[1]) {
+                    return false;
                 }
-    
-                $(ele).html(
-                    '<span id="priceRangeMax">' +
-                        '<small> 9000' +
-                    '</small> د.ع </span>'
-                );
-            })
-        },
-        slide: function (event, ui) {
-            if (ui.values[0] == ui.values[1]) {
-                return false;
+                
+                $("#priceRangeMin small").html(ui.values[0]);
+                $("#priceRangeMax small").html(ui.values[1]);
             }
-            
-            $("#priceRangeMin small").html(ui.values[0]);
-            $("#priceRangeMax small").html(ui.values[1]);
-        }
-    });
-
-    // tree js
-    $('#jstree').jstree({
-        "checkbox" : {
-            "keep_selected_style" : false
-        },
-        "plugins" : [ "wholerow", "checkbox" ]
-    });
-    // .select_node('mn1');
-
-    $('#jstree').on("changed.jstree", function (e, data) {
-        var i, selectedLeafs = [];
-        for(i = 0; i < data.selected.length; i++) {
-            selectedLeafs.push(data.instance.get_node(data.selected[i]).text);
-        }
-        console.log(selectedLeafs);
-    });
-
-    $('#jstree').on("check_node.jstree", function (node, selected, event) {
-        // console.log(node);
-        console.log(selected);
-    });
+        });
+    
+        // tree js
+        $('#jstree').jstree({
+            "checkbox" : {
+                "keep_selected_style" : false
+            },
+            "plugins" : [ "wholerow", "checkbox" ]
+        });
+        // .select_node('mn1');
+    
+        $('#jstree').on("changed.jstree", function (e, data) {
+            var i, selectedLeafs = [];
+            for(i = 0; i < data.selected.length; i++) {
+                selectedLeafs.push(data.instance.get_node(data.selected[i]).text);
+            }
+            console.log(selectedLeafs);
+        });
+    
+        $('#jstree').on("check_node.jstree", function (node, selected, event) {
+            // console.log(node);
+            console.log(selected);
+        });
+    
+        let ias = new InfiniteAjaxScroll('.product-items-container', {
+            item: '.product-item',
+            next: '.next',
+            logger: {
+                next: (event) => {
+                    console.log(event.pageIndex);
+                },
+                loaded: (event) => {
+                    console.logElse(event.url);
+                }
+            },
+        });
+    })
   </script>
 </body>
 </html>
