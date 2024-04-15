@@ -3187,6 +3187,10 @@ body {
     input.iti__tel-input {
       width: 100%;
     }
+
+    .iti__country-container {
+      height: 50px;
+    }
   }
 
   .iti--allow-dropdown .iti__country-container, 
@@ -3230,5 +3234,19 @@ body {
     &::after {
       display: flex;
     }
+  }
+}
+
+// parsley errors list
+.parsley-errors-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+
+  li {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #dc3545;
   }
 }
