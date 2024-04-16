@@ -1,0 +1,24 @@
+#otp-input {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  #otp-input input {
+    width: 45px;
+    height: 45px;
+    padding: 0.5em 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* hide spinner */
+  #otp-input input::-webkit-outer-spin-button,
+  #otp-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  #otp-input input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+  }
