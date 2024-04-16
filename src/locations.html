@@ -1,4 +1,6 @@
 {{> _head }}
+<link rel="stylesheet" href="vendor/slick/slick.min.css">
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
 
 </head>
 <body class="medico-page navbar-padding-top">
@@ -26,9 +28,20 @@
               <div class="col-md-6">
                 <div class="location-card">
                   <div class="location-card__map">
-                    <span class="location-card__icon">
+                    <a href="https://maps.google.com/?q=33.32009032894255,43.71438700" target="_blank" class="location-card__icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 256 256"><path fill="currentColor" d="M128 66a38 38 0 1 0 38 38a38 38 0 0 0-38-38m0 64a26 26 0 1 1 26-26a26 26 0 0 1-26 26m0-112a86.1 86.1 0 0 0-86 86c0 30.91 14.34 63.74 41.47 94.94a252.32 252.32 0 0 0 41.09 38a6 6 0 0 0 6.88 0a252.32 252.32 0 0 0 41.09-38c27.13-31.2 41.47-64 41.47-94.94a86.1 86.1 0 0 0-86-86m0 206.51C113 212.93 54 163.62 54 104a74 74 0 0 1 148 0c0 59.62-59 108.93-74 120.51"/></svg>
-                    </span>
+                    </a>
+                    <div class="location-slider">
+                      <div>
+                        <img class="location-slider__img" data-lazy="https://images.unsplash.com/photo-1712839398257-8f7ee9127998?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                      </div>
+                      <div>
+                        <img class="location-slider__img" data-lazy="https://plus.unsplash.com/premium_photo-1661962830760-1e0a679eba23?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                      </div>
+                      <div>
+                        <img class="location-slider__img" data-lazy="https://images.unsplash.com/photo-1617469170366-ccfbf37a8a0b?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                      </div>
+                    </div>
                   </div>
                   <h2 class="location-card__name">مثال اسم الفرع</h2>
                   <p class="location-card__text mb-0">مثال لنص مثال لنص مثال لنص  مثال  لنص  مثال   لنص   مثال لنص   مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثا   لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</p>
@@ -36,100 +49,16 @@
                     <div class="col-6">
                       <h3 class="location-card__heading">العنوان</h3>
                       <div class="location-card__list d-flex flex-column gap-1">
-                        <span>مثال اسم المدينة</span>
-                        <span>مثال اسم الحي</span>
-                        <span>مثال رقم الشارع</span>
+                        <span>مثال تفاصيل العنوان</span>
+                        <!-- <span>مثال اسم الحي</span> -->
+                        <!-- <span>مثال رقم الشارع</span> -->
                       </div>
                     </div>
                     <div class="col-6">
                       <h3 class="location-card__heading">رقم الهاتف</h3>
                       <div class="location-card__list d-flex flex-column gap-1">
                         <span>023-456-789-987</span>
-                        <span>023-456-789-987</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="location-card">
-                  <div class="location-card__map">
-                    <span class="location-card__icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 256 256"><path fill="currentColor" d="M128 66a38 38 0 1 0 38 38a38 38 0 0 0-38-38m0 64a26 26 0 1 1 26-26a26 26 0 0 1-26 26m0-112a86.1 86.1 0 0 0-86 86c0 30.91 14.34 63.74 41.47 94.94a252.32 252.32 0 0 0 41.09 38a6 6 0 0 0 6.88 0a252.32 252.32 0 0 0 41.09-38c27.13-31.2 41.47-64 41.47-94.94a86.1 86.1 0 0 0-86-86m0 206.51C113 212.93 54 163.62 54 104a74 74 0 0 1 148 0c0 59.62-59 108.93-74 120.51"/></svg>
-                    </span>
-                  </div>
-                  <h2 class="location-card__name">مثال اسم الفرع</h2>
-                  <p class="location-card__text mb-0">مثال لنص مثال لنص مثال لنص  مثال  لنص  مثال   لنص   مثال لنص   مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثا   لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</p>
-                  <div class="row">
-                    <div class="col-6">
-                      <h3 class="location-card__heading">العنوان</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>مثال اسم المدينة</span>
-                        <span>مثال اسم الحي</span>
-                        <span>مثال رقم الشارع</span>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <h3 class="location-card__heading">رقم الهاتف</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>023-456-789-987</span>
-                        <span>023-456-789-987</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="location-card">
-                  <div class="location-card__map">
-                    <span class="location-card__icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 256 256"><path fill="currentColor" d="M128 66a38 38 0 1 0 38 38a38 38 0 0 0-38-38m0 64a26 26 0 1 1 26-26a26 26 0 0 1-26 26m0-112a86.1 86.1 0 0 0-86 86c0 30.91 14.34 63.74 41.47 94.94a252.32 252.32 0 0 0 41.09 38a6 6 0 0 0 6.88 0a252.32 252.32 0 0 0 41.09-38c27.13-31.2 41.47-64 41.47-94.94a86.1 86.1 0 0 0-86-86m0 206.51C113 212.93 54 163.62 54 104a74 74 0 0 1 148 0c0 59.62-59 108.93-74 120.51"/></svg>
-                    </span>
-                  </div>
-                  <h2 class="location-card__name">مثال اسم الفرع</h2>
-                  <p class="location-card__text mb-0">مثال لنص مثال لنص مثال لنص  مثال  لنص  مثال   لنص   مثال لنص   مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثا   لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</p>
-                  <div class="row">
-                    <div class="col-6">
-                      <h3 class="location-card__heading">العنوان</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>مثال اسم المدينة</span>
-                        <span>مثال اسم الحي</span>
-                        <span>مثال رقم الشارع</span>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <h3 class="location-card__heading">رقم الهاتف</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>023-456-789-987</span>
-                        <span>023-456-789-987</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="location-card">
-                  <div class="location-card__map">
-                    <span class="location-card__icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 256 256"><path fill="currentColor" d="M128 66a38 38 0 1 0 38 38a38 38 0 0 0-38-38m0 64a26 26 0 1 1 26-26a26 26 0 0 1-26 26m0-112a86.1 86.1 0 0 0-86 86c0 30.91 14.34 63.74 41.47 94.94a252.32 252.32 0 0 0 41.09 38a6 6 0 0 0 6.88 0a252.32 252.32 0 0 0 41.09-38c27.13-31.2 41.47-64 41.47-94.94a86.1 86.1 0 0 0-86-86m0 206.51C113 212.93 54 163.62 54 104a74 74 0 0 1 148 0c0 59.62-59 108.93-74 120.51"/></svg>
-                    </span>
-                  </div>
-                  <h2 class="location-card__name">مثال اسم الفرع</h2>
-                  <p class="location-card__text mb-0">مثال لنص مثال لنص مثال لنص  مثال  لنص  مثال   لنص   مثال لنص   مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثا   لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال</p>
-                  <div class="row">
-                    <div class="col-6">
-                      <h3 class="location-card__heading">العنوان</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>مثال اسم المدينة</span>
-                        <span>مثال اسم الحي</span>
-                        <span>مثال رقم الشارع</span>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <h3 class="location-card__heading">رقم الهاتف</h3>
-                      <div class="location-card__list d-flex flex-column gap-1">
-                        <span>023-456-789-987</span>
-                        <span>023-456-789-987</span>
+                        <!-- <span>023-456-789-987</span> -->
                       </div>
                     </div>
                   </div>
@@ -145,5 +74,22 @@
   {{> _footer }}
   {{> _tail }}
 
+  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.location-slider').slick({
+        rtl: document.dir == 'rtl',
+        lazyLoad: 'ondemand',
+        infinite: true,
+        // speed: 500,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+      });
+    });
+  </script>
 </body>
 </html>
