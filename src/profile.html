@@ -1,5 +1,5 @@
 {{> _head }}
-
+<link rel="stylesheet" href="vendor/intlTelInput/intlTelInput.css">
 </head>
 <body class="medico-page navbar-padding-top">
   {{> _navbar }}
@@ -19,7 +19,7 @@
             </div>
         </nav>
 
-      <div class="py-5">
+      <div class="auth profile-page py-5">
         <div class="card-gray mb-5">
           <h2 class="page-section-title mb-3">
             المعلومات الشخصية
@@ -27,24 +27,29 @@
           <div class="">
               <hr>
           </div>
-          <div class="row mb-4 py-4" style="--bs-gutter-y: 1.5rem;">
+          <form id="form" action="#" class="row mb-4 py-4" style="--bs-gutter-y: 1.5rem;" data-parsley-validate>
             <div class="col-sm-6">
               <h2 class="cart-title mb-2">
                 الاسم الأول
               </h2>
-              <p class="cart-summary-title mb-0">محمد</p>
+              <p class="cart-summary-title mb-0 info-data">محمد</p>
+              <input id="fName" type="text" value="محمد" required class="form-control info-input">
             </div>
             <div class="col-sm-6">
               <h2 class="cart-title mb-2">
                 الاسم الأخير
               </h2>
-              <p class="cart-summary-title mb-0">محمد</p>
+              <p class="cart-summary-title mb-0 info-data">أحمد</p>
+              <input id="lName" type="text" value="أحمد" required class="form-control info-input">
             </div>
             <div class="col-sm-6">
               <h2 class="cart-title mb-2">
                 رقم الهاتف
               </h2>
-              <p class="cart-summary-title mb-0">07234567891</p>
+              <p class="cart-summary-title mb-0 info-data">07234567891</p>
+              <div dir="ltr" class="info-input">
+                <input id="phone" type="tel" required class="form-control" data-parsley-phone-validation="11" value="07234567891">
+              </div>
             </div>
             <div class="col-sm-6">
               <h2 class="cart-title mb-2">
@@ -56,22 +61,30 @@
               <h2 class="cart-title mb-2">
                 العنوان
               </h2>
-              <p class="cart-summary-title mb-0">العنوان العنوان</p>
+              <p class="cart-summary-title mb-0 info-data">العنوان العنوان</p>
+              <input id="lName" type="text" value="العنوان العنوان" required class="form-control info-input">
             </div>
             <div class="col-sm-6">
               <h2 class="cart-title mb-2">
                 المحافظة
               </h2>
-              <p class="cart-summary-title mb-0">اسم المحافظة</p>
+              <p class="cart-summary-title mb-0 info-data">اسم المحافظة</p>
+              <input id="lName" type="text" value="اسم المحافظة" required class="form-control info-input">
             </div>
-          </div>
+            <div class="col-12 pt-4">
+              <button type="submit" class="btn btn-main btn-main--primary py-3 info-input">
+                تحديث المعلومات
+              </button>
+            </div>
+          </form>
         </div>
 
         <div class="d-flex align-items-center justify-content-center gap-2 mb-5">
-          <button type="button" class="btn btn-main btn-main--primary py-3">
+          <button id="updateInfoController" 
+          type="button" class="btn btn-main btn-main--primary py-3">
             تحديث المعلومات الشخصية
           </button>
-          <a href="#" class="btn btn-main btn-main--outline-primary py-3">
+          <a href="reset-password.html" class="btn btn-main btn-main--outline-primary py-3">
             تغيير كلمة المرور
           </a>
         </div>
@@ -92,6 +105,58 @@
 
   {{> _footer }}
   {{> _tail }}
+  <script src="vendor/intlTelInput/intelTelInput.js"></script>
+  <script src="vendor/parsley/parsley.min.js"></script>
+  <script src="vendor/parsley/i18n/ar.js"></script>
+  <script>
+     $(document).ready(function () {
+      var isUpdating = false;
+
+      $('#updateInfoController').on('click', function () {
+        if(isUpdating) {
+          $('.info-input').removeClass('d-block');
+          $('.info-data').removeClass('d-none');
+
+          isUpdating = false;
+          return;
+        }
+
+        $('.info-input').addClass('d-block');
+        $('.info-data').addClass('d-none');
+        isUpdating = true;
+
+      });
+
+      $('#form').on('submit', function (e) {
+        e.preventDefault();
+
+
+      });
+
+      window.Parsley.addValidator('phoneValidation', {
+        requirementType: 'integer',
+        validateNumber: function(value, requirement) {
+          if(!value.toString().startsWith('7')) {
+            return false;
+          }
+
+          return value.toString().length == requirement;
+        },
+        messages: {
+          ar: 'يجب أن يبدأ الرقم ب 07 ويتكون من 11 خانة',
+          en: 'Phone should start with 07 and it\'s length is 11 digits.',
+        }
+      });
+
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        utilsScript: "vendor/intlTelInput/utils.js",
+        showSelectedDialCode: true,
+        initialCountry: 'IQ',
+        preferredCountries: ['IQ', 'EG', 'KSA'],
+      });
+     });
+  </script>
 
 </body>
 </html>
