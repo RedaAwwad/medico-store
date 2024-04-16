@@ -3251,3 +3251,24 @@ body {
     color: #dc3545;
   }
 }
+
+// sharing-socialmedia-wrapper
+.sharing-socialmedia-wrapper {
+
+  .blog-share-button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+    transition: 300ms ease-in-out;
+
+    &:hover {
+      background-color: var(--mainColor);
+      color: $white;
+    }
+  }
+}
