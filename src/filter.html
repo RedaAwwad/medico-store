@@ -107,6 +107,7 @@
                         </button>
                     </div>
                     <div class="accordion" id="accordionFilter">
+                        <!-- brands -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -118,7 +119,7 @@
                                 <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-2">
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="all">
+                                            <input type="checkbox" name="brand[]" value="all" id="all">
                                             <label for="all">
                                                 <span class="font-semibold">الكل</span>
                                             </label>
@@ -126,7 +127,7 @@
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="brand1">
+                                            <input type="checkbox" name="brand[]" value="brand1" id="brand1">
                                             <label for="brand1">
                                                 <span class="font-semibold">العلامة التجارية</span>
                                                 (<small>25</small>)
@@ -135,7 +136,7 @@
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="brand2">
+                                            <input type="checkbox" name="brand[]" value="brand2" id="brand2">
                                             <label for="brand2">
                                                 <span class="font-semibold">العلامة التجارية</span>
                                                 (<small>25</small>)
@@ -144,7 +145,7 @@
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="brand3">
+                                            <input type="checkbox" name="brand[]" value="brand3" id="brand3">
                                             <label for="brand3">
                                                 <span class="font-semibold">العلامة التجارية</span>
                                                 (<small>25</small>)
@@ -153,7 +154,7 @@
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="brand4">
+                                            <input type="checkbox" name="brand[]" value="brand4" id="brand4">
                                             <label for="brand4">
                                                 <span class="font-semibold">العلامة التجارية</span>
                                                 (<small>25</small>)
@@ -162,7 +163,7 @@
                                     </li>
                                     <li>
                                         <div class="form-group">
-                                            <input type="checkbox" id="brand5">
+                                            <input type="checkbox" name="brand[]" value="brand5" id="brand5">
                                             <label for="brand5">
                                                 <span class="font-semibold">العلامة التجارية</span>
                                                 (<small>25</small>)
@@ -173,6 +174,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- price -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -187,6 +189,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- color -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -198,7 +201,7 @@
                                     <ul class="filter__color-list list-unstyled m-0 p-0 d-flex flex-wrap">
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color1">
+                                                <input type="checkbox" name="color[]" value="#000" id="color1">
                                                 <label for="color1" data-var-color="#000">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -207,7 +210,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color2">
+                                                <input type="checkbox" name="color[]" value="#000" id="color2">
                                                 <label for="color2" data-var-color="#000">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -216,7 +219,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color3">
+                                                <input type="checkbox" name="color[]" value="#864C4C" id="color3">
                                                 <label for="color3" data-var-color="#864C4C">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -225,7 +228,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color4">
+                                                <input type="checkbox" name="color[]" value="#864C4C" id="color4">
                                                 <label for="color4" data-var-color="#864C4C">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -234,7 +237,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color5">
+                                                <input type="checkbox" name="color[]" value="#D9D9D9" id="color5">
                                                 <label for="color5" data-var-color="#D9D9D9">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -243,7 +246,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color6">
+                                                <input type="checkbox" name="color[]" value="#D9D9D9" id="color6">
                                                 <label for="color6" data-var-color="#D9D9D9">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -252,7 +255,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color7">
+                                                <input type="checkbox" name="color[]" value="#0CA3E4" id="color7">
                                                 <label for="color7" data-var-color="#0CA3E4">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -261,7 +264,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="color8">
+                                                <input type="checkbox" name="color[]" value="#0CA3E4" id="color8">
                                                 <label for="color8" data-var-color="#0CA3E4">
                                                     <span class="font-semibold">اسم اللون</span>
                                                     (<small>35</small>)
@@ -272,6 +275,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- category -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
@@ -320,6 +324,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- size -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
@@ -330,7 +335,7 @@
                                 <div class="accordion-body">
                                     <div class="filter-sizes py-4 d-flex align-items-center flex-wrap">
                                         <label class="btn">
-                                            <input type="checkbox" value="xxs" name="sizes[]">
+                                            <input type="checkbox" value="xxs" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>XXS</span>
@@ -338,7 +343,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="xs" name="sizes[]">
+                                            <input type="checkbox" value="xs" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>XS</span>
@@ -346,7 +351,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="s" name="sizes[]">
+                                            <input type="checkbox" value="s" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>S</span>
@@ -354,7 +359,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="m" name="sizes[]">
+                                            <input type="checkbox" value="m" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>M</span>
@@ -362,7 +367,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="l" name="sizes[]">
+                                            <input type="checkbox" value="l" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>L</span>
@@ -370,7 +375,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="xl" name="sizes[]">
+                                            <input type="checkbox" value="xl" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>XL</span>
@@ -378,7 +383,7 @@
                                             </span>
                                         </label>
                                         <label class="btn">
-                                            <input type="checkbox" value="xxl" name="sizes[]">
+                                            <input type="checkbox" value="xxl" name="size[]">
                                             <span class="bg"></span>
                                             <span class="text">
                                                 <span>XXL</span>
@@ -389,6 +394,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- rate -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingLast">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLast" aria-expanded="true" aria-controls="collapseLast">
@@ -400,7 +406,7 @@
                                     <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-2">
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="rate1">
+                                                <input type="checkbox" name="rate[]" value="5" id="rate1">
                                                 <label for="rate1">
                                                     <div class="d-flex align-items-center gap-1">
                                                         <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -424,7 +430,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="rate2">
+                                                <input type="checkbox" name="rate[]" value="4"  id="rate2">
                                                 <label for="rate2">
                                                     <div class="d-flex align-items-center gap-1">
                                                         <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -448,7 +454,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="rate3">
+                                                <input type="checkbox" name="rate[]" value="3"  id="rate3">
                                                 <label for="rate3">
                                                     <div class="d-flex align-items-center gap-1">
                                                         <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -472,7 +478,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="rate4">
+                                                <input type="checkbox" name="rate[]" value="2"  id="rate4">
                                                 <label for="rate4">
                                                     <div class="d-flex align-items-center gap-1">
                                                         <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -496,7 +502,7 @@
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <input type="checkbox" id="rate5">
+                                                <input type="checkbox" name="rate[]" value="1"  id="rate5">
                                                 <label for="rate5">
                                                     <div class="d-flex align-items-center gap-1">
                                                         <svg width="1rem" height="1rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -967,6 +973,10 @@
   <script src="https://unpkg.com/@webcreate/infinite-ajax-scroll/dist/infinite-ajax-scroll.min.js"></script>
   <script>
     $(document).ready(function () {
+        var treeSelectedNodeItems = [];
+        var startPrice = '';
+        var endPrice = '';
+
         $("#slider-range").slider({
             range: true,
             orientation: "horizontal",
@@ -1000,6 +1010,11 @@
                 
                 $("#priceRangeMin small").html(ui.values[0]);
                 $("#priceRangeMax small").html(ui.values[1]);
+
+                startPrice = ui.values[0];
+                endPrice = ui.values[1];
+
+                updateURL();
             }
         });
 
@@ -1017,14 +1032,91 @@
             for(i = 0; i < data.selected.length; i++) {
                 selectedLeafs.push(data.instance.get_node(data.selected[i]).text);
             }
-            console.log(selectedLeafs);
+            treeSelectedNodeItems = selectedLeafs;
+            updateURL();
         });
 
         $('#jstree').on("check_node.jstree", function (node, selected, event) {
+           
             // console.log(node);
             console.log(selected);
         });
 
+        // updateURL
+        function updateURL() {
+            var queryParams = [];
+
+            // brand params
+            var queryBrand = [];
+            $('input[name="brand[]"]:checked').each(function(index, input) {
+                queryBrand.push($(input).val());
+            });
+            if(queryBrand.length) {
+                queryParams.push('brand=' + encodeURIComponent(queryBrand.join(',')));
+            }
+
+            // price
+            if(startPrice) {
+                queryParams.push('start_price=' + encodeURIComponent(startPrice));
+            }
+
+            if(endPrice) {
+                queryParams.push('end_price=' + encodeURIComponent(endPrice));
+            }
+
+            // color params
+            var queryColor = [];
+            $('input[name="color[]"]:checked').each(function(index, input) {
+                queryColor.push($(input).val());
+            });
+            if(queryColor.length) {
+                queryParams.push('color=' + encodeURIComponent(queryColor.join(',')));
+            }
+
+            // item nodes
+            if(treeSelectedNodeItems.length) {
+                queryParams.push('item=' + encodeURIComponent(treeSelectedNodeItems.join(',')));
+            }
+
+            // size params
+            var querySize = [];
+            $('input[name="size[]"]:checked').each(function(index, input) {
+                querySize.push($(input).val());
+            });
+            if(querySize.length) {
+                queryParams.push('size=' + encodeURIComponent(querySize.join(',')));
+            }
+
+            // rate params
+            var queryRate = [];
+            $('input[name="rate[]"]:checked').each(function(index, input) {
+                queryRate.push($(input).val());
+            });
+            if(queryRate.length) {
+                queryParams.push('rate=' + encodeURIComponent(queryRate.join(',')));
+            }
+            
+            // Update the URL with the query parameters
+            var newURL = window.location.pathname + '?' + queryParams.join('&');
+            history.pushState({}, '', newURL);
+        }
+
+        $('input[name="brand[]"]').each(function(index, input) {
+            $(input).on('change', updateURL);
+        });
+
+        $('input[name="color[]"]').each(function(index, input) {
+            $(input).on('change', updateURL);
+        });
+
+        $('input[name="size[]"]').each(function(index, input) {
+            $(input).on('change', updateURL);
+        });
+
+        $('input[name="rate[]"]').each(function(index, input) {
+            $(input).on('change', updateURL);
+        });
+        
         let ias = new InfiniteAjaxScroll('.product-items-container', {
             item: '.product-item',
             next: '.next',
