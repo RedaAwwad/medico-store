@@ -23,270 +23,276 @@
         </nav>
 
         <div class="product-page__product-meta">
-            <div class="row">
-                <div class="col-lg-5 order-2 order-lg-1">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4 pb-2"
-                    style="max-width: 600px;">
-                        <div>
-                            <h1 class="product-page__product-name">
-                                اسم المنتج
-                            </h1>
-                            <small dir="ltr">
-                                <span> Sku No. 234</span>
-                            </small>
-                            <!-- 
-                              Product ID should be provided
-                              some functionality depends on it
-                             -->
-                            <input type="hidden" id="productId" value="1">
-                        </div>
-                        <div>
-                            <small>السعر</small>
-                            <h2 class="product-page__product-price">
-                                <span class="convert-price">1200</span>
-                                <span>د.ع</span>
-                            </h2>
-                        </div>
+          <div class="row">
+            <!-- product info -->
+            <div class="col-lg-5 order-2 order-lg-1">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4 pb-2"
+                style="max-width: 600px;">
+                    <div>
+                        <h1 class="product-page__product-name">
+                            اسم المنتج
+                        </h1>
+                        <small dir="ltr">
+                            <span> Sku No. 234</span>
+                        </small>
+                        <!-- 
+                          Product ID should be provided
+                          some functionality depends on it
+                          -->
+                        <input type="hidden" id="productId" value="1">
                     </div>
-                    <div class="mb-4">
-                        <h2 class="product-page__heading">التقييمات</h2>
-                        <div class="d-flex align-items-center gap-2">
-                            <div class="d-flex align-items-center gap-1">
-                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
-                              </svg>
-                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
-                              </svg>
-                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
-                              </svg>
-                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
-                              </svg>
-                              <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
-                              </svg>
-                            </div>
-                            <small class="text-gray">(35)</small>
-                        </div>
+                    <div>
+                        <small>السعر</small>
+                        <h2 class="product-page__product-price">
+                            <span class="convert-price">1200</span>
+                            <span>د.ع</span>
+                        </h2>
                     </div>
-                    <div class="mb-4" style="max-width: 400px;">
-                        <h2 class="product-page__heading">اللون</h2>
-                        <div id="productColorsContainer" class="product-card__variants product-colors-variants">
-                            <input type="hidden" id="productColor" name="product_color">
-                            <button type="button" class="btn p-1" 
-                              data-color="#D9D9D9" 
-                              data-src="imgs/products/p1.jfif"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="رمادي">
-                              <!-- <span class="color-unavailable">X</span> -->
-                            </button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#000" 
-                              data-src="imgs/products/p1-b.webp"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أسود">
-                            </button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#FFF" 
-                              data-src="imgs/products/p1-w.jpg"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أبيض"
-                              ></button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#CF3B3B" 
-                              data-src="imgs/products/p1-r.webp"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أحمر" disabled>
-                              <span class="color-unavailable">X</span>
-                              </button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#23A440" 
-                              data-src="imgs/products/p1-g.webp"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أخضر" disabled>
-                              <span class="color-unavailable">X</span>
-                              </button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#D9D9D9" 
-                              data-src="imgs/products/p1.jfif"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="رمادي"
-                              ></button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#000" 
-                              data-src="imgs/products/p1-b.webp"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أسود"
-                              ></button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#FFF" 
-                              data-src="imgs/products/p1-w.jpg"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أبيض"
-                              ></button>
-                            <button type="button" class="btn p-1" 
-                              data-color="#CF3B3B" 
-                              data-src="imgs/products/p1-r.webp"
-                              data-bs-toggle="tooltip" 
-                              data-bs-placement="top" 
-                              title="أحمر"
-                              ></button>
+                </div>
+                <div class="mb-4">
+                    <h2 class="product-page__heading">التقييمات</h2>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-1">
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" fill="#FFB932"/>
+                          </svg>
+                          <svg width="0.75rem" height="0.75rem" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.59316 11.7399L10.9925 13.8912C11.615 14.2855 12.3768 13.7027 12.213 12.9656L11.312 8.92013L14.3181 6.19459C14.8669 5.69748 14.5721 4.75469 13.8512 4.69469L9.89488 4.34329L8.34675 0.52068C8.06825 -0.17356 7.11807 -0.17356 6.83957 0.52068L5.29143 4.33471L1.33508 4.68612C0.614257 4.74612 0.319374 5.68891 0.868184 6.18602L3.87435 8.91156L2.97332 12.957C2.8095 13.6941 3.57128 14.2769 4.19381 13.8827L7.59316 11.7399Z" stroke="#FFB932"/>
+                          </svg>
                         </div>
+                        <small class="text-gray">(35)</small>
                     </div>
-                    <div class="mb-4" style="max-width: 400px;">
-                        <h2 class="product-page__heading">المقاسات</h2>
-                        <div id="productSizeContainer" class="filter-sizes product-size-variants d-flex align-items-center flex-wrap">
-                            <input type="hidden" id="productSize" name="product_size">
-                            <label class="btn unavailable" disabled>
-                                <input disabled type="radio" value="xxs" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>XXS</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="xs" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>XS</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="s" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>S</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="m" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>M</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="l" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>L</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="xl" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>XL</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                            <label class="btn">
-                                <input type="radio" value="xxl" name="size">
-                                <span class="bg"></span>
-                                <span class="text">
-                                    <span>XXL</span>
-                                    (<small>25</small>)
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h2 class="product-page__heading">الكمية</h2>
-                        <div class="d-flex align-items-center product-counter">
-                            <button class="btn btn-increase">+</button>
-                            <span>1</span>
-                            <input type="hidden" value="1" id="productQty" name="qty">
-                            <button class="btn btn-decrease">-</button>
-                        </div>
-    
-                        <div class="py-5">
-                            <div class="add-embroidery">
-                                <div>
-                                    <div class="form-group">
-                                        <input type="checkbox" id="embroidery">
-                                        <label for="embroidery" aria-label="add embroidery"></label>
-                                    </div>
-                                </div>
-                                <div class="body">
-                                    <h2>اضافة تطريز</h2>
-                                    <p class="mb-0">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثالد</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="d-flex gap-3 mb-4">
-                            <button id="addToCartBtn" type="button" class="btn btn-main btn-main--primary">
-                                اضافة الى العربة
-                            </button>
-                            <button id="addToFavoriteBtn" type="button" class="btn btn-main px-2">
-                                <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.4951 15.8562C15.7327 18.2276 12.9069 19.7723 12.5 19.9882C12.0931 19.7723 9.26728 18.2276 6.50488 15.8562C3.57328 13.3396 1.0003 10.1359 1 6.78343C1.00191 5.25666 1.62131 3.78882 2.72901 2.70302C3.8374 1.61654 5.3443 1.00188 6.92021 1C8.94028 1.00016 10.6534 1.84727 11.7061 3.22167L12.5 4.25809L13.2939 3.22167C14.3466 1.84727 16.0597 1.00016 18.0798 1C19.6557 1.00188 21.1626 1.61654 22.271 2.70302C23.3788 3.78896 23.9982 5.25703 24 6.784C23.9994 10.1363 21.4266 13.3397 18.4951 15.8562Z" fill="white" stroke="#00A9A7" stroke-width="2"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h2 class="product-page__heading">الوصف</h2>
-                        <p>
-                            وصف المنتج وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج وصف ا
-                        </p>
-                    </div>
-                    <div class="d-flex gap-3 mb-4">
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#findYourSizeModal" class="btn btn-main btn-main--primary">
-                            اوجد قياسك
+                </div>
+                <div class="mb-4" style="max-width: 400px;">
+                    <h2 class="product-page__heading">اللون</h2>
+                    <div id="productColorsContainer" class="product-card__variants product-colors-variants">
+                        <input type="hidden" id="productColor" name="product_color">
+                        <button type="button" class="btn p-1" 
+                          data-color="#D9D9D9" 
+                          data-src="imgs/products/p1.jfif"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="رمادي">
+                          <!-- <span class="color-unavailable">X</span> -->
                         </button>
-                        <button type="button" class="btn btn-main btn-main--primary">
-                            اكمل التنسيق الخاص بك
+                        <button type="button" class="btn p-1" 
+                          data-color="#000" 
+                          data-src="imgs/products/p1-b.webp"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أسود">
+                        </button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#FFF" 
+                          data-src="imgs/products/p1-w.jpg"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أبيض"
+                          ></button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#CF3B3B" 
+                          data-src="imgs/products/p1-r.webp"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أحمر" disabled>
+                          <span class="color-unavailable">X</span>
+                          </button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#23A440" 
+                          data-src="imgs/products/p1-g.webp"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أخضر" disabled>
+                          <span class="color-unavailable">X</span>
+                          </button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#D9D9D9" 
+                          data-src="imgs/products/p1.jfif"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="رمادي"
+                          ></button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#000" 
+                          data-src="imgs/products/p1-b.webp"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أسود"
+                          ></button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#FFF" 
+                          data-src="imgs/products/p1-w.jpg"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أبيض"
+                          ></button>
+                        <button type="button" class="btn p-1" 
+                          data-color="#CF3B3B" 
+                          data-src="imgs/products/p1-r.webp"
+                          data-bs-toggle="tooltip" 
+                          data-bs-placement="top" 
+                          title="أحمر"
+                          ></button>
+                    </div>
+                </div>
+                <div class="mb-4" style="max-width: 400px;">
+                    <h2 class="product-page__heading">المقاسات</h2>
+                    <div id="productSizeContainer" class="filter-sizes product-size-variants d-flex align-items-center flex-wrap">
+                        <input type="hidden" id="productSize" name="product_size">
+                        <label class="btn unavailable" disabled>
+                            <input disabled type="radio" value="xxs" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>XXS</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="xs" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>XS</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="s" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>S</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="m" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>M</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="l" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>L</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="xl" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>XL</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                        <label class="btn">
+                            <input type="radio" value="xxl" name="size">
+                            <span class="bg"></span>
+                            <span class="text">
+                                <span>XXL</span>
+                                (<small>25</small>)
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h2 class="product-page__heading">الكمية</h2>
+                    <div class="d-flex align-items-center product-counter">
+                        <button class="btn btn-increase">+</button>
+                        <span>1</span>
+                        <input type="hidden" value="1" id="productQty" name="qty">
+                        <button class="btn btn-decrease">-</button>
+                    </div>
+
+                    <div class="py-5">
+                        <div class="add-embroidery">
+                            <div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="embroidery">
+                                    <label for="embroidery" aria-label="add embroidery"></label>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <h2>اضافة تطريز</h2>
+                                <p class="mb-0">مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثال لنص مثالد</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 mb-4">
+                        <button id="addToCartBtn" type="button" class="btn btn-main btn-main--primary">
+                            اضافة الى العربة
+                        </button>
+                        <button id="addToFavoriteBtn" type="button" class="btn btn-main px-2">
+                            <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.4951 15.8562C15.7327 18.2276 12.9069 19.7723 12.5 19.9882C12.0931 19.7723 9.26728 18.2276 6.50488 15.8562C3.57328 13.3396 1.0003 10.1359 1 6.78343C1.00191 5.25666 1.62131 3.78882 2.72901 2.70302C3.8374 1.61654 5.3443 1.00188 6.92021 1C8.94028 1.00016 10.6534 1.84727 11.7061 3.22167L12.5 4.25809L13.2939 3.22167C14.3466 1.84727 16.0597 1.00016 18.0798 1C19.6557 1.00188 21.1626 1.61654 22.271 2.70302C23.3788 3.78896 23.9982 5.25703 24 6.784C23.9994 10.1363 21.4266 13.3397 18.4951 15.8562Z" fill="white" stroke="#00A9A7" stroke-width="2"/>
+                            </svg>
                         </button>
                     </div>
                 </div>
-                <div class="col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0">
-                    <div class="d-flex justify-content-center gap-2 mb-3">
-                        <span>مثال نوع المنتج</span>
-                        <span>-</span>
-                        <span>مثال كود المنتج</span>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <div class="product-page__product-viewer">
-                          <div>
-                              <div class="viewer-item">
-                                  <img src="imgs/p--1.png" class="zoom-image" alt="">
-                              </div>
-                          </div>
-                          <div>
-                              <div class="viewer-item">
-                                  <img src="imgs/p--2.png" class="zoom-image" alt="">
-                              </div>
-                          </div>
-                          <div>
-                              <div class="viewer-item">
-                                  <img src="imgs/p--3.png" class="zoom-image" alt="">
-                              </div>
-                          </div>
-                          <div>
-                              <div class="viewer-item">
-                                  <img src="imgs/p--3.png" class="zoom-image" alt="">
-                              </div>
-                          </div>
-                      </div>
-                    </div>
+                <div class="mb-4">
+                    <h2 class="product-page__heading">الوصف</h2>
+                    <p>
+                        وصف المنتج وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج  وصف المنتج وصف ا
+                    </p>
+                </div>
+                <div class="d-flex gap-3 mb-4">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#findYourSizeModal" class="btn btn-main btn-main--primary">
+                        اوجد قياسك
+                    </button>
+                    <button type="button" class="btn btn-main btn-main--primary">
+                        اكمل التنسيق الخاص بك
+                    </button>
                 </div>
             </div>
+            <!-- product images -->
+            <div class="col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0">
+                <div class="d-flex justify-content-center gap-2 mb-3">
+                    <span>مثال نوع المنتج</span>
+                    <span>-</span>
+                    <span>مثال كود المنتج</span>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <div class="product-page__product-viewer">
+                      <div>
+                          <div class="viewer-item">
+                              <img src="imgs/p--1.png" class="zoom-image" alt="">
+                          </div>
+                      </div>
+                      <div>
+                          <div class="viewer-item">
+                              <span class="viewer-item__badge"
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top" 
+                                title="مثال نص"></span>
+                              <img src="imgs/p--2.png" class="zoom-image" alt="">
+                          </div>
+                      </div>
+                      <div>
+                          <div class="viewer-item">
+                              <img src="imgs/p--3.png" class="zoom-image" alt="">
+                          </div>
+                      </div>
+                      <div>
+                          <div class="viewer-item">
+                              <img src="imgs/p--3.png" class="zoom-image" alt="">
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
         </div>
 
         <div class="mb-4">
