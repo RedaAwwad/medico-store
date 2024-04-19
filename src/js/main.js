@@ -24,12 +24,33 @@ import {
     updateProductSize
 } from './helpers/product-details'
 
+import handleTatriz from './helpers/tatriz'
+
 $(function () {
     // setTimeout(function () {
     //     $('#preloader').addClass('hidden');
     //     // $('body').removeClass('overflow-hidden');
         
     // }, 1000);
+    if($('#tatrizProductModal').length) {
+        handleTatriz();
+    }
+
+    if($('#fileUpload').length) {
+        document.getElementById("fileUpload").addEventListener("change", function() {
+            if(this.files && this.files.length) {
+                $('#uploadPreview').text(this.files[0].name);
+                $('.upload-area__label').addClass('d-none')
+                $('.upload-area__preview').removeClass('d-none')
+
+                return
+            }
+
+            $('#uploadPreview').text('');
+            $('.upload-area__label').removeClass('d-none')
+            $('.upload-area__preview').addClass('d-none')
+        });
+    }
 
     // init bootstrap modals
     Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {

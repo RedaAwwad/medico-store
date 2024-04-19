@@ -2627,6 +2627,96 @@ body .add-to-cart-btn {
     max-width: 1200px;
   }
 
+  &__img {
+    position: relative;
+    width: 400px;
+    height: 525px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .tatriz {
+    &__marker {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 5px 10px rgba(0, 0, 0, 0.02);
+
+      &--left-shoulder {
+        top: 140px;
+        right: 35px;
+      }
+
+      &--right-shoulder {
+        top: 140px;
+        left: 35px;
+      }
+
+      &--left-chest {
+        top: 150px;
+        right: 100px;
+      }
+
+      &--right-chest {
+        top: 150px;
+        left: 100px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: var(--mainColor);
+        // background-color: rgba(0, 169, 167, 0.9);
+      }
+    }
+
+    &__previewer {
+      width: 300px;
+      height: 100px;
+      max-width: 100%;
+      background-color: $white;
+      border: 1px solid var(--mainColor);
+      border-radius: 5px;
+      
+      &--text-sm {
+        font-size: 0.8rem;
+      }
+
+      &--text-base {
+        font-size: 1rem;
+      }
+
+      &--text-md {
+        font-size: 1.2rem;
+      }
+
+      &--text-lg {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .logos__wrapper {
+    img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+  }
+
   &__right {
     background-color: #F9F9F9;
   }
@@ -3335,4 +3425,48 @@ body {
   .info-input {
     display: none;
   }
+}
+
+.upload-area {
+	margin-top: 1.25rem;
+	border: none;
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ccc' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	background-color: transparent;
+	padding: 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:hover, &:focus {
+			background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232e44ff' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	}
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} 
+
+.upload-area-icon {
+	display: block;
+	width: 2.25rem;
+	height: 2.25rem;
+	svg {
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+.upload-area-title {
+	margin-top: 1rem;
+	display: block;
+	font-weight: 700;
+}
+
+.upload-area-description {
+		display: block;
+	strong {
+		font-weight: 700;
+	}
 }
