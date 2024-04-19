@@ -36,5 +36,5 @@ export default function handleTatriz() {
 
         $('#tatrizLogo').val($(this).attr('data-logo'));
     });
-    
+
 }

@@ -2710,6 +2710,9 @@ body .add-to-cart-btn {
   }
 
   .logos__wrapper {
+    max-height: 175px;
+    overflow-y: auto;
+
     img {
       width: 45px;
       height: 45px;
