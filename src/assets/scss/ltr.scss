@@ -120,4 +120,13 @@
     .product-counter .btn.btn-decrease {
         border-radius: 0 5px 5px 0;
     }
+
+    .product-card__info {
+        left: auto;
+        right: 0;
+    }
+
+    .product-card__discount {
+        transform: translateX(-1.25rem);
+    }
 }
