@@ -3,6 +3,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/assets/css/style.css';
 import '@/assets/scss/main.scss';
+import '@/assets/scss/ltr.scss';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';

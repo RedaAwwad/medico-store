@@ -1023,7 +1023,13 @@
             "checkbox" : {
                 "keep_selected_style" : false
             },
-            "plugins" : [ "wholerow", "checkbox" ]
+            "plugins" : [ "wholerow", "checkbox" ],
+            "core": {
+                "themes": {
+                    url: true,
+                    dir: document.dir
+                }
+            }
         });
         // .select_node('mn1');
 
